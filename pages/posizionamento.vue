@@ -311,7 +311,7 @@ const scrollDown = () => {
             <div class="grid grid-cols-2 gap-4 md:gap-6 items-center">
               <a href="https://denani.it/2021/04/21/hotel-ristorante-camoretti/" target="_blank" rel="noopener" class="group block rounded-xl overflow-hidden">
                 <ImageReveal
-                  src="https://i0.wp.com/denani.it/wp-content/uploads/2022/11/CAMORETTI-scaled-e1709716201950.jpg?fit=1000%2C997&ssl=1"
+                  src="/images/CAMORETTI-scaled-e1709716201950.webp"
                   alt="Hotel Ristorante Camoretti - Denani"
                   ratio="square"
                   rounded
@@ -320,7 +320,7 @@ const scrollDown = () => {
 
               <a href="https://denani.it/2021/04/21/portfolio-fabrizio-crippa/" target="_blank" rel="noopener" class="group block rounded-xl overflow-hidden">
                 <ImageReveal
-                  src="https://i0.wp.com/denani.it/wp-content/uploads/2022/11/FABRIZIO-CRIPPA-scaled-e1709716167674.jpg?fit=1000%2C1000&ssl=1"
+                  src="/images/FABRIZIO-CRIPPA-scaled-e1709716167674.webp"
                   alt="Fabrizio Crippa - Denani"
                   ratio="square"
                   rounded
@@ -329,7 +329,7 @@ const scrollDown = () => {
 
               <a href="https://denani.it/2021/09/30/pasticceria-florian/" target="_blank" rel="noopener" class="group block col-span-2 rounded-2xl overflow-hidden mt-2 md:mt-4">
                 <ImageReveal
-                  src="https://i0.wp.com/denani.it/wp-content/uploads/2022/11/FLORIAN-scaled-e1709716143700.jpg?fit=1000%2C1000&ssl=1"
+                  src="/images/FLORIAN-scaled-e1709716143700.webp"
                   alt="Pasticceria Florian - Denani"
                   ratio="landscape"
                   rounded
@@ -406,7 +406,7 @@ const scrollDown = () => {
           <div class="flex flex-col gap-6 md:gap-8 items-stretch max-w-2xl">
             <a href="https://denani.it/portfolio/kraken-factory/" target="_blank" rel="noopener" class="block">
               <ImageReveal
-                src="https://i0.wp.com/denani.it/wp-content/uploads/2022/11/KRAKEN-FACTORY-scaled-e1709716112360.jpg?fit=1000%2C1008&ssl=1"
+                src="/images/KRAKEN-FACTORY-scaled-e1709716112360.webp"
                 alt="Kraken Factory - Denani"
                 ratio="landscape"
                 rounded
@@ -416,7 +416,7 @@ const scrollDown = () => {
 
             <a href="https://denani.it/2024/03/25/zestloungebar/" target="_blank" rel="noopener" class="block">
               <ImageReveal
-                src="https://i0.wp.com/denani.it/wp-content/uploads/2024/03/ZEST-LOUNGE-BAR.jpg?w=1000&ssl=1"
+                src="/images/ZEST-LOUNGE-BAR.webp"
                 alt="Zest Lounge Bar - Denani"
                 ratio="landscape"
                 rounded
