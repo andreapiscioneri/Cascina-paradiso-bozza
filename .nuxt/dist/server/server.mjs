@@ -1,0 +1,1 @@
+export { default } from "file:///Users/andreapiscioneri/Repo/Cascina-paradiso-bozza/node_modules/@nuxt/vite-builder/dist/vite-node-entry.mjs"
