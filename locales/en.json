@@ -1,0 +1,281 @@
+{
+  "brand": {
+    "name": "Cascina Paradiso",
+    "since": "Since 1972",
+    "tagline": "Bergamasco cooking. Wood-fired grill. A family tradition."
+  },
+  "nav": {
+    "home": "Home",
+    "storia": "Our Story",
+    "menu": "Menu",
+    "contatti": "Contact",
+    "prenotazioni": "Bookings",
+    "prenota": "Book a table"
+  },
+  "cta": {
+    "book": "Book a table",
+    "bookWhatsapp": "Book on WhatsApp",
+    "call": "Call us",
+    "directions": "Directions",
+    "discover": "Discover more",
+    "readMore": "Read more",
+    "viewMenu": "View the menu",
+    "ourStory": "Our story"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Since 1972 — Alzano Lombardo",
+      "title": "The flavour you don't forget",
+      "subtitle": "Wood-fired meat, local produce, and a family story that opens its doors again.",
+      "scroll": "Scroll to discover"
+    },
+    "storytelling": {
+      "eyebrow": "The homecoming",
+      "line1": "Today we welcome",
+      "line2": "BACK",
+      "line3": "Roberta",
+      "line4": "who has reopened the historic family business",
+      "line5": "everyone remembers as",
+      "line6": "Cascina Cerea",
+      "line7": "and which today returns to its original name:",
+      "line8": "Cascina Paradiso"
+    },
+    "values": {
+      "eyebrow": "Our kitchen",
+      "title": "Three ingredients. One promise.",
+      "items": {
+        "fire": {
+          "title": "The fire",
+          "description": "Live coals are the heart of our kitchen. Selected meats, slowly cooked over the flame — the way it used to be done."
+        },
+        "land": {
+          "title": "Local produce",
+          "description": "Ingredients from the Bergamasco valleys. Cheeses, cured meats, vegetables — we know exactly where they come from."
+        },
+        "family": {
+          "title": "Family tradition",
+          "description": "The recipes Roberta learned in this kitchen, brought back to the table with the same care as fifty years ago."
+        }
+      }
+    },
+    "menuTeaser": {
+      "eyebrow": "The menu",
+      "title": "A return to the origins.",
+      "description": "Casoncelli, polenta taragna, fassona steak, rosemary ribs. A kitchen that speaks Bergamasco."
+    },
+    "cta": {
+      "title": "Come see us",
+      "description": "The table is ready. The fire is lit. We're waiting for you.",
+      "book": "Book now"
+    }
+  },
+  "storia": {
+    "hero": {
+      "eyebrow": "Our story",
+      "title": "Fifty years of live fire.",
+      "subtitle": "From the historic Cantina Cerea to Cascina Paradiso: a family legacy still served at the table."
+    },
+    "intro": "In the heart of Alzano Lombardo, a family, a farmhouse, a table. For over fifty years we've told the story of Bergamasco cooking the way we received it: with respect, with memory, with fire.",
+    "timeline": {
+      "y1972": {
+        "year": "1972",
+        "title": "Cantina Cerea is born",
+        "body": "The Cerea family opens their cantina on Via Ghilardi. A simple place, made for wine, polenta, and an evening in good company."
+      },
+      "y1985": {
+        "year": "1985",
+        "title": "The grill becomes a ritual",
+        "body": "The wood-burning hearth takes centre stage. Local meats, cooked on live coals, become our signature."
+      },
+      "y2005": {
+        "year": "2005",
+        "title": "Cascina Cerea",
+        "body": "The business grows. The name changes along with the dining room, but the spirit stays the same: real food, real people."
+      },
+      "y2024": {
+        "year": "Today",
+        "title": "Welcome back, Roberta",
+        "body": "Roberta reopens the doors of the farmhouse and gives it back its original name: Cascina Paradiso. The circle closes, the story begins again."
+      }
+    },
+    "quote": "We didn't reinvent anything. We just remembered.",
+    "quoteAuthor": "— Roberta"
+  },
+  "menu": {
+    "hero": {
+      "eyebrow": "The menu",
+      "title": "Recipes of a valley.",
+      "subtitle": "A seasonal kitchen that changes with the calendar. Here you'll find the dishes that tell you who we are, better than words can."
+    },
+    "intro": "A seasonal kitchen that changes with the calendar. Here you'll find the dishes that tell you who we are, better than words can.",
+    "categories": {
+      "antipasti": "Starters",
+      "primi": "First courses",
+      "brace": "From the grill",
+      "contorni": "Sides",
+      "dolci": "Desserts"
+    },
+    "note": "The menu is indicative. Ask the staff for the dishes of the day and seasonal proposals. Please inform our team of any allergies or intolerances.",
+    "items": {
+      "antipasti": [
+        { "name": "Local cured meats", "desc": "Selection of artisan Bergamasco salumi, served with ancient-grain bread.", "price": "14" },
+        { "name": "Alpine cheeses", "desc": "Mountain cheeses with honey, preserves, and Grumello walnuts.", "price": "16" },
+        { "name": "Polenta and mushrooms", "desc": "Polenta taragna, sautéed porcini, shavings of Branzi.", "price": "13" }
+      ],
+      "primi": [
+        { "name": "Casoncelli bergamasca", "desc": "Fresh filled pasta, melted butter, sage, crisp pancetta.", "price": "14" },
+        { "name": "Tagliatelle with brasato ragù", "desc": "Hand-rolled tagliatelle, slow-braised beef ragù in Valcalepio wine.", "price": "15" },
+        { "name": "Taleggio risotto", "desc": "Carnaroli rice, Taleggio DOP, caramelised pears.", "price": "16" }
+      ],
+      "brace": [
+        { "name": "Fassona steak", "desc": "Piedmontese fassona, Cervia salt, rocket and grana.", "price": "24" },
+        { "name": "Rosemary pork ribs", "desc": "Local pork ribs, slow-cooked over live coals.", "price": "19" },
+        { "name": "Beef fillet", "desc": "Grilled fillet, herb butter, roast potatoes.", "price": "28" },
+        { "name": "Free-range chicken", "desc": "Half chicken marinated in herbs, live-coal grilled.", "price": "17" }
+      ],
+      "contorni": [
+        { "name": "Roast potatoes", "desc": "Local potatoes, rosemary, sea salt.", "price": "6" },
+        { "name": "Grilled vegetables", "desc": "Seasonal vegetables over charcoal.", "price": "7" }
+      ],
+      "dolci": [
+        { "name": "Hazelnut cake", "desc": "Classic cake, mascarpone cream, espresso.", "price": "7" },
+        { "name": "House tiramisù", "desc": "Family recipe, homemade savoiardi.", "price": "7" }
+      ]
+    }
+  },
+  "contatti": {
+    "hero": {
+      "eyebrow": "Where we are",
+      "title": "We're waiting for you.",
+      "subtitle": "Message us, call us, or visit us in Alzano Lombardo: your table is ready."
+    },
+    "address": {
+      "title": "Address",
+      "line1": "Via Guglielmo Ghilardi, 20",
+      "line2": "24022 Alzano Lombardo (BG), Italy"
+    },
+    "phone": {
+      "title": "Phone",
+      "value": "+39 351 915 2082"
+    },
+    "hours": {
+      "title": "Opening hours",
+      "weekdays": "Tuesday — Friday",
+      "weekdaysValue": "12:00 — 14:30 · 19:00 — 22:30",
+      "weekend": "Saturday and Sunday",
+      "weekendValue": "12:00 — 15:00 · 19:00 — 23:00",
+      "closed": "Closed on Monday"
+    },
+    "book": {
+      "title": "Reservations",
+      "description": "To book, message us on WhatsApp. We will reply as soon as possible."
+    }
+  },
+  "prenotazioni": {
+    "hero": {
+      "eyebrow": "Book your table",
+      "title": "WhatsApp bookings",
+      "subtitle": "Fast confirmation directly with our team at +39 351 915 2082."
+    },
+    "intro": "Bookings are handled directly on WhatsApp at +39 351 915 2082. Send us date, time and number of guests.",
+    "steps": {
+      "title": "How it works",
+      "one": "Open WhatsApp with the button below.",
+      "two": "Send the pre-filled message with your details.",
+      "three": "Get your confirmation from our team as soon as possible."
+    },
+    "note": "For urgent requests, you can also call the same number during opening hours."
+  },
+  "legal": {
+    "eyebrow": "Legal notice",
+    "lastUpdate": "Last update: April 2026",
+    "privacy": {
+      "seoTitle": "Privacy Policy",
+      "seoDescription": "Information about personal data processing at Cascina Paradiso.",
+      "heroTitle": "Privacy Policy",
+      "heroSubtitle": "Clear information about what data we collect, how we protect it, and why we process it.",
+      "ownerTitle": "Data controller",
+      "ownerLine1": "The data controller for personal data collected through this website is:",
+      "ownerLine2": "Cascina Paradiso",
+      "ownerLine3": "Via Guglielmo Ghilardi, 20 — 24022 Alzano Lombardo (BG), Italy",
+      "collectedTitle": "Collected data and purposes",
+      "collectedIntro": "This website collects the following data:",
+      "collectedNav": "Navigation data — IP address, browser type, visited pages. Collected automatically for technical purposes.",
+      "collectedDirect": "Voluntarily provided data — if you contact us by email or phone, we use your data only to answer your request.",
+      "collectedNote": "We do not use advertising profiling systems.",
+      "legalBasisTitle": "Legal basis for processing",
+      "legalBasisBody": "Processing is based on the controller's legitimate interest for technical data and on consent for voluntarily provided data (Art. 6 GDPR).",
+      "storageTitle": "Data retention",
+      "storageBody": "Data is kept only for the time necessary for the stated purposes, unless legal obligations apply.",
+      "rightsTitle": "Data subject rights",
+      "rightsBody": "You may request access, rectification, deletion, objection and portability of your data by writing to:",
+      "rightsAuthority": "You may also file a complaint with the Italian Data Protection Authority.",
+      "thirdPartyTitle": "Transfer to third parties",
+      "thirdPartyBody": "Data is not sold to third parties for commercial purposes. It may be processed by technical suppliers only to provide the service.",
+      "cookieTitle": "Cookies",
+      "cookieBody": "For information about cookies, see our"
+    },
+    "cookie": {
+      "seoTitle": "Cookie Policy",
+      "seoDescription": "Information on cookie usage at Cascina Paradiso.",
+      "heroTitle": "Cookie Policy",
+      "heroSubtitle": "How technical cookies are used and how browsing preferences are managed on this website.",
+      "whatTitle": "What cookies are",
+      "whatBody": "Cookies are small text files stored on your device to improve website functionality and remember preferences.",
+      "usedTitle": "Cookies used on this website",
+      "usedIntro": "We only use essential technical cookies:",
+      "usedOne": "Session cookies — required for navigation.",
+      "usedTwo": "Language cookies — remember your selected language.",
+      "usedThree": "Theme cookies — remember light or dark mode.",
+      "usedNote": "We do not use profiling or advertising cookies.",
+      "thirdTitle": "Third-party cookies",
+      "thirdBody": "The Contact page embeds Google Maps, which may set its own cookies.",
+      "manageTitle": "How to manage cookies",
+      "manageBody": "You can disable cookies in your browser settings. Disabling technical cookies may reduce some site features.",
+      "contactsTitle": "Contacts",
+      "contactsBody": "For questions about cookie usage, contact us at:"
+    },
+    "data": {
+      "seoTitle": "Data Processing",
+      "seoDescription": "Details on personal data processing, retention and user rights.",
+      "heroTitle": "Data Processing",
+      "heroSubtitle": "Processing methods, retention periods, and GDPR rights in one place.",
+      "purposeTitle": "Purpose of processing",
+      "purposeBody": "Personal data collected through direct contact is processed to answer requests and comply with legal obligations.",
+      "typesTitle": "Types of processed data",
+      "typesOne": "Identification data — name and surname, if voluntarily provided.",
+      "typesTwo": "Contact data — email and phone number.",
+      "typesThree": "Technical data — IP address, user-agent and server logs.",
+      "methodsTitle": "Processing methods",
+      "methodsBody": "Processing is carried out with electronic tools and appropriate measures to ensure security, integrity and confidentiality.",
+      "retentionTitle": "Retention",
+      "retentionBody": "Data is retained only for the time necessary for the stated purposes, unless legal obligations require otherwise.",
+      "sharingTitle": "Sharing with third parties",
+      "sharingBody": "Data is not shared with third parties for commercial purposes. It may be processed by appointed technical providers.",
+      "rightsTitle": "Data subject rights",
+      "rightsBody": "You may request access, rectification, deletion, restriction, objection and portability by writing to:",
+      "referencesTitle": "References",
+      "referencesBody": "For general information, also see",
+      "and": "and"
+    }
+  },
+  "footer": {
+    "tagline": "Bergamasco cooking. Wood-fired grill.\nA family tradition.",
+    "address": "Via Guglielmo Ghilardi, 20 — Alzano Lombardo (BG), Italy",
+    "rights": "All rights reserved.",
+    "built": "A place, a table, a fire."
+  },
+  "loader": {
+    "since": "Since 1972"
+  },
+  "errorPage": {
+    "seoTitle": "404",
+    "code": "404",
+    "titleLine1": "The page you are looking for",
+    "titleHighlight": "is not at the table.",
+    "descriptionStart": "Maybe it is out of season, or maybe you took a wrong turn.",
+    "descriptionCta": "Go back home and start again.",
+    "backHome": "Back to home",
+    "footerMark": "Cascina Paradiso — Since 1972"
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "brand": {
+    "name": "Cascina Paradiso",
+    "since": "Dal 1972",
+    "tagline": "Cucina bergamasca. Carne alla brace. Tradizione di famiglia."
+  },
+  "nav": {
+    "home": "Home",
+    "storia": "La Storia",
+    "menu": "Menu",
+    "contatti": "Contatti",
+    "prenotazioni": "Prenotazioni",
+    "prenota": "Prenota un tavolo"
+  },
+  "cta": {
+    "book": "Prenota un tavolo",
+    "bookWhatsapp": "Prenota su WhatsApp",
+    "call": "Chiamaci",
+    "directions": "Indicazioni",
+    "discover": "Scopri di più",
+    "readMore": "Scopri",
+    "viewMenu": "Vedi il menu",
+    "ourStory": "La nostra storia"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Dal 1972 — Alzano Lombardo",
+      "title": "Il sapore che non si dimentica",
+      "subtitle": "Carne alla brace, prodotti nostrani e una storia di famiglia che riapre le sue porte.",
+      "scroll": "Scorri per scoprire"
+    },
+    "storytelling": {
+      "eyebrow": "Il ritorno a casa",
+      "line1": "Oggi diamo un",
+      "line2": "BENTORNATO",
+      "line3": "a Roberta",
+      "line4": "che ha riaperto la storica attività di famiglia",
+      "line5": "che tutti ricordano come",
+      "line6": "Cascina Cerea",
+      "line7": "e che oggi ha preso il nome originario di",
+      "line8": "Cascina Paradiso"
+    },
+    "values": {
+      "eyebrow": "La nostra cucina",
+      "title": "Tre ingredienti. Una sola promessa.",
+      "items": {
+        "fire": {
+          "title": "La brace",
+          "description": "Il fuoco è al centro della nostra cucina. Carne selezionata, cotta lentamente sulla brace viva, come si faceva un tempo."
+        },
+        "land": {
+          "title": "Prodotti nostrani",
+          "description": "Materie prime del territorio bergamasco. Formaggi, salumi, verdure: tutto ciò che sappiamo da dove viene."
+        },
+        "family": {
+          "title": "Tradizione di famiglia",
+          "description": "Le ricette che Roberta ha imparato in questa cucina, riportate a tavola con la stessa cura di cinquant'anni fa."
+        }
+      }
+    },
+    "menuTeaser": {
+      "eyebrow": "Il menu",
+      "title": "Un ritorno alle origini.",
+      "description": "Casoncelli, polenta taragna, tagliata di fassona, costine al rosmarino. Una cucina che parla bergamasco."
+    },
+    "cta": {
+      "title": "Vieni a trovarci",
+      "description": "Il tavolo è pronto. Il fuoco è acceso. Ti aspettiamo.",
+      "book": "Prenota ora"
+    }
+  },
+  "storia": {
+    "hero": {
+      "eyebrow": "La nostra storia",
+      "title": "Cinquant'anni di fuoco acceso.",
+      "subtitle": "Dalla storica Cantina Cerea a Cascina Paradiso: una memoria di famiglia che continua a vivere a tavola."
+    },
+    "intro": "Nel cuore di Alzano Lombardo, una famiglia, una cascina, una tavola. Da oltre cinquant'anni raccontiamo la cucina bergamasca come l'abbiamo ricevuta: con rispetto, con memoria, con fuoco.",
+    "timeline": {
+      "y1972": {
+        "year": "1972",
+        "title": "Nasce Cantina Cerea",
+        "body": "La famiglia Cerea apre la sua cantina sulla via Ghilardi. Un luogo semplice, pensato per il vino, la polenta e i compagni di una sera."
+      },
+      "y1985": {
+        "year": "1985",
+        "title": "La brace diventa rito",
+        "body": "Il camino a legna prende il centro della sala. Le carni del territorio, cotte sulla brace viva, diventano la nostra firma."
+      },
+      "y2005": {
+        "year": "2005",
+        "title": "Cascina Cerea",
+        "body": "L'attività cresce. Il nome cambia insieme alla sala, ma lo spirito resta quello delle origini: cibo vero, persone vere."
+      },
+      "y2024": {
+        "year": "Oggi",
+        "title": "Bentornata, Roberta",
+        "body": "Roberta riapre le porte della cascina e le restituisce il suo nome originario: Cascina Paradiso. Il cerchio si chiude, la storia ricomincia."
+      }
+    },
+    "quote": "Non abbiamo reinventato niente. Abbiamo solo ricordato.",
+    "quoteAuthor": "— Roberta"
+  },
+  "menu": {
+    "hero": {
+      "eyebrow": "Il menu",
+      "title": "Le ricette di una valle.",
+      "subtitle": "Una cucina stagionale che cambia con il calendario. Qui trovi i piatti che raccontano meglio di noi chi siamo."
+    },
+    "intro": "Una cucina stagionale che cambia con il calendario. Qui trovi i piatti che raccontano meglio di noi chi siamo.",
+    "categories": {
+      "antipasti": "Antipasti",
+      "primi": "Primi piatti",
+      "brace": "Dalla brace",
+      "contorni": "Contorni",
+      "dolci": "Dolci"
+    },
+    "note": "Il menu è indicativo. Chiedi allo staff i piatti del giorno e le proposte stagionali. Per allergeni e intolleranze, non esitare a informare il nostro personale.",
+    "items": {
+      "antipasti": [
+        { "name": "Salumi del territorio", "desc": "Selezione di salumi artigianali bergamaschi serviti con pane di grani antichi.", "price": "14" },
+        { "name": "Formaggi d'alpeggio", "desc": "Formaggi di malga con miele, confetture e noci di Grumello.", "price": "16" },
+        { "name": "Polenta e funghi", "desc": "Polenta taragna, funghi porcini trifolati, scaglie di Branzi.", "price": "13" }
+      ],
+      "primi": [
+        { "name": "Casoncelli alla bergamasca", "desc": "Pasta fresca ripiena, burro fuso, salvia, pancetta croccante.", "price": "14" },
+        { "name": "Tagliatelle al ragù di brasato", "desc": "Tagliatelle tirate a mano, ragù di brasato al Valcalepio.", "price": "15" },
+        { "name": "Risotto mantecato al Taleggio", "desc": "Riso Carnaroli, Taleggio DOP, pere caramellate.", "price": "16" }
+      ],
+      "brace": [
+        { "name": "Tagliata di fassona", "desc": "Fassona piemontese, sale di Cervia, rucola e grana.", "price": "24" },
+        { "name": "Costine al rosmarino", "desc": "Costine di suino nostrano cotte lentamente sulla brace.", "price": "19" },
+        { "name": "Filetto di manzo", "desc": "Filetto alla brace, burro alle erbe, patate arrosto.", "price": "28" },
+        { "name": "Pollo ruspante", "desc": "Mezzo pollo marinato alle erbe, brace viva.", "price": "17" }
+      ],
+      "contorni": [
+        { "name": "Patate al forno", "desc": "Patate nostrane, rosmarino, sale grosso.", "price": "6" },
+        { "name": "Verdure alla brace", "desc": "Verdure di stagione grigliate su carbone.", "price": "7" }
+      ],
+      "dolci": [
+        { "name": "Torta di nocciole", "desc": "Torta classica, crema di mascarpone, caffè.", "price": "7" },
+        { "name": "Tiramisù della casa", "desc": "Ricetta di famiglia, savoiardi fatti in casa.", "price": "7" }
+      ]
+    }
+  },
+  "contatti": {
+    "hero": {
+      "eyebrow": "Dove siamo",
+      "title": "Ti aspettiamo.",
+      "subtitle": "Scrivici, chiamaci o passa a trovarci ad Alzano Lombardo: il tavolo e pronto."
+    },
+    "address": {
+      "title": "Indirizzo",
+      "line1": "Via Guglielmo Ghilardi, 20",
+      "line2": "24022 Alzano Lombardo (BG)"
+    },
+    "phone": {
+      "title": "Telefono",
+      "value": "351 915 2082"
+    },
+    "hours": {
+      "title": "Orari",
+      "weekdays": "Martedì — Venerdì",
+      "weekdaysValue": "12:00 — 14:30 · 19:00 — 22:30",
+      "weekend": "Sabato e Domenica",
+      "weekendValue": "12:00 — 15:00 · 19:00 — 23:00",
+      "closed": "Chiuso il Lunedì"
+    },
+    "book": {
+      "title": "Prenotazioni",
+      "description": "Per prenotare scrivici su WhatsApp. Ti rispondiamo il prima possibile."
+    }
+  },
+  "prenotazioni": {
+    "hero": {
+      "eyebrow": "Prenota il tuo tavolo",
+      "title": "Prenotazioni su WhatsApp",
+      "subtitle": "Conferma rapida e diretta con il nostro staff al numero 351 915 2082."
+    },
+    "intro": "Le prenotazioni avvengono direttamente via WhatsApp al numero 351 915 2082. Scrivici giorno, orario e numero di persone.",
+    "steps": {
+      "title": "Come funziona",
+      "one": "Apri WhatsApp con il pulsante qui sotto.",
+      "two": "Invia il messaggio precompilato con i tuoi dettagli.",
+      "three": "Ricevi conferma dal nostro staff appena possibile."
+    },
+    "note": "Per urgenze puoi anche chiamarci allo stesso numero durante gli orari di apertura."
+  },
+  "legal": {
+    "eyebrow": "Informativa legale",
+    "lastUpdate": "Ultimo aggiornamento: aprile 2026",
+    "privacy": {
+      "seoTitle": "Privacy Policy",
+      "seoDescription": "Informativa sul trattamento dei dati personali di Cascina Paradiso.",
+      "heroTitle": "Privacy Policy",
+      "heroSubtitle": "Trasparenza su quali dati raccogliamo, come li proteggiamo e per quali finalita li trattiamo.",
+      "ownerTitle": "Titolare del trattamento",
+      "ownerLine1": "Il titolare del trattamento dei dati personali raccolti tramite questo sito e:",
+      "ownerLine2": "Cascina Paradiso",
+      "ownerLine3": "Via Guglielmo Ghilardi, 20 — 24022 Alzano Lombardo (BG)",
+      "collectedTitle": "Dati raccolti e finalita",
+      "collectedIntro": "Questo sito raccoglie i seguenti dati:",
+      "collectedNav": "Dati di navigazione — indirizzo IP, tipo di browser, pagine visitate. Raccolti automaticamente a fini tecnici.",
+      "collectedDirect": "Dati forniti volontariamente — se ci contatti via e-mail o telefono, usiamo i dati solo per rispondere alla richiesta.",
+      "collectedNote": "Non usiamo sistemi di profilazione pubblicitaria.",
+      "legalBasisTitle": "Base giuridica del trattamento",
+      "legalBasisBody": "Il trattamento si basa sul legittimo interesse del titolare per i dati tecnici e sul consenso dell'interessato per i dati forniti volontariamente (art. 6 GDPR).",
+      "storageTitle": "Conservazione dei dati",
+      "storageBody": "I dati sono conservati solo per il tempo necessario alle finalita indicate, salvo obblighi di legge.",
+      "rightsTitle": "Diritti dell'interessato",
+      "rightsBody": "Puoi richiedere accesso, rettifica, cancellazione, opposizione e portabilita dei dati scrivendo a:",
+      "rightsAuthority": "Puoi anche presentare reclamo all'Autorita Garante per la protezione dei dati personali.",
+      "thirdPartyTitle": "Trasferimento a terzi",
+      "thirdPartyBody": "I dati non vengono ceduti a terzi per finalita commerciali. Possono essere trattati da fornitori tecnici solo per l'erogazione del servizio.",
+      "cookieTitle": "Cookie",
+      "cookieBody": "Per informazioni sui cookie consulta la nostra"
+    },
+    "cookie": {
+      "seoTitle": "Cookie Policy",
+      "seoDescription": "Informativa sull'uso dei cookie su Cascina Paradiso.",
+      "heroTitle": "Cookie Policy",
+      "heroSubtitle": "Uso dei cookie tecnici e gestione delle preferenze di navigazione sul nostro sito.",
+      "whatTitle": "Cosa sono i cookie",
+      "whatBody": "I cookie sono piccoli file di testo salvati sul dispositivo per migliorare il funzionamento del sito e ricordare alcune preferenze.",
+      "usedTitle": "Cookie utilizzati su questo sito",
+      "usedIntro": "Utilizziamo solo cookie tecnici necessari:",
+      "usedOne": "Cookie di sessione — necessari alla navigazione.",
+      "usedTwo": "Cookie lingua — ricordano la lingua selezionata.",
+      "usedThree": "Cookie tema — ricordano la modalita chiara o scura.",
+      "usedNote": "Non utilizziamo cookie di profilazione o pubblicitari.",
+      "thirdTitle": "Cookie di terze parti",
+      "thirdBody": "La pagina Contatti incorpora Google Maps, che potrebbe impostare cookie propri.",
+      "manageTitle": "Come gestire i cookie",
+      "manageBody": "Puoi disabilitare i cookie dal browser. Disattivare i cookie tecnici puo ridurre alcune funzionalita del sito.",
+      "contactsTitle": "Contatti",
+      "contactsBody": "Per domande sull'uso dei cookie, contattaci a:"
+    },
+    "data": {
+      "seoTitle": "Trattamento Dati",
+      "seoDescription": "Dettagli su trattamento, conservazione e diritti degli interessati per i dati personali.",
+      "heroTitle": "Trattamento Dati",
+      "heroSubtitle": "Modalita operative, tempi di conservazione e diritti previsti dal GDPR.",
+      "purposeTitle": "Finalita del trattamento",
+      "purposeBody": "I dati personali raccolti tramite contatti diretti sono trattati per rispondere alle richieste e adempiere a obblighi di legge.",
+      "typesTitle": "Tipologie di dati trattati",
+      "typesOne": "Dati identificativi — nome e cognome, se forniti volontariamente.",
+      "typesTwo": "Dati di contatto — e-mail e numero di telefono.",
+      "typesThree": "Dati tecnici — indirizzo IP, user-agent e log del server.",
+      "methodsTitle": "Modalita di trattamento",
+      "methodsBody": "Il trattamento avviene con strumenti elettronici e misure adeguate a garantire sicurezza, integrita e riservatezza.",
+      "retentionTitle": "Conservazione",
+      "retentionBody": "I dati sono conservati solo per il tempo necessario alle finalita indicate, salvo obblighi normativi.",
+      "sharingTitle": "Comunicazione a terzi",
+      "sharingBody": "I dati non sono ceduti a terzi per finalita commerciali. Possono essere trattati da fornitori tecnici nominati responsabili.",
+      "rightsTitle": "Diritti dell'interessato",
+      "rightsBody": "Puoi richiedere accesso, rettifica, cancellazione, limitazione, opposizione e portabilita scrivendo a:",
+      "referencesTitle": "Riferimenti",
+      "referencesBody": "Per l'informativa generale consulta anche",
+      "and": "e"
+    }
+  },
+  "footer": {
+    "tagline": "Cucina bergamasca. Carne alla brace.\nTradizione di famiglia.",
+    "address": "Via Guglielmo Ghilardi, 20 — Alzano Lombardo (BG)",
+    "rights": "Tutti i diritti riservati.",
+    "built": "Un luogo, una tavola, un fuoco."
+  },
+  "loader": {
+    "since": "Dal 1972"
+  },
+  "errorPage": {
+    "seoTitle": "404",
+    "code": "404",
+    "titleLine1": "La pagina che cerchi",
+    "titleHighlight": "non e a tavola.",
+    "descriptionStart": "Forse e fuori stagione, o forse hai sbagliato strada.",
+    "descriptionCta": "Torna alla home e ricomincia da capo.",
+    "backHome": "Torna alla home",
+    "footerMark": "Cascina Paradiso — Dal 1972"
+  }
+}

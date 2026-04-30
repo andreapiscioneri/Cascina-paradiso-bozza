@@ -1,0 +1,328 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   DESIGN TOKENS — CASCINA PARADISO
+   ============================================================ */
+:root {
+  --color-cream: #f5f1e8;
+  --color-cream-soft: #fbf9f3;
+  --color-brown: #3e2f2b;
+  --color-brown-soft: #5b433d;
+  --color-noir: #0f0f0f;
+  --color-wine: #7b1e1e;
+  --color-wine-soft: #922525;
+
+  --bg: var(--color-cream);
+  --bg-soft: var(--color-cream-soft);
+  --fg: var(--color-brown);
+  --fg-muted: #6b524b;
+  --accent: var(--color-wine);
+  --line: rgba(62, 47, 43, 0.12);
+
+  --ease-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-smooth: cubic-bezier(0.77, 0, 0.175, 1);
+
+  --nav-h: 80px;
+  --safe-x: clamp(1.25rem, 4vw, 3rem);
+}
+
+.dark {
+  --bg: var(--color-noir);
+  --bg-soft: #1a1a1a;
+  --fg: var(--color-cream);
+  --fg-muted: #bba99b;
+  --accent: #a83838;
+  --line: rgba(245, 241, 232, 0.12);
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: auto; /* disabled — Lenis handles smooth scroll */
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  body {
+    @apply font-sans;
+    background: var(--bg);
+    color: var(--fg);
+    font-feature-settings: 'ss01', 'cv11';
+    transition: background-color 300ms var(--ease-expo), color 300ms var(--ease-expo);
+    overflow-x: hidden;
+  }
+
+  body.is-loading {
+    overflow: hidden;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--color-cream);
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-serif;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  /* Hide native cursor on pointer devices */
+  @media (pointer: fine) {
+    html, body, a, button, [role='button'] {
+      cursor: none;
+    }
+  }
+}
+
+/* ============================================================
+   PAGE TRANSITION
+   ============================================================ */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 500ms var(--ease-expo), transform 500ms var(--ease-expo);
+}
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+@layer utilities {
+  .container-x {
+    padding-left: var(--safe-x);
+    padding-right: var(--safe-x);
+  }
+
+  .full-bleed {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .eyebrow {
+    @apply font-sans text-fluid-xs uppercase tracking-eyebrow;
+  }
+
+  .line-hover {
+    position: relative;
+  }
+  .line-hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform-origin: right center;
+    transform: scaleX(0);
+    transition: transform 600ms var(--ease-expo);
+  }
+  .line-hover:hover::after {
+    transform-origin: left center;
+    transform: scaleX(1);
+  }
+
+  .mask-reveal {
+    clip-path: inset(100% 0 0 0);
+    will-change: clip-path;
+  }
+  .mask-reveal.is-in {
+    clip-path: inset(0% 0 0 0);
+    transition: clip-path 1200ms var(--ease-expo);
+  }
+
+  .will-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+/* ============================================================
+   CUSTOM CURSOR
+   ============================================================ */
+.cp-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--fg);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: width 400ms var(--ease-expo), height 400ms var(--ease-expo),
+    background-color 300ms ease, opacity 200ms ease;
+}
+
+.cp-cursor--hover {
+  width: 56px;
+  height: 56px;
+  background: transparent;
+  border: 1px solid var(--fg);
+}
+
+.cp-cursor--image {
+  width: 96px;
+  height: 96px;
+  background: var(--accent);
+  mix-blend-mode: normal;
+  color: var(--color-cream);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.cp-cursor__label {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.cp-cursor--image .cp-cursor__label {
+  opacity: 1;
+}
+
+@media (pointer: coarse) {
+  .cp-cursor {
+    display: none;
+  }
+}
+
+/* ============================================================
+   LOADER
+   ============================================================ */
+.cp-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  transition: opacity 700ms var(--ease-expo);
+}
+
+.cp-loader__bar {
+  position: absolute;
+  bottom: 10vh;
+  left: 10vw;
+  right: 10vw;
+  height: 1px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.cp-loader__fill {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: var(--fg);
+  transition: width 400ms var(--ease-smooth);
+}
+
+/* ============================================================
+   MARQUEE
+   ============================================================ */
+.marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  gap: 3rem;
+}
+.marquee__track {
+  display: flex;
+  gap: 3rem;
+  animation: marquee-scroll 40s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ============================================================
+   LENIS
+   ============================================================ */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

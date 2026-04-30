@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <g transform="translate(20,20)">
+    <circle cx="40" cy="40" r="38" fill="none" stroke="#3E2F2B" stroke-width="1.5"/>
+    <path d="M22 50c5-12 12-18 18-18s13 6 18 18" stroke="#3E2F2B" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <circle cx="40" cy="30" r="3" fill="#7B1E1E"/>
+  </g>
+  <g font-family="Cormorant Garamond, serif" fill="#3E2F2B">
+    <text x="110" y="58" font-size="34" font-weight="500">Cascina Paradiso</text>
+    <text x="110" y="88" font-size="12" letter-spacing="4" text-transform="uppercase" font-family="Inter, sans-serif" fill="#7B1E1E">DAL 1972 — ALZANO LOMBARDO</text>
+  </g>
+</svg>
