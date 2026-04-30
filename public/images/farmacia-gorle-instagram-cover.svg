@@ -1,0 +1,24 @@
+<svg width="1080" height="1350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-farmacia" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E53935;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C42;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1080" height="1350" fill="url(#grad-farmacia)"/>
+  
+  <!-- Play button circle -->
+  <circle cx="540" cy="550" r="90" fill="none" stroke="white" stroke-width="5"/>
+  
+  <!-- Play triangle -->
+  <polygon points="500,510 500,590 600,550" fill="white"/>
+  
+  <!-- Text with shadow effect -->
+  <text x="540" y="800" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" fill="white" text-anchor="middle" letter-spacing="3">
+    GUARDA SU
+  </text>
+  <text x="540" y="890" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" fill="white" text-anchor="middle" letter-spacing="3">
+    INSTAGRAM
+  </text>
+</svg>

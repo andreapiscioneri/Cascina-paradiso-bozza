@@ -32,6 +32,10 @@ export const pathToI18nConfig = {
     "it": "/prenotazioni",
     "en": "/prenotazioni"
   },
+  "/posizionamento": {
+    "it": "/posizionamento",
+    "en": "/posizionamento"
+  },
   "/trattamento-dati": {
     "it": "/trattamento-dati",
     "en": "/trattamento-dati"
@@ -50,6 +54,7 @@ export const i18nPathToPath = {
   "/contatti": "/contatti",
   "/:slug(.*)*": "/:slug(.*)*",
   "/prenotazioni": "/prenotazioni",
+  "/posizionamento": "/posizionamento",
   "/trattamento-dati": "/trattamento-dati",
   "/ndefined": "/ndefined"
 };

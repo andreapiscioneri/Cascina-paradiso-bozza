@@ -28,6 +28,7 @@ const links = computed(() => [
   { to: localePath('/storia'), label: t('nav.storia') },
   { to: localePath('/menu'), label: t('nav.menu') },
   { to: localePath('/contatti'), label: t('nav.contatti') },
+  { to: localePath('/posizionamento'), label: t('nav.posizionamento') },
 ])
 </script>
 
