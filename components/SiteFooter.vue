@@ -34,8 +34,8 @@ const year = new Date().getFullYear()
         <NuxtLink :to="localePath('/menu')" class="line-hover text-fluid-sm">
           {{ $t('nav.menu') }}
         </NuxtLink>
-        <NuxtLink :to="localePath('/contatti')" class="line-hover text-fluid-sm">
-          {{ $t('nav.contatti') }}
+        <NuxtLink :to="localePath('/posizionamento')" class="line-hover text-fluid-sm">
+          {{ $t('nav.posizionamento') }}
         </NuxtLink>
         <NuxtLink :to="localePath('/contatti')" class="line-hover text-fluid-sm">
           {{ $t('nav.contatti') }}
