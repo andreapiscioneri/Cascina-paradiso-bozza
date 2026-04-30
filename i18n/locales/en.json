@@ -1,4 +1,112 @@
 {
+  "posizionamento": {
+    "seo": {
+      "title": "Positioning | Cascina Paradiso",
+      "description": "The positioning strategy and objectives of Cascina Paradiso"
+    },
+    "hero": {
+      "eyebrow": "Cascina Paradiso – Restaurant since 1972",
+      "title": "\"We didn't reinvent anything. We just remembered.\"",
+      "subtitle": "Cascina Paradiso is not a marketing operation built from scratch, but a living fragment of Val Seriana's history. While the market today 'mimics' tradition with artificial rustic aesthetics, we restart from the roots of 1972.",
+      "scroll": "Scroll"
+    },
+    "valore": {
+      "eyebrow": "Positioning",
+      "line1": "The Differentiating Value:",
+      "line2": "Honesty",
+      "line3": "We were born this way, we don't need to pretend."
+    },
+    "keywords": [
+      "Heritage", "Tradition", "History", "Territory", "Authenticity", "Local Cuisine", "Genuineness", "Fresh Products", "Local Suppliers", "Raw Materials"
+    ],
+    "obiettivi": {
+      "eyebrow": "Strategies and Objectives",
+      "items": {
+        "one": {
+          "title": "Brand Awareness (RE-Discover)",
+          "desc": "Reactivate the historical memory of old customers and position ourselves as a \"new discovery\" for new potential customers."
+        },
+        "two": {
+          "title": "Conversion",
+          "desc": "Transform interest into direct bookings through streamlined digital tools."
+        },
+        "three": {
+          "title": "Digital Positioning",
+          "desc": "Climb Google rankings for local searches (\"Restaurants Val Seriana\") and oversee social media with high-level aesthetics."
+        }
+      }
+    },
+    "strumenti": {
+      "bgText": "TOOLS",
+      "eyebrow": "How we will do it",
+      "titleLine1": "Three pillars",
+      "titleLine2": "for success",
+      "s1": {
+        "eyebrow": "Tool 1",
+        "title": "Brand Identity",
+        "desc": "Need to create a coherent, recognizable, and memorable image.",
+        "items": {
+          "logo": {
+            "title": "Logo & Visual",
+            "desc": "Not modern and cold, but recalling craftsmanship with visual cleanliness that communicates quality."
+          },
+          "palette": {
+            "title": "Color Palette",
+            "desc": "Wine/burgundy inspired by the restaurant's walls."
+          },
+          "landing": {
+            "title": "Landing Page with Dynamic Menu",
+            "desc": "Easily updatable (essential for those working with seasonal products). Options:",
+            "list1": "Hero Video: 10 emotional seconds (burning fire, hand-rolled fresh pasta, valley view)",
+            "list2": "Direct Booking: Fundamental to convert the user immediately, without intermediate steps"
+          },
+          "menu": {
+            "title": "Physical Menu",
+            "desc": "Consistent with the rest of the image, the menu is the first physical touchpoint. It must be textured (quality paper) and tell, in a column or on the back, the story of Cantina Cerea to give depth to the experience."
+          }
+        }
+      },
+      "s2": {
+        "eyebrow": "Tool 2",
+        "title": "Social Media & Content",
+        "desc1": "Use video as a tool with a high rate of diffusion and visibility.",
+        "desc2": "What to show:",
+        "items": {
+          "mani": {
+            "title": "\"From Hands to Table\"",
+            "desc": "Macro-shots of the preparation of typical dishes. Focus on technique (\"like it used to be\") but with modern aesthetics (careful plating)."
+          },
+          "frammenti": {
+            "title": "\"Fragments of 1972\"",
+            "desc": "Stories about the restaurant's history, the historical figures who visited it, shots of details referring to the history (photos, historical objects)."
+          },
+          "atmosfera": {
+            "title": "\"The Atmosphere\"",
+            "desc": "Videos conveying the vibe of the place: the clinking of glasses, the warmth of the wood, the peace of Val Seriana."
+          },
+          "fornitore": {
+            "title": "\"The Supplier of the Day\"",
+            "desc": "Videos in collaboration with local suppliers, or simply focusing on a local product."
+          }
+        }
+      },
+      "s3": {
+        "eyebrow": "Tool 3",
+        "title": "Sponsorships",
+        "items": {
+          "ads": {
+            "title": "Strategic Social Ads",
+            "desc": "Geolocated campaigns aimed at an audience who loves fine-dining and tradition, to accelerate reach and turn \"I didn't know it reopened\" into \"I want to go try it\"."
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "Let's restart from the roots",
+      "desc": "Every communication choice refers to who we are: a cross-section of Bergamasco history that lives today, as authentic as yesterday.",
+      "btn": "Back to Homepage"
+    }
+  },
   "brand": {
     "name": "Cascina Paradiso",
     "since": "Since 1972",

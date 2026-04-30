@@ -1,9 +1,16 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, rt, tm } = useI18n()
+const localePath = useLocalePath()
+// 2. Aggiungi questa riga per creare l'array tipizzato
+// 2. Mappa l'array e risolvi le traduzioni in vero testo
+const keywords = computed(() => {
+  const items = tm('posizionamento.keywords') as any[]
+  return items.map(item => rt(item))
+})
 
 useSeoMeta({
-  title: 'Posizionamento | Cascina Paradiso',
-  description: 'La strategia di posizionamento e obiettivi di Cascina Paradiso',
+  title: t('posizionamento.seo.title'),
+  description: t('posizionamento.seo.description'),
 })
 
 // Hero refs
@@ -107,12 +114,10 @@ const scrollDown = () => {
 
 <template>
   <div>
-    <!-- HERO FULLSCREEN -->
     <section
       ref="heroRoot"
       class="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-noir text-cream"
     >
-      <!-- Background video -->
       <div ref="heroImg" class="absolute inset-0 will-change-transform">
         <video
           autoplay
@@ -122,7 +127,6 @@ const scrollDown = () => {
           class="w-full h-full object-cover"
         >
           <source src="/images/12186173_2160_3840_30fps.mp4" type="video/mp4" />
-          <!-- Fallback image -->
           <img
             src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=2400&q=85"
             alt="Cucina - Hero Background"
@@ -138,38 +142,35 @@ const scrollDown = () => {
         </div>
       </div>
 
-      <!-- Hero copy -->
       <div class="relative z-10 h-full container-x flex flex-col justify-end pb-20 md:pb-28">
         <div ref="heroEyebrow" class="eyebrow mb-6 text-cream/80">
           <span class="inline-block w-8 h-px bg-cream/60 mr-3 align-middle" />
-          Cascina Paradiso – Ristorante dal 1972
+          {{ $t('posizionamento.hero.eyebrow') }}
         </div>
         <h1
           ref="heroTitle"
           class="font-serif font-light text-fluid-6xl leading-tightest tracking-tightest max-w-5xl text-balance"
         >
-          "Non abbiamo reinventato niente. Abbiamo solo ricordato."
+          {{ $t('posizionamento.hero.title') }}
         </h1>
         <p
           ref="heroSub"
           class="mt-8 max-w-xl text-fluid-base opacity-90 leading-relaxed"
         >
-          Cascina Paradiso non è un'operazione di marketing costruita a tavolino, ma un frammento vivo della storia della Val Seriana. Mentre il mercato oggi "scimmiotta" la tradizione con estetiche rustiche artificiali, noi ripartiamo dalle radici del 1972.
+          {{ $t('posizionamento.hero.subtitle') }}
         </p>
 
-        <!-- Scroll hint -->
         <button
           type="button"
           class="absolute bottom-10 right-[var(--safe-x)] flex flex-col items-center gap-3 opacity-70 hover:opacity-100 transition-opacity"
           @click="scrollDown"
         >
-          <span class="eyebrow">Scorri</span>
+          <span class="eyebrow">{{ $t('posizionamento.hero.scroll') }}</span>
           <span class="block w-px h-12 bg-current animate-pulse" />
         </button>
       </div>
     </section>
 
-    <!-- VALORE DIFFERENZIANTE — progressive text reveal -->
     <section
       id="valore"
       ref="valoreRoot"
@@ -177,40 +178,38 @@ const scrollDown = () => {
     >
       <div class="container-x max-w-5xl mx-auto">
         <p data-valore-line class="eyebrow text-wine mb-10">
-          Posizionamento
+          {{ $t('posizionamento.valore.eyebrow') }}
         </p>
 
         <div class="font-serif font-light text-fluid-5xl md:text-fluid-6xl leading-[1.05] tracking-tightest space-y-2 md:space-y-4">
-          <p data-valore-line>Il Valore Differenziante:</p>
+          <p data-valore-line>{{ $t('posizionamento.valore.line1') }}</p>
           <p
             data-valore-line
             class="italic text-wine font-normal text-fluid-6xl md:text-fluid-7xl"
           >
-            L'onestà
+            {{ $t('posizionamento.valore.line2') }}
           </p>
           <p data-valore-line class="opacity-70 text-fluid-3xl md:text-fluid-4xl mt-6">
-            Siamo nati così, non abbiamo bisogno di fingere.
+            {{ $t('posizionamento.valore.line3') }}
           </p>
         </div>
       </div>
     </section>
 
-    <!-- PAROLE CHIAVE — Keywords section -->
     <section class="py-10 border-y border-[color:var(--line)] bg-cream dark:bg-noir overflow-hidden">
-      <Marquee
-        :items="['Heritage', 'Tradizione', 'Storia', 'Territorialità', 'Autenticità', 'Cucina tipica', 'Genuinità', 'Prodotti freschi', 'Fornitori locali', 'Materie prime']"
-        italic
-      />
+    <Marquee
+  :items="keywords"
+  italic
+/>
     </section>
 
-    <!-- OBIETTIVI — progressive reveal con cards -->
     <section
       ref="obiettiviRoot"
       class="relative py-section-lg bg-noir text-cream overflow-hidden"
     >
       <div class="container-x max-w-6xl mx-auto">
         <p data-obiettivo-line class="eyebrow text-wine mb-16">
-          Strategie e Obiettivi
+          {{ $t('posizionamento.obiettivi.eyebrow') }}
         </p>
 
         <div class="grid md:grid-cols-3 gap-8 md:gap-6">
@@ -219,10 +218,10 @@ const scrollDown = () => {
               <span class="text-wine font-serif font-light text-fluid-3xl">01</span>
             </div>
             <h4 class="font-serif font-light text-fluid-lg text-cream mb-3 leading-tight">
-              Brand Awareness (RI-Conoscere)
+              {{ $t('posizionamento.obiettivi.items.one.title') }}
             </h4>
             <p class="text-fluid-sm text-cream/80 leading-relaxed">
-              Riattivare la memoria storica dei vecchi clienti e posizionarci come "nuova scoperta" per nuovi potenziali clienti.
+              {{ $t('posizionamento.obiettivi.items.one.desc') }}
             </p>
           </div>
 
@@ -231,10 +230,10 @@ const scrollDown = () => {
               <span class="text-wine font-serif font-light text-fluid-3xl">02</span>
             </div>
             <h4 class="font-serif font-light text-fluid-lg text-cream mb-3 leading-tight">
-              Conversione
+              {{ $t('posizionamento.obiettivi.items.two.title') }}
             </h4>
             <p class="text-fluid-sm text-cream/80 leading-relaxed">
-              Trasformare l'interesse in prenotazioni dirette attraverso strumenti digitali snelli.
+              {{ $t('posizionamento.obiettivi.items.two.desc') }}
             </p>
           </div>
 
@@ -243,69 +242,67 @@ const scrollDown = () => {
               <span class="text-wine font-serif font-light text-fluid-3xl">03</span>
             </div>
             <h4 class="font-serif font-light text-fluid-lg text-cream mb-3 leading-tight">
-              Posizionamento Digitale
+              {{ $t('posizionamento.obiettivi.items.three.title') }}
             </h4>
             <p class="text-fluid-sm text-cream/80 leading-relaxed">
-              Scalare il ranking Google per le ricerche locali ("Ristoranti Val Seriana") e presidiare i social con un'estetica di alto livello.
+              {{ $t('posizionamento.obiettivi.items.three.desc') }}
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- STRUMENTI HEADER -->
     <SectionWrapper tone="cream" padding="lg">
       <div class="max-w-6xl mx-auto relative">
         <div class="absolute -bottom-32 -right-20 text-cream font-serif font-light text-9xl leading-none pointer-events-none">
-          STRUMENTI
+          {{ $t('posizionamento.strumenti.bgText') }}
         </div>
         <div class="relative z-10">
           <p class="eyebrow text-wine mb-6 uppercase tracking-widest text-xs">
-            Come lo faremo
+            {{ $t('posizionamento.strumenti.eyebrow') }}
           </p>
           <h2 class="font-serif font-light text-fluid-7xl leading-tightest tracking-tightest text-wine">
-            Tre pilastri <br class="hidden md:block" />per il successo
+            {{ $t('posizionamento.strumenti.titleLine1') }} <br class="hidden md:block" />{{ $t('posizionamento.strumenti.titleLine2') }}
           </h2>
         </div>
       </div>
     </SectionWrapper>
 
-    <!-- STRUMENTO 1: BRAND IDENTITY — split image/text -->
     <SectionWrapper tone="cream" padding="lg">
       <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
         <div class="order-2 md:order-1">
           <div class="flex items-start gap-6 mb-8">
             <span class="font-serif font-light text-7xl md:text-8xl text-wine/90 leading-none">01</span>
             <div class="flex-1">
-              <span class="eyebrow text-wine text-xs uppercase tracking-widest">Strumento 1</span>
-              <h3 class="font-serif font-light text-fluid-5xl leading-tightest tracking-tightest text-white mt-2">Brand Identity</h3>
-              <p class="mt-4 text-fluid-lg text-cream/90 leading-relaxed max-w-prose">Necessità di creare un'immagine coerente, riconoscibile, ricordabile.</p>
+              <span class="eyebrow text-wine text-xs uppercase tracking-widest">{{ $t('posizionamento.strumenti.s1.eyebrow') }}</span>
+              <h3 class="font-serif font-light text-fluid-5xl leading-tightest tracking-tightest text-white mt-2">{{ $t('posizionamento.strumenti.s1.title') }}</h3>
+              <p class="mt-4 text-fluid-lg text-cream/90 leading-relaxed max-w-prose">{{ $t('posizionamento.strumenti.s1.desc') }}</p>
             </div>
           </div>
 
           <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="p-5 rounded-2xl bg-gradient-to-br from-wine/20 to-transparent border border-wine/40">
-              <h4 class="font-serif font-medium text-cream mb-2">Logo & Visual</h4>
-              <p class="text-cream text-sm leading-relaxed">No moderno e freddo, ma che richiami l'artigianalità con una pulizia visiva che comunichi qualità.</p>
+              <h4 class="font-serif font-medium text-cream mb-2">{{ $t('posizionamento.strumenti.s1.items.logo.title') }}</h4>
+              <p class="text-cream text-sm leading-relaxed">{{ $t('posizionamento.strumenti.s1.items.logo.desc') }}</p>
             </div>
 
             <div class="p-5 rounded-2xl bg-gradient-to-br from-wine/20 to-transparent border border-wine/40">
-              <h4 class="font-serif font-medium text-cream mb-2">Color Palette</h4>
-              <p class="text-cream text-sm leading-relaxed">Vino/bordeaux ispirato alle pareti del ristorante.</p>
+              <h4 class="font-serif font-medium text-cream mb-2">{{ $t('posizionamento.strumenti.s1.items.palette.title') }}</h4>
+              <p class="text-cream text-sm leading-relaxed">{{ $t('posizionamento.strumenti.s1.items.palette.desc') }}</p>
             </div>
 
             <div class="p-5 rounded-2xl bg-gradient-to-br from-wine/20 to-transparent border border-wine/40 md:col-span-2">
-              <h4 class="font-serif font-medium text-cream mb-2">Landing Page con Menu Dinamico</h4>
-              <p class="text-cream text-sm leading-relaxed mb-2">Facilmente aggiornabile (essenziale per chi lavora con prodotti stagionali). Opzionabili:</p>
+              <h4 class="font-serif font-medium text-cream mb-2">{{ $t('posizionamento.strumenti.s1.items.landing.title') }}</h4>
+              <p class="text-cream text-sm leading-relaxed mb-2">{{ $t('posizionamento.strumenti.s1.items.landing.desc') }}</p>
               <ul class="list-disc list-inside space-y-1 text-cream ml-2">
-                <li>Hero Video: 10 secondi emozionali (fuoco che arde, pasta fresca tirata a mano, vista sulla valle)</li>
-                <li>Prenotazione Diretta: Fondamentale per convertire l'utente subito, senza passaggi intermedi</li>
+                <li>{{ $t('posizionamento.strumenti.s1.items.landing.list1') }}</li>
+                <li>{{ $t('posizionamento.strumenti.s1.items.landing.list2') }}</li>
               </ul>
             </div>
 
             <div class="p-5 rounded-2xl bg-gradient-to-br from-wine/20 to-transparent border border-wine/40 md:col-span-2">
-              <h4 class="font-serif font-medium text-cream mb-2">Menu Fisico</h4>
-              <p class="text-cream text-sm leading-relaxed">Coerente con il resto dell'immagine, il menù è il primo punto di contatto fisico. Deve essere materico (carta di qualità) e raccontare, in una colonna o nel retro, la storia della Cantina Cerea per dare profondità all'esperienza.</p>
+              <h4 class="font-serif font-medium text-cream mb-2">{{ $t('posizionamento.strumenti.s1.items.menu.title') }}</h4>
+              <p class="text-cream text-sm leading-relaxed">{{ $t('posizionamento.strumenti.s1.items.menu.desc') }}</p>
             </div>
           </div>
         </div>
@@ -346,61 +343,60 @@ const scrollDown = () => {
 
     
 
-    <!-- STRUMENTO 2: SOCIAL MEDIA & CONTENT — split image/text -->
     <SectionWrapper tone="wine" padding="lg">
       <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
         <div>
           <div class="flex items-start gap-6 mb-12">
             <span class="font-serif font-light text-8xl md:text-9xl text-cream/90 leading-none">02</span>
             <div class="flex-1">
-              <span class="eyebrow text-cream text-xs uppercase tracking-widest opacity-80">Strumento 2</span>
+              <span class="eyebrow text-cream text-xs uppercase tracking-widest opacity-80">{{ $t('posizionamento.strumenti.s2.eyebrow') }}</span>
               <h3 class="font-serif font-light text-fluid-5xl leading-tightest tracking-tightest text-cream mt-2">
-                Social Media & Content
+                {{ $t('posizionamento.strumenti.s2.title') }}
               </h3>
             </div>
           </div>
           
           <p class="text-fluid-base text-cream leading-relaxed mb-2">
-            Utilizzare video perché strumento ad alto tasso di diffusione e visibilità.
+            {{ $t('posizionamento.strumenti.s2.desc1') }}
           </p>
           <p class="text-fluid-sm text-cream/70 leading-relaxed mb-8 font-medium">
-            Cosa mostrare:
+            {{ $t('posizionamento.strumenti.s2.desc2') }}
           </p>
 
           <div class="space-y-4">
             <div class="bg-cream/10 border border-cream/20 rounded-lg p-6">
               <h4 class="font-serif font-medium text-fluid-base text-cream mb-2">
-                "Dalle Mani alla Tavola"
+                {{ $t('posizionamento.strumenti.s2.items.mani.title') }}
               </h4>
               <p class="text-fluid-sm text-cream leading-relaxed">
-                Macro-riprese della preparazione dei piatti tipici. Focus sulla tecnica (il "come una volta") ma con l'estetica moderna (impiattamento curato).
+                {{ $t('posizionamento.strumenti.s2.items.mani.desc') }}
               </p>
             </div>
 
             <div class="bg-cream/10 border border-cream/20 rounded-lg p-6">
               <h4 class="font-serif font-medium text-fluid-base text-cream mb-2">
-                "Frammenti di 1972"
+                {{ $t('posizionamento.strumenti.s2.items.frammenti.title') }}
               </h4>
               <p class="text-fluid-sm text-cream leading-relaxed">
-                Racconti sulla storia del ristorante, sui personaggi storici che lo hanno visitato, riprese di dettagli che rimandano alla storia (foto, oggetti storici).
+                {{ $t('posizionamento.strumenti.s2.items.frammenti.desc') }}
               </p>
             </div>
 
             <div class="bg-cream/10 border border-cream/20 rounded-lg p-6">
               <h4 class="font-serif font-medium text-fluid-base text-cream mb-2">
-                "L'Atmosfera"
+                {{ $t('posizionamento.strumenti.s2.items.atmosfera.title') }}
               </h4>
               <p class="text-fluid-sm text-cream leading-relaxed">
-                Video che trasmettano il vibe del locale: il rumore dei calici, il calore del legno, la pace della Val Seriana.
+                {{ $t('posizionamento.strumenti.s2.items.atmosfera.desc') }}
               </p>
             </div>
 
             <div class="bg-cream/10 border border-cream/20 rounded-lg p-6">
               <h4 class="font-serif font-medium text-fluid-base text-cream mb-2">
-                "Il Fornitore del Giorno"
+                {{ $t('posizionamento.strumenti.s2.items.fornitore.title') }}
               </h4>
               <p class="text-fluid-sm text-cream leading-relaxed">
-                Video in collaborazione con i fornitori locali, o più semplicemente in cui si fa un focus su un prodotto local.
+                {{ $t('posizionamento.strumenti.s2.items.fornitore.desc') }}
               </p>
             </div>
           </div>
@@ -432,26 +428,25 @@ const scrollDown = () => {
       </div>
     </SectionWrapper>
 
-    <!-- STRUMENTO 3: SPONSORIZZAZIONI — split image/text -->
     <SectionWrapper tone="noir" padding="lg">
       <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
         <div class="order-2 md:order-1">
           <div class="flex items-start gap-6 mb-12">
             <span class="font-serif font-light text-8xl md:text-9xl text-cream/90 leading-none">03</span>
             <div class="flex-1">
-              <span class="eyebrow text-cream text-xs uppercase tracking-widest opacity-80">Strumento 3</span>
+              <span class="eyebrow text-cream text-xs uppercase tracking-widest opacity-80">{{ $t('posizionamento.strumenti.s3.eyebrow') }}</span>
               <h3 class="font-serif font-light text-fluid-5xl leading-tightest tracking-tightest text-cream mt-2">
-                Sponsorizzazioni
+                {{ $t('posizionamento.strumenti.s3.title') }}
               </h3>
             </div>
           </div>
 
           <div class="bg-cream/5 border border-cream/15 rounded-lg p-6">
             <h4 class="font-serif font-medium text-fluid-base text-cream mb-3">
-              Social Ads Strategiche
+              {{ $t('posizionamento.strumenti.s3.items.ads.title') }}
             </h4>
             <p class="text-fluid-base text-cream leading-relaxed">
-              Campagne geolocalizzate mirate a un pubblico amante del fine-dining e della tradizione, per accelerare la copertura e trasformare i "non so che ha riaperto" in "voglio andare a provare".
+              {{ $t('posizionamento.strumenti.s3.items.ads.desc') }}
             </p>
           </div>
         </div>
@@ -459,7 +454,7 @@ const scrollDown = () => {
           <div class="flex flex-col gap-6 md:gap-8 items-stretch max-w-2xl">
             <a href="https://www.instagram.com/mediline_torino/" target="_blank" rel="noopener" class="block">
               <ImageReveal
-                src="/images/mediline-instagram-cover.svg"
+                src="/images/logo-instagram_1199-122.png"
                 alt="Mediline - Sponsorizzazioni Instagram"
                 ratio="landscape"
                 rounded
@@ -469,7 +464,7 @@ const scrollDown = () => {
 
             <a href="https://www.instagram.com/farmacia.di.gorle/" target="_blank" rel="noopener" class="block">
               <ImageReveal
-                src="/images/farmacia-gorle-instagram-cover.svg"
+                src="/images/logo-instagram_1199-122.png"
                 alt="Farmacia di Gorle - Sponsorizzazioni Instagram"
                 ratio="landscape"
                 rounded
@@ -481,17 +476,16 @@ const scrollDown = () => {
       </div>
     </SectionWrapper>
 
-    <!-- CTA SECTION -->
     <SectionWrapper tone="wine" padding="lg" class="text-center">
       <div class="max-w-2xl mx-auto">
         <h2 class="font-serif font-light text-fluid-5xl leading-tightest tracking-tightest text-cream mb-8">
-          Ripartiamo dalle radici
+          {{ $t('posizionamento.cta.title') }}
         </h2>
         <p class="text-fluid-lg text-cream/90 mb-12">
-          Ogni scelta comunicativa rimanda a ciò che siamo: uno spaccato di storia bergamasca che vive oggi, autentico come ieri.
+          {{ $t('posizionamento.cta.desc') }}
         </p>
-        <NuxtLink to="/" class="inline-block px-10 py-4 bg-cream text-wine font-medium rounded-full hover:bg-cream/90 transition-all">
-          Torna alla Homepage
+        <NuxtLink :to="localePath('/')" class="inline-block px-10 py-4 bg-cream text-wine font-medium rounded-full hover:bg-cream/90 transition-all">
+          {{ $t('posizionamento.cta.btn') }}
         </NuxtLink>
       </div>
     </SectionWrapper>

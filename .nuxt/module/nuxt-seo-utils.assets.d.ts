@@ -9,7 +9,7 @@ declare module '#app' {
 }
 declare module '@unhead/schema' {
 
-  type PublicFiles = '/_robots.txt' | '/favicon.svg' | '/images/12186173_2160_3840_30fps.mp4' | '/images/farmacia-gorle-instagram-cover.svg' | '/images/logo.svg' | '/images/mediline-instagram-cover.svg' | (string & Record<never, never>)
+  type PublicFiles = '/_robots.txt' | '/favicon.svg' | '/images/12186173_2160_3840_30fps.mp4' | '/images/farmacia-gorle-instagram-cover.svg' | '/images/logo-instagram_1199-122.png' | '/images/logo.svg' | '/images/mediline-instagram-cover.svg' | (string & Record<never, never>)
   type JsFiles = (string & Record<never, never>)
 
   interface SchemaAugmentations {
