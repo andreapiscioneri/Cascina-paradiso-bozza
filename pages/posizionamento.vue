@@ -23,9 +23,9 @@ const prospettoRows = [
 ]
 
 const budgetRows = [
-  { pkg: 'Abbinato a BASE — Radici', daily: '€ 10 – € 15', monthly: '€ 300 – € 450', reach: '15.000 – 30.000 persone raggiunte' },
-  { pkg: 'Abbinato a MEDIUM — Equilibrio', daily: '€ 20 – € 30', monthly: '€ 600 – € 900', reach: '40.000 – 70.000 persone raggiunte' },
-  { pkg: 'Abbinato a PREMIUM — Eccellenza', daily: '€ 40 – € 60', monthly: '€ 1.200 – € 1.800', reach: '100.000+ impression e traffico costante' },
+  { pkg: 'Abbinato a BASE —\nRadici', daily: '€ 10 – € 15', monthly: '€ 300 – € 450', reach: '15.000 – 30.000 persone raggiunte' },
+  { pkg: 'Abbinato a MEDIUM —\nEquilibrio', daily: '€ 20 – € 30', monthly: '€ 600 – € 900', reach: '40.000 – 70.000 persone raggiunte' },
+  { pkg: 'Abbinato a PREMIUM —\nEccellenza', daily: '€ 40 – € 60', monthly: '€ 1.200 – € 1.800', reach: '100.000+ impression e traffico costante' },
 ]
 
 const heroRoot = ref<HTMLElement | null>(null)
@@ -264,8 +264,7 @@ onMounted(() => {
       <div class="container-x max-w-6xl mx-auto">
         <div class="flex items-end justify-between mb-10 sm:mb-16 md:mb-20 border-b border-[color:var(--line)] pb-6 sm:pb-8">
           <p class="eyebrow text-wine">{{ $t('posizionamento.obiettivi.eyebrow') }}</p>
-          <span class="font-serif font-light text-[10px] sm:text-xs text-brown/30 dark:text-cream/30 hidden sm:block">03 obiettivi</span>
-        </div>
+          </div>
 
         <div class="divide-y divide-[color:var(--line)]">
           <div
@@ -345,7 +344,7 @@ onMounted(() => {
                       {{ $t(`posizionamento.strumenti.s1.items.${item}.desc`) }}
                     </p>
                     <template v-if="item === 'palette'">
-                      <div class="mt-3 sm:mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
+                      <div class="mt-3 sm:mt-4 grid grid-cols-2 gap-2 sm:gap-3">
                         <div class="flex items-center gap-2.5 text-fluid-xs sm:text-fluid-sm text-brown/70 dark:text-cream/70">
                           <span class="h-3.5 w-3.5 rounded-full border border-white/10 bg-wine shrink-0" aria-hidden="true" />
                           <div class="min-w-0">
@@ -361,7 +360,7 @@ onMounted(() => {
                           </div>
                         </div>
                         <div class="flex items-center gap-2.5 text-fluid-xs sm:text-fluid-sm text-brown/70 dark:text-cream/70">
-                          <span class="h-3.5 w-3.5 rounded-full border border-[color:var(--line)] bg-black shrink-0" aria-hidden="true" />
+                          <span class="h-3.5 w-3.5 rounded-full border border-white/40 bg-black shrink-0" aria-hidden="true" />
                           <div class="min-w-0">
                             <span class="block font-medium text-brown dark:text-cream">Nero</span>
                             <span class="block text-brown/40 dark:text-cream/40 tracking-[0.18em] uppercase">#0F0F0F</span>
@@ -706,7 +705,7 @@ onMounted(() => {
               >
                 <p class="eyebrow text-[9px] text-cream/25 mb-1.5">{{ row.label }}</p>
                 <p
-                  class="font-sans font-medium leading-snug tracking-normal"
+                  class="font-serif font-medium leading-none whitespace-nowrap shrink-0"
                   :class="row.label === 'Investimento mensile'
                     ? 'text-fluid-xl text-cream'
                     : 'text-fluid-sm text-cream/60'"
@@ -730,7 +729,7 @@ onMounted(() => {
               >
                 <p class="eyebrow text-[9px] text-cream/35 mb-1.5">{{ row.label }}</p>
                 <p
-                  class="font-sans font-medium leading-snug tracking-normal"
+                  class="font-serif font-medium leading-none whitespace-nowrap shrink-0"
                   :class="row.label === 'Investimento mensile'
                     ? 'text-fluid-xl text-wine'
                     : 'text-fluid-sm text-cream/80'"
@@ -753,7 +752,7 @@ onMounted(() => {
               >
                 <p class="eyebrow text-[9px] text-cream/25 mb-1.5">{{ row.label }}</p>
                 <p
-                  class="font-sans font-medium leading-snug tracking-normal"
+                  class="font-serif font-medium leading-none whitespace-nowrap shrink-0"
                   :class="row.label === 'Investimento mensile'
                     ? 'text-fluid-xl text-cream'
                     : 'text-fluid-sm text-cream/60'"
@@ -795,7 +794,7 @@ onMounted(() => {
             </div>
             <div class="min-w-0">
               <p class="eyebrow text-[9px] sm:text-[10px] text-brown/35 dark:text-cream/30 mb-2">{{ $t('posizionamento.budget.col3') }}</p>
-              <p class="font-serif font-medium text-[clamp(1.05rem,2.9vw,1.9rem)] text-wine dark:text-cream leading-none whitespace-nowrap shrink-0">{{ row.monthly }}</p>
+              <p class="font-serif font-medium text-[clamp(1.05rem,2.9vw,1.9rem)] leading-none whitespace-nowrap shrink-0" style="color: rgb(123 30 30 / var(--tw-text-opacity, 1))">{{ row.monthly }}</p>
             </div>
             <div class="min-w-0">
               <p class="eyebrow text-[9px] sm:text-[10px] text-brown/35 dark:text-cream/30 mb-2">{{ $t('posizionamento.budget.col4') }}</p>

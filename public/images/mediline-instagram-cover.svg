@@ -14,9 +14,6 @@
   <line x1="480" y1="0" x2="480" y2="1080" stroke="#f5f1e8" stroke-opacity="0.03" stroke-width="1"/>
   <line x1="960" y1="0" x2="960" y2="1080" stroke="#f5f1e8" stroke-opacity="0.03" stroke-width="1"/>
 
-  <!-- BG number -->
-  <text x="1200" y="820" font-family="Georgia, serif" font-size="660" font-weight="300" fill="#f5f1e8" fill-opacity="0.025" text-anchor="middle" letter-spacing="-20">02</text>
-
   <!-- Main headline -->
   <text x="220" y="430" font-family="Georgia, serif" font-size="148" font-weight="300" fill="#f5f1e8" fill-opacity="0.92" letter-spacing="-4">Mediline</text>
   <text x="220" y="590" font-family="Georgia, serif" font-size="148" font-weight="300" fill="#7B1E1E" letter-spacing="-4">Torino</text>
