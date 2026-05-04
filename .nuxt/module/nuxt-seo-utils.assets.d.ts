@@ -9,7 +9,7 @@ declare module '#app' {
 }
 declare module '@unhead/schema' {
 
-  type PublicFiles = '/_redirects' | '/_robots.txt' | '/favicon.svg' | '/PDF/Denani Cascina Paradiso.pdf' | '/images/12186173_2160_3840_30fps.mp4' | '/images/CAMORETTI-scaled-e1709716201950.webp' | '/images/FABRIZIO-CRIPPA-scaled-e1709716167674.webp' | '/images/FLORIAN-scaled-e1709716143700.webp' | '/images/KRAKEN-FACTORY-scaled-e1709716112360.webp' | '/images/ZEST-LOUNGE-BAR.webp' | '/images/farmacia-gorle-instagram-cover.svg' | '/images/logo-instagram_1199-122.png' | '/images/logo.svg' | '/images/mediline-instagram-cover.svg' | (string & Record<never, never>)
+  type PublicFiles = '/_robots.txt' | '/favicon.svg' | '/PDF/Denani Cascina Paradiso.pdf' | '/images/12186173_2160_3840_30fps.mp4' | '/images/CAMORETTI-scaled-e1709716201950.webp' | '/images/FABRIZIO-CRIPPA-scaled-e1709716167674.webp' | '/images/FLORIAN-scaled-e1709716143700.webp' | '/images/KRAKEN-FACTORY-scaled-e1709716112360.webp' | '/images/ZEST-LOUNGE-BAR.webp' | '/images/farmacia-gorle-instagram-cover.svg' | '/images/logo-instagram_1199-122.png' | '/images/logo.svg' | '/images/mediline-instagram-cover.svg' | (string & Record<never, never>)
   type JsFiles = (string & Record<never, never>)
 
   interface SchemaAugmentations {
