@@ -12,6 +12,22 @@ useSeoMeta({
   description: t('posizionamento.seo.description'),
 })
 
+const prospettoRows = [
+  { label: 'Obiettivo', base: 'Presenza e Awareness', medium: 'Crescita e Conversioni', premium: 'Posizionamento Top-Tier' },
+  { label: 'Visual Identity', base: 'Logo + Palette', medium: 'Identità completa + Icone', premium: 'Brand Manual + Stationery' },
+  { label: 'Sito Web', base: 'Landing Page (Menu PDF)', medium: 'Sito Dinamico + Prenotazioni', premium: 'Sito Premium + SEO + Video' },
+  { label: 'Contenuti Social', base: '4 Reel / mese', medium: '8 Reel / mese', premium: '12 Reel / mese' },
+  { label: 'Gestione ADS', base: 'Setup Base (Local)', medium: 'Awareness + Traffico', premium: 'Funnel Avanzato (Retargeting)' },
+  { label: 'Produzione Video/Foto', base: '6h ogni 3 mesi', medium: '10h ogni 3 mesi', premium: '16h ogni 3 mesi' },
+  { label: 'Investimento mensile', base: '€ 900', medium: '€ 1.500', premium: '€ 2.800' },
+]
+
+const budgetRows = [
+  { pkg: 'Abbinato a BASE — Radici', daily: '€ 10 – € 15', monthly: '€ 300 – € 450', reach: '15.000 – 30.000 persone raggiunte' },
+  { pkg: 'Abbinato a MEDIUM — Equilibrio', daily: '€ 20 – € 30', monthly: '€ 600 – € 900', reach: '40.000 – 70.000 persone raggiunte' },
+  { pkg: 'Abbinato a PREMIUM — Eccellenza', daily: '€ 40 – € 60', monthly: '€ 1.200 – € 1.800', reach: '100.000+ impression e traffico costante' },
+]
+
 const heroRoot = ref<HTMLElement | null>(null)
 const heroImg = ref<HTMLElement | null>(null)
 const heroQuote = ref<HTMLElement | null>(null)
@@ -170,7 +186,7 @@ onMounted(() => {
         </div>
         <h1
           ref="heroQuote"
-          class="font-serif font-light text-fluid-5xl sm:text-fluid-6xl leading-tightest tracking-tightest max-w-4xl text-balance"
+          class="font-serif font-light text-fluid-5xl sm:text-fluid-6xl leading-tightest tracking-tightest max-w-[min(96vw,78rem)] text-balance whitespace-pre-line"
         >
           {{ $t('posizionamento.hero.title') }}
         </h1>
@@ -223,7 +239,7 @@ onMounted(() => {
           </p>
           <p
             data-manifesto-word
-            class="font-serif font-light text-fluid-xl sm:text-fluid-2xl md:text-fluid-3xl leading-relaxed text-cream/50 max-w-2xl"
+            class="font-serif font-light text-fluid-xl sm:text-fluid-2xl md:text-fluid-3xl leading-relaxed text-cream/50 max-w-2xl whitespace-pre-line"
           >
             {{ $t('posizionamento.valore.line3') }}
           </p>
@@ -445,14 +461,14 @@ onMounted(() => {
               </div>
             </div>
             <div data-str-el class="flex flex-col gap-3 sm:gap-4">
-              <div class="group/img relative rounded-2xl overflow-hidden ring-1 ring-transparent hover:ring-wine/50 transition-all duration-500">
+              <a href="https://www.instagram.com/farmacia.di.gorle/" target="_blank" rel="noopener" class="group/img relative rounded-2xl overflow-hidden ring-1 ring-transparent hover:ring-wine/50 transition-all duration-500">
                 <ImageReveal src="/images/farmacia-gorle-instagram-cover.svg" alt="Farmacia di Gorle – Instagram" ratio="landscape" :rounded="false" />
                 <div class="absolute inset-0 bg-wine/0 group-hover/img:bg-wine/10 transition-colors duration-500 pointer-events-none" />
-              </div>
-              <div class="group/img relative rounded-2xl overflow-hidden ring-1 ring-transparent hover:ring-wine/50 transition-all duration-500">
+              </a>
+              <a href="https://www.instagram.com/mediline_torino/" target="_blank" rel="noopener" class="group/img relative rounded-2xl overflow-hidden ring-1 ring-transparent hover:ring-wine/50 transition-all duration-500">
                 <ImageReveal src="/images/mediline-instagram-cover.svg" alt="Mediline – Instagram" ratio="landscape" :rounded="false" />
                 <div class="absolute inset-0 bg-wine/0 group-hover/img:bg-wine/10 transition-colors duration-500 pointer-events-none" />
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -479,132 +495,289 @@ onMounted(() => {
         </div>
 
         <!-- Cards grid — stack su mobile, 3 col su desktop -->
-        <div ref="packagesRoot" class="flex flex-col md:grid md:grid-cols-3 border border-[color:var(--line)] rounded-2xl sm:rounded-3xl overflow-hidden">
+        <div ref="packagesRoot" class="flex flex-col md:grid md:grid-cols-3 gap-4 sm:gap-5">
 
-          <!-- Base -->
+          <!-- Base — Radici -->
           <div
             data-pk-card
-            class="group flex flex-col border-b md:border-b-0 md:border-r border-[color:var(--line)] hover:bg-cream-200 dark:hover:bg-noir-50 transition-colors duration-500"
+            class="group flex flex-col rounded-2xl border border-[color:var(--line)] hover:border-wine/20 transition-colors duration-500 overflow-hidden"
           >
-            <div class="p-6 sm:p-8 md:p-10 flex-1">
-              <div class="flex items-start justify-between mb-6 sm:mb-8">
-                <p class="eyebrow text-wine text-[10px] sm:text-xs">{{ $t('posizionamento.pacchetti.base.label') }}</p>
-                <span class="font-serif font-light text-fluid-2xl sm:text-fluid-3xl text-brown/15 dark:text-cream/15 leading-none">01</span>
+            <div class="px-7 sm:px-8 pt-7 sm:pt-8 pb-5 sm:pb-6 border-b border-[color:var(--line)]">
+              <div class="flex items-center justify-between mb-5">
+                <span class="eyebrow text-[10px] text-wine bg-wine/[0.08] px-2.5 py-1 rounded-full">
+                  {{ $t('posizionamento.pacchetti.base.tag') }}
+                </span>
+                <span class="font-serif font-light text-[2rem] text-brown/10 dark:text-cream/10 leading-none">01</span>
               </div>
-              <h3 class="font-serif font-light text-fluid-2xl sm:text-fluid-3xl text-brown dark:text-cream leading-tight mb-2 sm:mb-3">
+              <h3 class="font-serif font-light text-fluid-3xl sm:text-fluid-4xl text-brown dark:text-cream leading-none mb-3">
                 {{ $t('posizionamento.pacchetti.base.name') }}
               </h3>
-              <p class="text-fluid-xs sm:text-fluid-sm text-brown/60 dark:text-cream/60 leading-relaxed mb-6 sm:mb-10">
+              <p class="text-fluid-xs sm:text-fluid-sm text-brown/55 dark:text-cream/55 leading-relaxed">
                 {{ $t('posizionamento.pacchetti.base.desc') }}
               </p>
-              <ul class="space-y-2 sm:space-y-3">
+            </div>
+            <div class="px-7 sm:px-8 py-6 sm:py-7 flex-1">
+              <ul class="space-y-3 sm:space-y-4">
                 <li
                   v-for="item in ($tm('posizionamento.pacchetti.base.items') as any[])"
                   :key="$rt(item)"
-                  class="flex items-start gap-2 sm:gap-3 text-fluid-xs sm:text-fluid-sm text-brown/80 dark:text-cream/80"
+                  class="flex items-start gap-3 text-fluid-xs sm:text-fluid-sm text-brown/70 dark:text-cream/70 leading-relaxed"
                 >
-                  <span class="text-wine mt-1 shrink-0 text-[10px]">✦</span>
+                  <span class="text-wine/60 shrink-0 mt-px text-sm leading-none select-none">—</span>
                   {{ $rt(item) }}
                 </li>
               </ul>
             </div>
-            <div class="p-6 sm:p-8 md:p-10 border-t border-[color:var(--line)]">
-              <p class="font-serif font-light text-fluid-2xl sm:text-fluid-3xl text-brown dark:text-cream leading-none mb-1">
-                {{ $t('posizionamento.pacchetti.base.price') }}
-              </p>
-              <p class="eyebrow text-[10px] sm:text-xs text-brown/40 dark:text-cream/40">
-                {{ $t('posizionamento.pacchetti.priceNote') }}
+            <div class="px-7 sm:px-8 py-5 sm:py-6 border-t border-[color:var(--line)] bg-brown/[0.02] dark:bg-cream/[0.02]">
+              <div class="flex items-baseline gap-2">
+                <p class="font-serif font-light text-[clamp(1.45rem,4.6vw,2.4rem)] text-brown dark:text-cream leading-none whitespace-nowrap shrink-0">
+                  {{ $t('posizionamento.pacchetti.base.price') }}
+                </p>
+                <span class="text-fluid-xs text-brown/40 dark:text-cream/40">
+                  {{ $t('posizionamento.pacchetti.pricePerMonth') }}
+                </span>
+              </div>
+              <p class="eyebrow text-[10px] text-brown/35 dark:text-cream/35 mt-1">
+                {{ $t('posizionamento.pacchetti.ivaNote') }}
               </p>
             </div>
           </div>
 
-          <!-- Pro — featured -->
+          <!-- Pro — Equilibrio (featured) -->
           <div
             data-pk-card
-            class="group flex flex-col bg-wine text-cream relative border-b md:border-b-0 md:border-r border-wine/0 md:shadow-2xl md:shadow-wine/20 z-10"
+            class="group flex flex-col rounded-2xl bg-wine text-cream relative overflow-hidden shadow-2xl shadow-wine/25"
           >
-            <div class="absolute -top-px left-1/2 -translate-x-1/2 hidden md:block">
-              <span class="eyebrow text-[10px] sm:text-xs bg-wine border border-cream/10 text-cream px-3 sm:px-4 py-1 sm:py-1.5 rounded-b-full block whitespace-nowrap">
-                {{ $t('posizionamento.pacchetti.pro.badge') }}
-              </span>
-            </div>
+            <div class="absolute top-0 left-0 right-0 h-[3px] bg-cream/30" />
 
-            <div class="p-6 sm:p-8 md:p-10 flex-1 md:pt-12">
-              <div class="flex items-start justify-between mb-6 sm:mb-8">
-                <div class="flex items-center gap-3">
-                  <p class="eyebrow text-cream/50 text-[10px] sm:text-xs">{{ $t('posizionamento.pacchetti.pro.label') }}</p>
-                  <span class="md:hidden eyebrow text-[10px] bg-cream/20 text-cream px-2 py-0.5 rounded-full">{{ $t('posizionamento.pacchetti.pro.badge') }}</span>
-                </div>
-                <span class="font-serif font-light text-fluid-2xl sm:text-fluid-3xl text-cream/15 leading-none">02</span>
+            <div class="px-7 sm:px-8 pt-8 sm:pt-9 pb-5 sm:pb-6 border-b border-cream/10">
+              <div class="flex items-center justify-between mb-5">
+                <span class="eyebrow text-[10px] text-cream bg-cream/15 px-2.5 py-1 rounded-full">
+                  {{ $t('posizionamento.pacchetti.pro.badge') }}
+                </span>
+                <span class="font-serif font-light text-[2rem] text-cream/10 leading-none">02</span>
               </div>
-              <h3 class="font-serif font-light text-fluid-2xl sm:text-fluid-3xl text-cream leading-tight mb-2 sm:mb-3">
+              <h3 class="font-serif font-light text-fluid-3xl sm:text-fluid-4xl text-cream leading-none mb-3">
                 {{ $t('posizionamento.pacchetti.pro.name') }}
               </h3>
-              <p class="text-fluid-xs sm:text-fluid-sm text-cream/70 leading-relaxed mb-6 sm:mb-10">
+              <p class="text-fluid-xs sm:text-fluid-sm text-cream/65 leading-relaxed">
                 {{ $t('posizionamento.pacchetti.pro.desc') }}
               </p>
-              <ul class="space-y-2 sm:space-y-3">
+            </div>
+            <div class="px-7 sm:px-8 py-6 sm:py-7 flex-1">
+              <ul class="space-y-3 sm:space-y-4">
                 <li
                   v-for="item in ($tm('posizionamento.pacchetti.pro.items') as any[])"
                   :key="$rt(item)"
-                  class="flex items-start gap-2 sm:gap-3 text-fluid-xs sm:text-fluid-sm text-cream/90"
+                  class="flex items-start gap-3 text-fluid-xs sm:text-fluid-sm text-cream/85 leading-relaxed"
                 >
-                  <span class="text-cream mt-1 shrink-0 text-[10px]">✦</span>
+                  <span class="text-cream/50 shrink-0 mt-px text-sm leading-none select-none">—</span>
                   {{ $rt(item) }}
                 </li>
               </ul>
             </div>
-            <div class="p-6 sm:p-8 md:p-10 border-t border-cream/10">
-              <p class="font-serif font-light text-fluid-2xl sm:text-fluid-3xl text-cream leading-none mb-1">
-                {{ $t('posizionamento.pacchetti.pro.price') }}
-              </p>
-              <p class="eyebrow text-[10px] sm:text-xs text-cream/40">
-                {{ $t('posizionamento.pacchetti.priceNote') }}
+            <div class="px-7 sm:px-8 py-5 sm:py-6 border-t border-cream/10 bg-black/10">
+              <div class="flex items-baseline gap-2">
+                <p class="font-serif font-light text-[clamp(1.45rem,4.6vw,2.4rem)] text-cream leading-none whitespace-nowrap shrink-0">
+                  {{ $t('posizionamento.pacchetti.pro.price') }}
+                </p>
+                <span class="text-fluid-xs text-cream/50">
+                  {{ $t('posizionamento.pacchetti.pricePerMonth') }}
+                </span>
+              </div>
+              <p class="eyebrow text-[10px] text-cream/40 mt-1">
+                {{ $t('posizionamento.pacchetti.ivaNote') }}
               </p>
             </div>
           </div>
 
-          <!-- Full -->
+          <!-- Full — Eccellenza -->
           <div
             data-pk-card
-            class="group flex flex-col hover:bg-cream-200 dark:hover:bg-noir-50 transition-colors duration-500"
+            class="group flex flex-col rounded-2xl border border-[color:var(--line)] hover:border-wine/20 transition-colors duration-500 overflow-hidden"
           >
-            <div class="p-6 sm:p-8 md:p-10 flex-1">
-              <div class="flex items-start justify-between mb-6 sm:mb-8">
-                <p class="eyebrow text-wine text-[10px] sm:text-xs">{{ $t('posizionamento.pacchetti.full.label') }}</p>
-                <span class="font-serif font-light text-fluid-2xl sm:text-fluid-3xl text-brown/15 dark:text-cream/15 leading-none">03</span>
+            <div class="px-7 sm:px-8 pt-7 sm:pt-8 pb-5 sm:pb-6 border-b border-[color:var(--line)]">
+              <div class="flex items-center justify-between mb-5">
+                <span class="eyebrow text-[10px] text-wine bg-wine/[0.08] px-2.5 py-1 rounded-full">
+                  {{ $t('posizionamento.pacchetti.full.tag') }}
+                </span>
+                <span class="font-serif font-light text-[2rem] text-brown/10 dark:text-cream/10 leading-none">03</span>
               </div>
-              <h3 class="font-serif font-light text-fluid-2xl sm:text-fluid-3xl text-brown dark:text-cream leading-tight mb-2 sm:mb-3">
+              <h3 class="font-serif font-light text-fluid-3xl sm:text-fluid-4xl text-brown dark:text-cream leading-none mb-3">
                 {{ $t('posizionamento.pacchetti.full.name') }}
               </h3>
-              <p class="text-fluid-xs sm:text-fluid-sm text-brown/60 dark:text-cream/60 leading-relaxed mb-6 sm:mb-10">
+              <p class="text-fluid-xs sm:text-fluid-sm text-brown/55 dark:text-cream/55 leading-relaxed">
                 {{ $t('posizionamento.pacchetti.full.desc') }}
               </p>
-              <ul class="space-y-2 sm:space-y-3">
+            </div>
+            <div class="px-7 sm:px-8 py-6 sm:py-7 flex-1">
+              <ul class="space-y-3 sm:space-y-4">
                 <li
                   v-for="item in ($tm('posizionamento.pacchetti.full.items') as any[])"
                   :key="$rt(item)"
-                  class="flex items-start gap-2 sm:gap-3 text-fluid-xs sm:text-fluid-sm text-brown/80 dark:text-cream/80"
+                  class="flex items-start gap-3 text-fluid-xs sm:text-fluid-sm text-brown/70 dark:text-cream/70 leading-relaxed"
                 >
-                  <span class="text-wine mt-1 shrink-0 text-[10px]">✦</span>
+                  <span class="text-wine/60 shrink-0 mt-px text-sm leading-none select-none">—</span>
                   {{ $rt(item) }}
                 </li>
               </ul>
             </div>
-            <div class="p-6 sm:p-8 md:p-10 border-t border-[color:var(--line)]">
-              <p class="font-serif font-light text-fluid-2xl sm:text-fluid-3xl text-brown dark:text-cream leading-none mb-1">
-                {{ $t('posizionamento.pacchetti.full.price') }}
-              </p>
-              <p class="eyebrow text-[10px] sm:text-xs text-brown/40 dark:text-cream/40">
-                {{ $t('posizionamento.pacchetti.priceNote') }}
+            <div class="px-7 sm:px-8 py-5 sm:py-6 border-t border-[color:var(--line)] bg-brown/[0.02] dark:bg-cream/[0.02]">
+              <div class="flex items-baseline gap-2">
+                <p class="font-serif font-light text-[clamp(1.45rem,4.6vw,2.4rem)] text-brown dark:text-cream leading-none whitespace-nowrap shrink-0">
+                  {{ $t('posizionamento.pacchetti.full.price') }}
+                </p>
+                <span class="text-fluid-xs text-brown/40 dark:text-cream/40">
+                  {{ $t('posizionamento.pacchetti.pricePerMonth') }}
+                </span>
+              </div>
+              <p class="eyebrow text-[10px] text-brown/35 dark:text-cream/35 mt-1">
+                {{ $t('posizionamento.pacchetti.ivaNote') }}
               </p>
             </div>
           </div>
         </div>
 
-        <p class="mt-4 sm:mt-6 text-center eyebrow text-[10px] sm:text-xs text-brown/30 dark:text-cream/30">
-          {{ $t('posizionamento.pacchetti.disclaimer') }}
-        </p>
+        <!-- Note sconto + budget -->
+        <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-1">
+          <p class="eyebrow text-[10px] sm:text-xs text-wine">
+            {{ $t('posizionamento.pacchetti.scontoNote') }}
+          </p>
+          <p class="eyebrow text-[10px] sm:text-xs text-brown/40 dark:text-cream/30">
+            {{ $t('posizionamento.pacchetti.budgetAside') }}
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         PROSPETTO COMPARATIVO
+    ══════════════════════════════════════════ -->
+    <section class="relative py-section sm:py-section-lg bg-noir text-cream overflow-hidden">
+      <div class="container-x max-w-6xl mx-auto">
+        <p class="eyebrow text-wine mb-8 sm:mb-12">Prospetto comparativo</p>
+
+        <div class="grid md:grid-cols-3 rounded-2xl overflow-hidden border border-white/[0.06]">
+
+          <!-- Colonna Base -->
+          <div class="flex flex-col border-b md:border-b-0 md:border-r border-white/[0.06]">
+            <div class="px-6 sm:px-8 py-6 sm:py-7 border-b border-white/[0.06] bg-white/[0.02]">
+              <p class="eyebrow text-[10px] text-cream/30 mb-3">01 — BASE</p>
+              <p class="font-serif font-light text-fluid-2xl text-cream leading-none">Radici</p>
+            </div>
+            <div class="flex-1 divide-y divide-white/[0.04]">
+              <div
+                v-for="row in prospettoRows"
+                :key="row.label + '-base'"
+                class="px-6 sm:px-8 py-4 sm:py-5"
+              >
+                <p class="eyebrow text-[9px] text-cream/25 mb-1.5">{{ row.label }}</p>
+                <p
+                  class="font-sans font-medium leading-snug tracking-normal"
+                  :class="row.label === 'Investimento mensile'
+                    ? 'text-fluid-xl text-cream'
+                    : 'text-fluid-sm text-cream/60'"
+                >{{ row.base }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonna Equilibrio — featured -->
+          <div class="flex flex-col relative border-b md:border-b-0 md:border-r border-white/[0.06] bg-wine/[0.07]">
+            <div class="absolute top-0 left-0 right-0 h-[3px] bg-wine" />
+            <div class="px-6 sm:px-8 py-6 sm:py-7 border-b border-wine/20 mt-[3px]">
+              <p class="eyebrow text-[10px] text-wine mb-3">02 — MEDIUM · Più scelto</p>
+              <p class="font-serif font-light text-fluid-2xl text-cream leading-none">Equilibrio</p>
+            </div>
+            <div class="flex-1 divide-y divide-white/[0.04]">
+              <div
+                v-for="row in prospettoRows"
+                :key="row.label + '-medium'"
+                class="px-6 sm:px-8 py-4 sm:py-5"
+              >
+                <p class="eyebrow text-[9px] text-cream/35 mb-1.5">{{ row.label }}</p>
+                <p
+                  class="font-sans font-medium leading-snug tracking-normal"
+                  :class="row.label === 'Investimento mensile'
+                    ? 'text-fluid-xl text-wine'
+                    : 'text-fluid-sm text-cream/80'"
+                >{{ row.medium }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonna Eccellenza -->
+          <div class="flex flex-col">
+            <div class="px-6 sm:px-8 py-6 sm:py-7 border-b border-white/[0.06] bg-white/[0.02]">
+              <p class="eyebrow text-[10px] text-cream/30 mb-3">03 — PREMIUM</p>
+              <p class="font-serif font-light text-fluid-2xl text-cream leading-none">Eccellenza</p>
+            </div>
+            <div class="flex-1 divide-y divide-white/[0.04]">
+              <div
+                v-for="row in prospettoRows"
+                :key="row.label + '-premium'"
+                class="px-6 sm:px-8 py-4 sm:py-5"
+              >
+                <p class="eyebrow text-[9px] text-cream/25 mb-1.5">{{ row.label }}</p>
+                <p
+                  class="font-sans font-medium leading-snug tracking-normal"
+                  :class="row.label === 'Investimento mensile'
+                    ? 'text-fluid-xl text-cream'
+                    : 'text-fluid-sm text-cream/60'"
+                >{{ row.premium }}</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         BUDGET SPONSORIZZAZIONI
+    ══════════════════════════════════════════ -->
+    <section class="relative py-section sm:py-section-lg bg-cream dark:bg-noir overflow-hidden">
+      <div class="container-x max-w-6xl mx-auto">
+
+        <div class="mb-10 sm:mb-14">
+          <p class="eyebrow text-wine mb-4 sm:mb-6">{{ $t('posizionamento.budget.eyebrow') }}</p>
+          <h2 class="font-serif font-light text-fluid-4xl sm:text-fluid-5xl leading-tightest tracking-tightest text-brown dark:text-cream">
+            {{ $t('posizionamento.budget.title') }}
+          </h2>
+        </div>
+
+        <div class="space-y-3 sm:space-y-4 mb-10 sm:mb-14">
+          <div
+            v-for="(row, i) in budgetRows"
+            :key="i"
+            class="group grid grid-cols-2 md:grid-cols-[minmax(0,1.35fr)_minmax(0,0.95fr)_minmax(0,1.05fr)_minmax(0,1.35fr)] gap-x-4 gap-y-5 sm:gap-6 md:gap-10 px-6 sm:px-8 py-6 sm:py-7 rounded-2xl border border-[color:var(--line)] hover:border-wine/20 transition-colors duration-400 items-start"
+          >
+            <div class="col-span-2 md:col-span-1 min-w-0">
+              <p class="font-serif font-light text-fluid-base sm:text-fluid-lg text-brown dark:text-cream leading-snug break-words">{{ row.pkg }}</p>
+            </div>
+            <div class="min-w-0">
+              <p class="eyebrow text-[9px] sm:text-[10px] text-brown/35 dark:text-cream/30 mb-2">{{ $t('posizionamento.budget.col2') }}</p>
+              <p class="font-serif font-light text-[clamp(1.15rem,3vw,1.7rem)] text-brown/70 dark:text-cream/70 leading-none whitespace-nowrap">{{ row.daily }}</p>
+            </div>
+            <div class="min-w-0">
+              <p class="eyebrow text-[9px] sm:text-[10px] text-brown/35 dark:text-cream/30 mb-2">{{ $t('posizionamento.budget.col3') }}</p>
+              <p class="font-serif font-light text-[clamp(1.05rem,2.9vw,1.9rem)] text-wine leading-none whitespace-nowrap shrink-0">{{ row.monthly }}</p>
+            </div>
+            <div class="min-w-0">
+              <p class="eyebrow text-[9px] sm:text-[10px] text-brown/35 dark:text-cream/30 mb-2">{{ $t('posizionamento.budget.col4') }}</p>
+              <p class="font-serif font-light italic text-fluid-xs sm:text-fluid-sm text-brown/60 dark:text-cream/60 leading-relaxed break-words">{{ row.reach }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-l-2 border-wine pl-5 sm:pl-6 max-w-3xl">
+          <p class="text-fluid-xs sm:text-fluid-sm text-brown/55 dark:text-cream/55 leading-relaxed">
+            {{ $t('posizionamento.budget.note') }}
+          </p>
+        </div>
+
       </div>
     </section>
 
@@ -649,15 +822,15 @@ onMounted(() => {
     <!-- ══════════════════════════════════════════
          CTA FINALE
     ══════════════════════════════════════════ -->
-    <section class="relative bg-wine text-cream py-section sm:py-section-lg overflow-hidden grain">
+    <section class="relative bg-wine text-cream py-section sm:py-section-lg overflow-hidden grain flex items-center">
       <div
         class="absolute inset-0 pointer-events-none"
         style="background-image: linear-gradient(rgba(245,241,232,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(245,241,232,0.04) 1px, transparent 1px); background-size: 80px 80px;"
       />
-      <div class="relative z-10 container-x text-center max-w-4xl mx-auto">
+      <div class="relative z-10 container-x text-center max-w-4xl mx-auto flex flex-col items-center justify-center">
         <AnimatedText
           as="h2"
-          class="font-serif font-light text-fluid-5xl sm:text-fluid-6xl leading-tightest tracking-tightest mb-6 sm:mb-8"
+          class="block mx-auto font-serif font-light text-fluid-5xl sm:text-fluid-6xl leading-tightest tracking-tightest mb-6 sm:mb-8 text-center"
         >
           {{ $t('posizionamento.cta.title') }}
         </AnimatedText>

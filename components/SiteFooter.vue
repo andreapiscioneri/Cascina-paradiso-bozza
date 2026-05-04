@@ -1,9 +1,6 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
 const year = new Date().getFullYear()
-
-const route = useRoute()
-const isOnPosizionamento = computed(() => route.path.includes('/posizionamento'))
 </script>
 
 <template>
@@ -26,7 +23,7 @@ const isOnPosizionamento = computed(() => route.path.includes('/posizionamento')
       </div>
 
       <!-- Navigation -->
-      <div v-if="!isOnPosizionamento" class="flex flex-col gap-3">
+      <div class="flex flex-col gap-3">
         <span class="eyebrow opacity-50">Nav</span>
         <NuxtLink :to="localePath('/')" class="line-hover text-fluid-sm">
           {{ $t('nav.home') }}
@@ -36,9 +33,6 @@ const isOnPosizionamento = computed(() => route.path.includes('/posizionamento')
         </NuxtLink>
         <NuxtLink :to="localePath('/menu')" class="line-hover text-fluid-sm">
           {{ $t('nav.menu') }}
-        </NuxtLink>
-        <NuxtLink :to="localePath('/posizionamento')" class="line-hover text-fluid-sm">
-          {{ $t('nav.posizionamento') }}
         </NuxtLink>
         <NuxtLink :to="localePath('/contatti')" class="line-hover text-fluid-sm">
           {{ $t('nav.contatti') }}
@@ -90,7 +84,7 @@ const isOnPosizionamento = computed(() => route.path.includes('/posizionamento')
       class="container-x flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-6 border-t border-white/10 text-xs opacity-50"
     >
       <span>© {{ year }} Cascina Paradiso — {{ $t('footer.rights') }}</span>
-      <div v-if="!isOnPosizionamento" class="flex gap-6">
+      <div class="flex gap-6">
         <NuxtLink :to="localePath('/privacy')" class="hover:opacity-100 transition-opacity">Privacy Policy</NuxtLink>
         <NuxtLink :to="localePath('/trattamento-dati')" class="hover:opacity-100 transition-opacity">Trattamento Dati</NuxtLink>
         <NuxtLink :to="localePath('/cookie')" class="hover:opacity-100 transition-opacity">Cookie Policy</NuxtLink>

@@ -6,7 +6,7 @@
     },
     "hero": {
       "eyebrow": "Dal 1972 — Val Seriana",
-      "title": "Non abbiamo reinventato niente. Abbiamo solo ricordato.",
+      "title": "Non abbiamo reinventato niente.\nAbbiamo solo ricordato.",
       "subtitle": "Una storia vera non ha bisogno di costruzioni. Cascina Paradiso riparte dalle radici del 1972 con una strategia di comunicazione che racconta ciò che siamo — senza filtri.",
       "scroll": "Scopri"
     },
@@ -14,25 +14,25 @@
       "eyebrow": "Il nostro posizionamento",
       "line1": "Il valore che ci distingue:",
       "line2": "L'onestà",
-      "line3": "Siamo nati così. Non abbiamo bisogno di fingere."
+      "line3": "Siamo nati così.\nNon abbiamo bisogno di fingere."
     },
     "keywords": [
-      "Heritage", "Tradizione", "Storia", "Territorialità", "Autenticità", "Cucina tipica", "Genuinità", "Prodotti freschi", "Fornitori locali", "Materie prime"
+      "Heritage", "Tradizione", "Storia", "Territorialità", "Autenticità", "Esperienza", "Cucina tipica", "Genuinità", "Prodotti freschi", "Fatto in casa", "Carne alla brace", "Fornitori locali", "Materie prime"
     ],
     "obiettivi": {
-      "eyebrow": "Strategia e obiettivi",
+      "eyebrow": "Obiettivi strategici",
       "items": {
         "one": {
-          "title": "Riconoscibilità del brand",
-          "desc": "Riattivare la memoria storica di chi già ci conosceva e presentarci come nuova scoperta per chi non ci ha ancora vissuto."
+          "title": "Brand Awareness — RI-Conoscere",
+          "desc": "Riattivare la memoria storica dei vecchi clienti e posizionarci come nuova scoperta per nuovi potenziali clienti."
         },
         "two": {
-          "title": "Conversione diretta",
-          "desc": "Trasformare ogni interazione digitale in una prenotazione reale, senza passaggi intermedi e senza attrito."
+          "title": "Conversione",
+          "desc": "Trasformare l'interesse in prenotazioni dirette attraverso strumenti digitali snelli e senza attrito."
         },
         "three": {
-          "title": "Presidio digitale locale",
-          "desc": "Scalare il ranking Google per le ricerche nella Val Seriana e costruire una presenza social con un'estetica riconoscibile."
+          "title": "Posizionamento Digitale",
+          "desc": "Scalare il ranking Google per le ricerche locali (\"Ristoranti Val Seriana\") e presidiare i social con un'estetica di alto livello."
         }
       }
     },
@@ -69,24 +69,24 @@
       "s2": {
         "eyebrow": "Pilastro 02",
         "title": "Social Media & Contenuti",
-        "desc1": "Il video è lo strumento a più alto tasso di diffusione organica. Lo usiamo per raccontare, non per vendere.",
-        "desc2": "I formati narrativi:",
+        "desc1": "Utilizziamo il video perché è lo strumento ad alto tasso di diffusione e visibilità. Lo usiamo per raccontare, non per vendere.",
+        "desc2": "Formati narrativi:",
         "items": {
           "mani": {
             "title": "Dalle Mani alla Tavola",
-            "desc": "Macro-riprese della preparazione: pasta fresca, brace accesa, ingredienti del territorio. La tecnica di una volta con l'estetica di oggi."
+            "desc": "Macro-riprese della preparazione dei piatti tipici. Focus sulla tecnica (il \"come una volta\") con l'estetica moderna dell'impiattamento curato."
           },
           "frammenti": {
             "title": "Frammenti di 1972",
-            "desc": "La storia del locale raccontata per dettagli: foto d'archivio, oggetti che resistono al tempo, volti e ricordi di chi c'era."
+            "desc": "Racconti sulla storia del ristorante, sui personaggi storici che lo hanno visitato, riprese di dettagli che rimandano alla storia: foto, oggetti, memorie."
           },
           "atmosfera": {
             "title": "L'Atmosfera",
-            "desc": "Il suono dei calici, il calore del legno, la luce di fine pomeriggio. L'esperienza prima dell'esperienza."
+            "desc": "Il rumore dei calici, il calore del legno, la pace della Val Seriana. L'esperienza prima dell'esperienza."
           },
           "fornitore": {
             "title": "Il Fornitore del Giorno",
-            "desc": "Chi porta la carne, chi produce il formaggio, chi raccoglie le erbe. Il territorio entra in cucina — e in camera."
+            "desc": "Video in collaborazione con i fornitori locali o focus su un prodotto del territorio. Il territorio entra in cucina — e in camera."
           }
         }
       },
@@ -95,57 +95,81 @@
         "title": "Sponsorizzazioni",
         "items": {
           "ads": {
-            "title": "Campagne Social Geolocalizzate",
-            "desc": "Annunci mirati a chi vive, lavora o si sposta nella Val Seriana. Per trasformare il 'non sapevo che avesse riaperto' in 'voglio andarci questa settimana'."
+            "title": "Social Ads Strategiche",
+            "desc": "Campagne geolocalizzate mirate a un pubblico amante del fine-dining e della tradizione, per accelerare la copertura e trasformare i \"non so che ha riaperto\" in \"voglio andare a provare\"."
           }
         }
       }
     },
     "pacchetti": {
-      "eyebrow": "I pacchetti",
-      "title": "Scegli da dove partire.",
-      "subtitle": "Tre livelli di intervento, ciascuno pensato per una fase precisa del percorso.",
-      "priceNote": "Preventivo personalizzato",
-      "disclaimer": "I prezzi variano in base alla complessità del progetto. Scrivici per un confronto senza impegno.",
+      "eyebrow": "Offerta su 12 mesi",
+      "title": "Scegli il tuo percorso.",
+      "subtitle": "Tre livelli di intervento per tre fasi di crescita.",
+      "pricePerMonth": "/ mese",
+      "ivaNote": "IVA esclusa",
+      "scontoNote": "Sconto 15% su contratto di 24 mesi",
+      "budgetAside": "* Budget sponsorizzazioni a parte",
+      "disclaimer": "Il budget per le sponsorizzazioni è da considerarsi indicativo e non vincolante, sebbene sia caldamente raccomandato per garantire la massima visibilità al progetto. L'intero investimento è interamente deducibile ai sensi dell'Art. 108 del TUIR.",
       "base": {
-        "label": "Pacchetto 01",
-        "name": "Identità",
-        "desc": "Le fondamenta. Per chi vuole esistere visivamente in modo coerente e professionale.",
-        "price": "Su richiesta",
+        "label": "Pacchetto Base",
+        "tag": "RADICI",
+        "name": "Radici",
+        "desc": "Le fondamenta. Presenza, identità e primo presidio social.",
+        "price": "€ 900",
         "items": [
-          "Logo & visual identity completa",
-          "Color palette e typografia",
-          "Menu fisico stampato",
-          "Scheda Google Business ottimizzata"
+          "Creazione logo e definizione palette colori Bordeaux/Vino",
+          "Landing Page (sito mono-pagina) con Menu Digitale PDF",
+          "Configurazione profili Facebook, Instagram, TikTok",
+          "Calendario editoriale trimestrale",
+          "1 Reel/Video a settimana — copione, ripresa, montaggio, pubblicazione",
+          "Campagna Meta sempre attiva — Local Awareness 20km *",
+          "1 sessione shooting (≈ 6h) ogni 3 mesi"
         ]
       },
       "pro": {
-        "label": "Pacchetto 02",
-        "name": "Presenza",
-        "badge": "Consigliato",
-        "desc": "Identità più presenza attiva. Il punto di partenza reale per costruire un pubblico fedele.",
-        "price": "Su richiesta",
+        "label": "Pacchetto Medium",
+        "tag": "EQUILIBRIO",
+        "name": "Equilibrio",
+        "badge": "Più scelto",
+        "desc": "Identità completa, sito dinamico e presenza social strutturata per crescere.",
+        "price": "€ 1.500",
         "items": [
-          "Tutto il Pacchetto Identità",
-          "Sito con menu dinamico aggiornabile",
-          "Setup e ottimizzazione profili social",
-          "Produzione contenuti — primo mese incluso",
-          "Piano editoriale mensile"
+          "Identità visiva completa: logo evoluto, font istituzionali, palette estesa, icone",
+          "Landing Page Dinamica con menu aggiornabile, prenotazioni e sezione 'La nostra storia'",
+          "Restyling materiale cartaceo — nuovi biglietti da visita",
+          "Ottimizzazione profili Facebook, Instagram e TikTok",
+          "Calendario editoriale trimestrale",
+          "2 Reel/Video a settimana — copione, ripresa, montaggio, pubblicazione",
+          "Campagne Multi-Obiettivo Meta: Copertura brand + Traffico prenotazioni *",
+          "1–2 sessioni shooting (≈ 10h) ogni 3 mesi"
         ]
       },
       "full": {
-        "label": "Pacchetto 03",
-        "name": "Crescita",
-        "desc": "Il percorso completo. Per chi vuole delegar tutto e concentrarsi sulla cucina.",
-        "price": "Su richiesta",
+        "label": "Pacchetto Premium",
+        "tag": "ECCELLENZA",
+        "name": "Eccellenza",
+        "desc": "Il percorso completo. Deleghi tutto, ti concentri sulla cucina.",
+        "price": "€ 2.800",
         "items": [
-          "Tutto il Pacchetto Presenza",
-          "Gestione social continuativa",
-          "Campagne sponsorizzate geolocalizzate",
-          "Report mensile con analisi e aggiustamenti",
-          "Consulenza strategica dedicata"
+          "Brand Book completo + stationery coordinata (biglietti, sottobicchieri, carta intestata, cartellonistica)",
+          "Sito Web Evoluto: Hero Video emozionale, prenotazione avanzata, multilingua, SEO locale",
+          "Gestione proattiva Facebook, Instagram e TikTok con monitoraggio notifiche",
+          "Strategia editoriale avanzata su dati, con focus su eventi speciali, festività e storytelling fornitori",
+          "3 Reel/Video a settimana — copione, ripresa, montaggio, pubblicazione",
+          "Storytelling quotidiano nelle Stories — dietro le quinte, fuori menu, vita in Cascina",
+          "Funnel Ads Avanzato: Retargeting, campagne eventi/cerimonie, pubblici Lookalike *",
+          "Sessioni shooting/video-making trimestrali (fino a 16h)"
         ]
       }
+    },
+    "budget": {
+      "eyebrow": "Budget sponsorizzazioni consigliato",
+      "title": "Quanto investire in advertising.",
+      "col1": "Pacchetto abbinato",
+      "col2": "Budget giornaliero",
+      "col3": "Budget mensile",
+      "col4": "Copertura stimata",
+      "note": "Il budget per le sponsorizzazioni è da considerarsi indicativo e non vincolante, sebbene sia caldamente raccomandato per garantire la massima visibilità al progetto. L'intero investimento — sia per il budget pubblicitario che per la creazione e gestione dei contenuti — è interamente deducibile ai sensi dell'Art. 108 del TUIR. Per tutti i dettagli tecnici, si veda il documento allegato alla mail."
     },
     "brochure": {
       "eyebrow": "Documentazione",

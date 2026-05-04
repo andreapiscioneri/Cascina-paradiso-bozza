@@ -46,6 +46,8 @@ const cursorClass = computed(() => ({
 
 <template>
   <div ref="cursorEl" class="cp-cursor" :class="cursorClass" aria-hidden="true">
+    <span class="cp-cursor__ring" />
+    <span class="cp-cursor__dot" />
     <span class="cp-cursor__label">{{ label }}</span>
   </div>
 </template>

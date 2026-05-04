@@ -196,26 +196,45 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 12px;
-  height: 12px;
+  width: 28px;
+  height: 28px;
   border-radius: 999px;
-  background: var(--fg);
+  background: transparent;
+  border: 1.5px solid var(--fg);
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: difference;
   transform: translate(-50%, -50%);
   transition: width 400ms var(--ease-expo), height 400ms var(--ease-expo),
-    background-color 300ms ease, opacity 200ms ease;
+    background-color 300ms ease, border-color 300ms ease, opacity 200ms ease;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.cp-cursor__ring,
+.cp-cursor__dot {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+}
+
+.cp-cursor__ring {
+  border: 1.5px solid var(--fg);
+}
+
+.cp-cursor__dot {
+  width: 5px;
+  height: 5px;
+  margin: auto;
+  background: var(--fg);
 }
 
 .cp-cursor--hover {
   width: 56px;
   height: 56px;
   background: transparent;
-  border: 1px solid var(--fg);
+  border-color: var(--fg);
 }
 
 .cp-cursor--image {
@@ -227,6 +246,10 @@
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+}
+
+.cp-cursor--image .cp-cursor__dot {
+  opacity: 0;
 }
 
 .cp-cursor__label {

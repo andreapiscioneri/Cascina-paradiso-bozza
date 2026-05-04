@@ -31,10 +31,9 @@ const links = computed(() => {
   const base = [
     { to: localePath('/storia'), label: t('nav.storia') },
     { to: localePath('/menu'), label: t('nav.menu') },
-    { to: localePath('/posizionamento'), label: t('nav.posizionamento') },
     { to: localePath('/contatti'), label: t('nav.contatti') },
   ]
-  return isOnPosizionamento.value ? [] : base
+  return base
 })
 </script>
 
@@ -50,6 +49,7 @@ const links = computed(() => {
     <div class="container-x flex items-center justify-between h-[var(--nav-h)]">
       <!-- Logo -->
       <NuxtLink
+        v-if="!isOnPosizionamento"
         :to="localePath('/')"
         class="flex items-center gap-3 group"
         @click="isOpen = false"
@@ -76,6 +76,29 @@ const links = computed(() => {
           <span class="eyebrow opacity-60 hidden sm:inline">{{ $t('brand.since') }}</span>
         </span>
       </NuxtLink>
+
+      <div v-else class="flex items-center gap-3">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 72 72"
+          fill="none"
+          aria-hidden="true"
+        >
+          <circle cx="36" cy="36" r="34" stroke="currentColor" stroke-width="1.5" />
+          <path
+            d="M22 44c4-10 10-14 14-14s10 4 14 14"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <circle cx="36" cy="28" r="2.5" fill="currentColor" />
+        </svg>
+        <span class="flex flex-col leading-none">
+          <span class="font-serif text-fluid-lg">Cascina Paradiso</span>
+          <span class="eyebrow opacity-60 hidden sm:inline">{{ $t('brand.since') }}</span>
+        </span>
+      </div>
 
       <!-- Desktop nav -->
       <nav class="hidden lg:flex items-center gap-10">
