@@ -616,14 +616,16 @@ onMounted(() => {
         </div>
 
         <!-- Note sconto + budget -->
-        <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-1">
+        <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 px-1">
           <p class="eyebrow text-wine font-sans font-semibold text-fluid-base sm:text-fluid-lg tracking-tight leading-tight">
             {{ $t('posizionamento.pacchetti.scontoNote') }}
           </p>
-          <p class="max-w-sm sm:max-w-xs text-fluid-xs sm:text-fluid-sm leading-relaxed text-brown/60 dark:text-cream/55 sm:text-right">
-            <span class="block mb-1 text-[10px] uppercase tracking-[0.24em] text-brown/35 dark:text-cream/35">Nota</span>
-            {{ $t('posizionamento.pacchetti.budgetAside') }}
-          </p>
+          <div class="max-w-sm sm:max-w-xs border-l-2 border-wine pl-4 py-2 bg-wine/5 dark:bg-wine/3 rounded-r-lg">
+            <p class="text-fluid-xs sm:text-fluid-sm leading-relaxed text-brown dark:text-cream sm:text-right">
+              <span class="block mb-1 text-[11px] uppercase tracking-[0.24em] font-semibold text-wine">Nota</span>
+              <span class="text-brown/80 dark:text-cream/85">{{ $t('posizionamento.pacchetti.budgetAside') }}</span>
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -710,10 +712,14 @@ onMounted(() => {
             <ImageReveal src="/images/FLORIAN-scaled-e1709716143700.webp" alt="Pasticceria Florian" ratio="square" rounded :hover-label="$t('posizionamento.hoverLabel')" />
           </a>
           <a href="https://www.instagram.com/farmacia.di.gorle/" target="_blank" rel="noopener">
-            <ImageReveal src="/images/farmacia.png" alt="Farmacia di Gorle" ratio="square" rounded fit="contain" :hover-label="$t('posizionamento.hoverLabel')" />
+            <div class="rounded-xl overflow-hidden bg-cream dark:bg-white/[0.08] flex items-center justify-center p-8 min-h-[300px]">
+              <img src="/images/farmacia.png" alt="Farmacia di Gorle" class="w-auto h-auto max-w-[200px] max-h-[200px] object-contain" />
+            </div>
           </a>
           <a href="https://www.instagram.com/mediline_torino/" target="_blank" rel="noopener" class="col-span-2 md:col-span-1">
-            <ImageReveal src="/images/mediline.png" alt="Mediline" ratio="square" rounded fit="contain" :hover-label="$t('posizionamento.hoverLabel')" />
+            <div class="rounded-xl overflow-hidden bg-cream dark:bg-white/[0.08] flex items-center justify-center p-8 min-h-[300px]">
+              <img src="/images/mediline.png" alt="Mediline" class="w-auto h-auto max-w-[200px] max-h-[200px] object-contain" />
+            </div>
           </a>
           <a href="https://denani.it/portfolio/kraken-factory/" target="_blank" rel="noopener">
             <ImageReveal src="/images/KRAKEN-FACTORY-scaled-e1709716112360.webp" alt="Kraken Factory" ratio="square" rounded :hover-label="$t('posizionamento.hoverLabel')" />
