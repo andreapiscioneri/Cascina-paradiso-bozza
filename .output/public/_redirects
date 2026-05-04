@@ -1,0 +1,11 @@
+# Passthrough: static assets e la pagina consentita
+/posizionamento       /posizionamento       200
+/posizionamento/      /posizionamento       301
+/_nuxt/*              /_nuxt/:splat         200
+/images/*             /images/:splat        200
+/PDF/*                /PDF/:splat           200
+/favicon.svg          /favicon.svg          200
+/_robots.txt          /_robots.txt          200
+
+# Tutto il resto → /posizionamento (force override anche su file statici)
+/*                    /posizionamento       301!

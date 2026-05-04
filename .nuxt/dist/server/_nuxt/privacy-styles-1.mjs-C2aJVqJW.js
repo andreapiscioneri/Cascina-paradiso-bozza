@@ -1,0 +1,5 @@
+const privacy_vue_vue_type_style_index_0_scoped_2fbb74e3_lang = ".prose-legal h2[data-v-2fbb74e3]{font-family:var(--font-serif);font-size:var(--text-fluid-2xl);font-weight:300;letter-spacing:-.02em;margin-bottom:1rem;margin-top:3rem}.prose-legal p[data-v-2fbb74e3],.prose-legal ul[data-v-2fbb74e3]{font-size:var(--text-fluid-base);line-height:1.75;margin-bottom:1.25rem;opacity:.8}.prose-legal ul[data-v-2fbb74e3]{list-style:disc;padding-left:1.5rem}.prose-legal li[data-v-2fbb74e3]{margin-bottom:.5rem}.prose-legal a[data-v-2fbb74e3]{text-decoration:underline;text-underline-offset:3px}";
+export {
+  privacy_vue_vue_type_style_index_0_scoped_2fbb74e3_lang as default
+};
+//# sourceMappingURL=privacy-styles-1.mjs-C2aJVqJW.js.map
