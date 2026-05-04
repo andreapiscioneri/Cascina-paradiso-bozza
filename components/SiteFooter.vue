@@ -1,6 +1,8 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
 const year = new Date().getFullYear()
+const route = useRoute()
+const isOnPosizionamento = computed(() => route.path.includes('/posizionamento'))
 </script>
 
 <template>
@@ -85,10 +87,10 @@ const year = new Date().getFullYear()
     >
       <span>© {{ year }} Cascina Paradiso — {{ $t('footer.rights') }}</span>
       <div class="flex gap-6">
-        <NuxtLink :to="localePath('/privacy')" class="hover:opacity-100 transition-opacity">Privacy Policy</NuxtLink>
-        <NuxtLink :to="localePath('/trattamento-dati')" class="hover:opacity-100 transition-opacity">Trattamento Dati</NuxtLink>
-        <NuxtLink :to="localePath('/cookie')" class="hover:opacity-100 transition-opacity">Cookie Policy</NuxtLink>
-        <span>P.IVA — Cascina Paradiso di Roberta</span>
+        <NuxtLink v-if="!isOnPosizionamento" :to="localePath('/privacy')" class="hover:opacity-100 transition-opacity">Privacy Policy</NuxtLink>
+        <NuxtLink v-if="!isOnPosizionamento" :to="localePath('/trattamento-dati')" class="hover:opacity-100 transition-opacity">Trattamento Dati</NuxtLink>
+        <NuxtLink v-if="!isOnPosizionamento" :to="localePath('/cookie')" class="hover:opacity-100 transition-opacity">Cookie Policy</NuxtLink>
+        <span>P.IVA — Cascina Paradiso</span>
       </div>
     </div>
   </footer>
