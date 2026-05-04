@@ -8,19 +8,19 @@ const isOnPosizionamento = computed(() => route.path.includes('/posizionamento')
 <template>
   <footer class="bg-noir text-cream grain mt-32">
     <!-- Oversized wordmark -->
-    <div class="container-x pt-24 pb-10 border-b border-white/10">
+    <div class="container-x pt-16 sm:pt-24 pb-8 sm:pb-10 border-b border-white/10">
       <h2
-        class="font-serif font-light text-fluid-6xl md:text-fluid-7xl leading-tightest tracking-tightest whitespace-nowrap"
+        class="font-serif font-light text-fluid-4xl sm:text-fluid-6xl md:text-fluid-7xl leading-tightest tracking-tightest max-w-[10ch] sm:max-w-none"
       >
         Cascina <span class="italic">Paradiso.</span>
       </h2>
     </div>
 
-    <div class="container-x grid md:grid-cols-[1fr_auto_auto] gap-12 py-14">
+    <div class="container-x grid md:grid-cols-[1fr_auto_auto] gap-10 sm:gap-12 py-10 sm:py-14">
       <!-- Tagline + address -->
       <div class="max-w-md">
-        <p class="font-serif text-fluid-xl mb-4 whitespace-pre-line">{{ $t('footer.tagline') }}</p>
-        <p class="text-fluid-sm opacity-70">{{ $t('footer.address') }}</p>
+        <p class="font-serif text-fluid-lg sm:text-fluid-xl mb-4 whitespace-pre-line">{{ $t('footer.tagline') }}</p>
+        <p class="text-fluid-xs sm:text-fluid-sm opacity-70">{{ $t('footer.address') }}</p>
       </div>
 
       <!-- Navigation -->
@@ -82,10 +82,10 @@ const isOnPosizionamento = computed(() => route.path.includes('/posizionamento')
     </div>
 
     <div
-      class="container-x flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-6 border-t border-white/10 text-xs opacity-50"
+      class="container-x flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-6 border-t border-white/10 text-[11px] sm:text-xs opacity-50"
     >
       <span>© {{ year }} Cascina Paradiso — {{ $t('footer.rights') }}</span>
-      <div class="flex gap-6">
+      <div class="flex flex-wrap gap-x-6 gap-y-2">
         <NuxtLink v-if="!isOnPosizionamento" :to="localePath('/privacy')" class="hover:opacity-100 transition-opacity">Privacy Policy</NuxtLink>
         <NuxtLink v-if="!isOnPosizionamento" :to="localePath('/trattamento-dati')" class="hover:opacity-100 transition-opacity">Trattamento Dati</NuxtLink>
         <NuxtLink v-if="!isOnPosizionamento" :to="localePath('/cookie')" class="hover:opacity-100 transition-opacity">Cookie Policy</NuxtLink>

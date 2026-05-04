@@ -792,14 +792,14 @@ onMounted(() => {
         class="absolute inset-0 pointer-events-none"
         style="background-image: linear-gradient(rgba(245,241,232,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(245,241,232,0.04) 1px, transparent 1px); background-size: 80px 80px;"
       />
-      <div class="relative z-10 container-x text-center max-w-4xl mx-auto flex flex-col items-center justify-center">
+      <div class="relative z-10 container-x text-center max-w-4xl mx-auto flex flex-col items-center justify-center px-4 sm:px-0">
         <AnimatedText
           as="h2"
-          class="block mx-auto font-serif font-light text-fluid-5xl sm:text-fluid-6xl leading-tightest tracking-tightest mb-6 sm:mb-8 text-center"
+          class="block mx-auto font-serif font-light text-fluid-4xl sm:text-fluid-6xl leading-tightest tracking-tightest mb-5 sm:mb-8 text-center max-w-[12ch] sm:max-w-none"
         >
           {{ $t('posizionamento.cta.title') }}
         </AnimatedText>
-        <p class="text-fluid-base opacity-80 mb-10 sm:mb-14 whitespace-nowrap">
+        <p class="text-fluid-sm sm:text-fluid-base opacity-80 mb-10 sm:mb-14 max-w-[28ch] sm:max-w-none leading-relaxed text-center">
           {{ $t('posizionamento.cta.desc') }}
         </p>
       </div>
