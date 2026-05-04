@@ -9,7 +9,7 @@ const { mode, label } = useCursor()
 let rafId = 0
 const pos = { x: -100, y: -100 }
 const target = { x: -100, y: -100 }
-const ease = 0.18
+const ease = 0.55
 
 const onMove = (e: MouseEvent) => {
   target.x = e.clientX

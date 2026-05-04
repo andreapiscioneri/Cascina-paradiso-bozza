@@ -220,7 +220,7 @@
 }
 
 .cp-cursor__ring {
-  border: 1.5px solid var(--fg);
+  border: 0.5px solid var(--fg);
 }
 
 .cp-cursor__dot {
