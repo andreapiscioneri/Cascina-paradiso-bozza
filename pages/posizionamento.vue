@@ -2,6 +2,17 @@
 const { t, rt, tm } = useI18n()
 const localePath = useLocalePath()
 
+// Helper function to split text at first colon and make the label bold when present
+const formatItemHtml = (text: string) => {
+  const colonIndex = text.indexOf(':')
+  if (colonIndex > -1) {
+    const label = text.substring(0, colonIndex + 1)
+    const rest = text.substring(colonIndex + 1)
+    return `<strong>${label}</strong>${rest}`
+  }
+  return text
+}
+
 const keywords = computed(() => {
   const items = tm('posizionamento.keywords') as any[]
   return items.map(item => rt(item))
@@ -490,7 +501,6 @@ onMounted(() => {
                 <span class="eyebrow text-[10px] text-wine bg-wine/[0.08] px-2.5 py-1 rounded-full">
                   {{ $t('posizionamento.pacchetti.base.tag') }}
                 </span>
-                <span class="font-serif font-light text-[2rem] text-brown/10 dark:text-cream/10 leading-none">01</span>
               </div>
               <h3 class="font-serif font-light text-fluid-3xl sm:text-fluid-4xl text-brown dark:text-cream leading-none mb-3">
                 {{ $t('posizionamento.pacchetti.base.name') }}
@@ -505,7 +515,7 @@ onMounted(() => {
                   class="flex items-start gap-3 text-fluid-xs sm:text-fluid-sm text-brown/70 dark:text-cream/70 leading-relaxed"
                 >
                   <span class="text-wine/60 shrink-0 mt-px text-sm leading-none select-none">—</span>
-                  {{ $rt(item) }}
+                  <span v-html="formatItemHtml($rt(item))"></span>
                 </li>
               </ul>
             </div>
@@ -536,7 +546,6 @@ onMounted(() => {
                 <span class="eyebrow text-[10px] sm:text-xs tracking-[0.22em] text-cream bg-cream/20 px-3 py-1.5 rounded-full ring-1 ring-cream/15">
                   {{ $t('posizionamento.pacchetti.pro.badge') }}
                 </span>
-                <span class="font-serif font-medium text-[2.2rem] sm:text-[2.4rem] text-cream/25 leading-none">02</span>
               </div>
               <h3 class="font-serif font-medium text-fluid-3xl sm:text-fluid-4xl text-cream leading-none mb-3 drop-shadow-[0_0_12px_rgba(255,255,255,0.05)]">
                 {{ $t('posizionamento.pacchetti.pro.name') }}
@@ -551,7 +560,7 @@ onMounted(() => {
                   class="flex items-start gap-3 text-fluid-xs sm:text-fluid-sm text-cream/85 leading-relaxed"
                 >
                   <span class="text-cream/50 shrink-0 mt-px text-sm leading-none select-none">—</span>
-                  {{ $rt(item) }}
+                  <span v-html="formatItemHtml($rt(item))"></span>
                 </li>
               </ul>
             </div>
@@ -580,7 +589,6 @@ onMounted(() => {
                 <span class="eyebrow text-[10px] text-wine bg-wine/[0.08] px-2.5 py-1 rounded-full">
                   {{ $t('posizionamento.pacchetti.full.tag') }}
                 </span>
-                <span class="font-serif font-light text-[2rem] text-brown/10 dark:text-cream/10 leading-none">03</span>
               </div>
               <h3 class="font-serif font-light text-fluid-3xl sm:text-fluid-4xl text-brown dark:text-cream leading-none mb-3">
                 {{ $t('posizionamento.pacchetti.full.name') }}
@@ -595,7 +603,7 @@ onMounted(() => {
                   class="flex items-start gap-3 text-fluid-xs sm:text-fluid-sm text-brown/70 dark:text-cream/70 leading-relaxed"
                 >
                   <span class="text-wine/60 shrink-0 mt-px text-sm leading-none select-none">—</span>
-                  {{ $rt(item) }}
+                  <span v-html="formatItemHtml($rt(item))"></span>
                 </li>
               </ul>
             </div>
@@ -702,6 +710,12 @@ onMounted(() => {
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+          <a href="https://www.youtube.com/watch?v=Q0QfrvUWmdA" target="_blank" rel="noopener">
+            <ImageReveal src="https://img.youtube.com/vi/Q0QfrvUWmdA/hqdefault.jpg" alt="YouTube video Q0QfrvUWmdA" ratio="square" rounded :hover-label="$t('posizionamento.hoverLabel')" />
+          </a>
+          <a href="https://www.youtube.com/watch?v=oeSr3wXENQM" target="_blank" rel="noopener">
+            <ImageReveal src="https://img.youtube.com/vi/oeSr3wXENQM/hqdefault.jpg" alt="YouTube video oeSr3wXENQM" ratio="square" rounded :hover-label="$t('posizionamento.hoverLabel')" />
+          </a>
           <a href="https://denani.it/2021/04/21/hotel-ristorante-camoretti/" target="_blank" rel="noopener">
             <ImageReveal src="/images/CAMORETTI-scaled-e1709716201950.webp" alt="Hotel Ristorante Camoretti" ratio="square" rounded :hover-label="$t('posizionamento.hoverLabel')" />
           </a>
@@ -712,12 +726,12 @@ onMounted(() => {
             <ImageReveal src="/images/FLORIAN-scaled-e1709716143700.webp" alt="Pasticceria Florian" ratio="square" rounded :hover-label="$t('posizionamento.hoverLabel')" />
           </a>
           <a href="https://www.instagram.com/farmacia.di.gorle/" target="_blank" rel="noopener">
-            <div class="rounded-xl overflow-hidden bg-cream dark:bg-white/[0.08] flex items-center justify-center p-8 min-h-[300px]">
+            <div class="aspect-square rounded-xl overflow-hidden bg-cream dark:bg-white/[0.08] flex items-center justify-center p-6 sm:p-8">
               <img src="/images/farmacia.png" alt="Farmacia di Gorle" class="w-auto h-auto max-w-[200px] max-h-[200px] object-contain" />
             </div>
           </a>
           <a href="https://www.instagram.com/mediline_torino/" target="_blank" rel="noopener" class="col-span-2 md:col-span-1">
-            <div class="rounded-xl overflow-hidden bg-cream dark:bg-white/[0.08] flex items-center justify-center p-8 min-h-[300px]">
+            <div class="aspect-square rounded-xl overflow-hidden bg-cream dark:bg-white/[0.08] flex items-center justify-center p-6 sm:p-8">
               <img src="/images/mediline.png" alt="Mediline" class="w-auto h-auto max-w-[200px] max-h-[200px] object-contain" />
             </div>
           </a>

@@ -19,7 +19,7 @@
       "line3": "We were born this way.\nWe don't need to pretend."
     },
     "keywords": [
-      "Heritage", "Tradition", "History", "Territory", "Authenticity", "Experience", "Local Cuisine", "Genuineness", "Fresh Products", "Home-made", "Grilled Meats", "Local Suppliers", "Raw Materials"
+      "Heritage", "Tradition", "History", "Territory", "Authenticity", "Experience", "Local Cuisine", "Genuineness", "Fresh Products", "Homemade", "Grilled Meats", "Local Suppliers", "Raw Materials"
     ],
     "obiettivi": {
       "eyebrow": "Strategic objectives",
@@ -54,7 +54,7 @@
           },
           "palette": {
             "title": "Color Palette",
-            "desc": "Burgundy and earth. The colours of the restaurant's walls become the thread running through all communication."
+            "desc": "Burgundy and earth. The colors of the restaurant's walls become the thread running through all communication."
           },
           "landing": {
             "title": "Website with Dynamic Menu",
@@ -119,7 +119,7 @@
         "desc": "The foundation. Presence, identity and first social presence.",
         "price": "€ 900",
         "items": [
-          "Logo creation and Bordeaux/Wine colour palette",
+          "Logo creation and Bordeaux/Wine color palette",
           "Landing Page (single-page website) with Digital Menu PDF",
           "Facebook, Instagram, TikTok profile setup",
           "Quarterly editorial calendar",
@@ -177,7 +177,7 @@
       "eyebrow": "Documentation",
       "title": "Download the full brochure.",
       "desc": "All the details of the positioning plan, packages and references in a single PDF document to share or keep.",
-      "btnOpen": "Donwload Brochure",
+      "btnOpen": "Download Brochure",
       "btnDownload": "Download"
     },
     "cta": {
