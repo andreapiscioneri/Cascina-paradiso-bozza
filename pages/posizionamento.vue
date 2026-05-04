@@ -664,7 +664,9 @@ onMounted(() => {
               </div>
               <div>
                 <p class="eyebrow text-[10px] sm:text-[11px] text-brown/40 dark:text-cream/35 mb-2 sm:mb-3">{{ $t('posizionamento.budget.col3') }}</p>
-                <p class="font-serif font-semibold text-[clamp(1.55rem,4vw,2.3rem)] leading-none tabular-nums" style="color: rgb(153 18 18 / var(--tw-text-opacity, 1)); text-shadow: 0 0 0.5px rgba(153,18,18,0.35);">{{ row.monthly }}</p>
+                <div class="inline-block px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg bg-wine">
+                  <p class="font-serif font-semibold text-[clamp(1.55rem,4vw,2.3rem)] leading-none tabular-nums text-white">{{ row.monthly }}</p>
+                </div>
               </div>
               <div>
                 <p class="eyebrow text-[10px] sm:text-[11px] text-brown/40 dark:text-cream/35 mb-2 sm:mb-3">{{ $t('posizionamento.budget.col4') }}</p>
