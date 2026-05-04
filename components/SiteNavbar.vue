@@ -27,6 +27,10 @@ watch(isOpen, (v) => {
 const route = useRoute()
 const isOnPosizionamento = computed(() => route.path.includes('/posizionamento'))
 
+watch(isOnPosizionamento, (value) => {
+  if (value) isOpen.value = false
+})
+
 const links = computed(() => {
   const base = [
     { to: localePath('/storia'), label: t('nav.storia') },
@@ -101,7 +105,7 @@ const links = computed(() => {
       </div>
 
       <!-- Desktop nav -->
-      <nav class="hidden lg:flex items-center gap-10">
+      <nav v-if="!isOnPosizionamento" class="hidden lg:flex items-center gap-10">
         <NuxtLink
           v-for="link in links"
           :key="link.to"
@@ -129,6 +133,7 @@ const links = computed(() => {
 
         <!-- Hamburger -->
         <button
+          v-if="!isOnPosizionamento"
           type="button"
           class="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5"
           :aria-expanded="isOpen"
@@ -159,7 +164,7 @@ const links = computed(() => {
       leave-to-class="opacity-0"
     >
       <div
-        v-if="isOpen"
+        v-if="isOpen && !isOnPosizionamento"
         class="fixed inset-0 top-[var(--nav-h)] z-[40] bg-cream dark:bg-noir grain lg:hidden"
       >
         <div class="container-x py-12 flex flex-col h-full">

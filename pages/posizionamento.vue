@@ -344,6 +344,38 @@ onMounted(() => {
                     <p class="text-fluid-xs sm:text-fluid-sm text-brown/60 dark:text-cream/60 leading-relaxed">
                       {{ $t(`posizionamento.strumenti.s1.items.${item}.desc`) }}
                     </p>
+                    <template v-if="item === 'palette'">
+                      <div class="mt-3 sm:mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
+                        <div class="flex items-center gap-2.5 text-fluid-xs sm:text-fluid-sm text-brown/70 dark:text-cream/70">
+                          <span class="h-3.5 w-3.5 rounded-full border border-white/10 bg-wine shrink-0" aria-hidden="true" />
+                          <div class="min-w-0">
+                            <span class="block font-medium text-brown dark:text-cream">Bordeaux</span>
+                            <span class="block text-brown/40 dark:text-cream/40 tracking-[0.18em] uppercase">#7B1E1E</span>
+                          </div>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-fluid-xs sm:text-fluid-sm text-brown/70 dark:text-cream/70">
+                          <span class="h-3.5 w-3.5 rounded-full border border-white/10 bg-brown shrink-0" aria-hidden="true" />
+                          <div class="min-w-0">
+                            <span class="block font-medium text-brown dark:text-cream">Terra</span>
+                            <span class="block text-brown/40 dark:text-cream/40 tracking-[0.18em] uppercase">#3E2F2B</span>
+                          </div>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-fluid-xs sm:text-fluid-sm text-brown/70 dark:text-cream/70">
+                          <span class="h-3.5 w-3.5 rounded-full border border-[color:var(--line)] bg-black shrink-0" aria-hidden="true" />
+                          <div class="min-w-0">
+                            <span class="block font-medium text-brown dark:text-cream">Nero</span>
+                            <span class="block text-brown/40 dark:text-cream/40 tracking-[0.18em] uppercase">#0F0F0F</span>
+                          </div>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-fluid-xs sm:text-fluid-sm text-brown/70 dark:text-cream/70">
+                          <span class="h-3.5 w-3.5 rounded-full border border-[color:var(--line)] bg-cream shrink-0" aria-hidden="true" />
+                          <div class="min-w-0">
+                            <span class="block font-medium text-brown dark:text-cream">Bianco</span>
+                            <span class="block text-brown/40 dark:text-cream/40 tracking-[0.18em] uppercase">#F5F1E8</span>
+                          </div>
+                        </div>
+                      </div>
+                    </template>
                     <template v-if="item === 'landing'">
                       <ul class="mt-2 sm:mt-3 space-y-1.5 text-fluid-xs sm:text-fluid-sm text-brown/60 dark:text-cream/60">
                         <li class="flex items-start gap-2">
@@ -546,18 +578,18 @@ onMounted(() => {
           <!-- Pro — Equilibrio (featured) -->
           <div
             data-pk-card
-            class="group flex flex-col rounded-2xl bg-wine text-cream relative overflow-hidden shadow-2xl shadow-wine/25"
+            class="group flex flex-col rounded-2xl bg-wine text-cream relative overflow-hidden shadow-2xl shadow-wine/25 ring-1 ring-cream/15 md:scale-[1.02] md:-translate-y-1"
           >
-            <div class="absolute top-0 left-0 right-0 h-[3px] bg-cream/30" />
+            <div class="absolute top-0 left-0 right-0 h-[4px] bg-cream/50" />
 
             <div class="px-7 sm:px-8 pt-8 sm:pt-9 pb-5 sm:pb-6 border-b border-cream/10">
               <div class="flex items-center justify-between mb-5">
-                <span class="eyebrow text-[10px] text-cream bg-cream/15 px-2.5 py-1 rounded-full">
+                <span class="eyebrow text-[10px] sm:text-xs tracking-[0.22em] text-cream bg-cream/20 px-3 py-1.5 rounded-full ring-1 ring-cream/15">
                   {{ $t('posizionamento.pacchetti.pro.badge') }}
                 </span>
-                <span class="font-serif font-light text-[2rem] text-cream/10 leading-none">02</span>
+                <span class="font-serif font-medium text-[2.2rem] sm:text-[2.4rem] text-cream/25 leading-none">02</span>
               </div>
-              <h3 class="font-serif font-light text-fluid-3xl sm:text-fluid-4xl text-cream leading-none mb-3">
+              <h3 class="font-serif font-medium text-fluid-3xl sm:text-fluid-4xl text-cream leading-none mb-3 drop-shadow-[0_0_12px_rgba(255,255,255,0.05)]">
                 {{ $t('posizionamento.pacchetti.pro.name') }}
               </h3>
               <p class="text-fluid-xs sm:text-fluid-sm text-cream/65 leading-relaxed">
@@ -578,7 +610,7 @@ onMounted(() => {
             </div>
             <div class="px-7 sm:px-8 py-5 sm:py-6 border-t border-cream/10 bg-black/10">
               <div class="flex items-baseline gap-2">
-                <p class="font-serif font-light text-[clamp(1.45rem,4.6vw,2.4rem)] text-cream leading-none whitespace-nowrap shrink-0">
+                <p class="font-serif font-medium text-[clamp(1.55rem,4.8vw,2.55rem)] text-cream leading-none whitespace-nowrap shrink-0 drop-shadow-[0_0_10px_rgba(255,255,255,0.08)]">
                   {{ $t('posizionamento.pacchetti.pro.price') }}
                 </p>
                 <span class="text-fluid-xs text-cream/50">
@@ -755,19 +787,19 @@ onMounted(() => {
             class="group grid grid-cols-2 md:grid-cols-[minmax(0,1.35fr)_minmax(0,0.95fr)_minmax(0,1.05fr)_minmax(0,1.35fr)] gap-x-4 gap-y-5 sm:gap-6 md:gap-10 px-6 sm:px-8 py-6 sm:py-7 rounded-2xl border border-[color:var(--line)] hover:border-wine/20 transition-colors duration-400 items-start"
           >
             <div class="col-span-2 md:col-span-1 min-w-0">
-              <p class="font-serif font-light text-fluid-base sm:text-fluid-lg text-brown dark:text-cream leading-snug break-words">{{ row.pkg }}</p>
+              <p class="font-serif font-light text-fluid-base sm:text-fluid-lg text-brown dark:text-cream leading-snug whitespace-pre-line break-words">{{ row.pkg }}</p>
             </div>
             <div class="min-w-0">
               <p class="eyebrow text-[9px] sm:text-[10px] text-brown/35 dark:text-cream/30 mb-2">{{ $t('posizionamento.budget.col2') }}</p>
-              <p class="font-serif font-light text-[clamp(1.15rem,3vw,1.7rem)] text-brown/70 dark:text-cream/70 leading-none whitespace-nowrap">{{ row.daily }}</p>
+              <p class="font-serif font-medium text-[clamp(1.15rem,3vw,1.7rem)] text-brown/70 dark:text-cream/90 leading-none whitespace-nowrap">{{ row.daily }}</p>
             </div>
             <div class="min-w-0">
               <p class="eyebrow text-[9px] sm:text-[10px] text-brown/35 dark:text-cream/30 mb-2">{{ $t('posizionamento.budget.col3') }}</p>
-              <p class="font-serif font-light text-[clamp(1.05rem,2.9vw,1.9rem)] text-wine leading-none whitespace-nowrap shrink-0">{{ row.monthly }}</p>
+              <p class="font-serif font-medium text-[clamp(1.05rem,2.9vw,1.9rem)] text-wine dark:text-cream leading-none whitespace-nowrap shrink-0">{{ row.monthly }}</p>
             </div>
             <div class="min-w-0">
               <p class="eyebrow text-[9px] sm:text-[10px] text-brown/35 dark:text-cream/30 mb-2">{{ $t('posizionamento.budget.col4') }}</p>
-              <p class="font-serif font-light italic text-fluid-xs sm:text-fluid-sm text-brown/60 dark:text-cream/60 leading-relaxed break-words">{{ row.reach }}</p>
+              <p class="font-serif font-medium italic text-fluid-xs sm:text-fluid-sm text-brown/60 dark:text-cream/80 leading-relaxed break-words">{{ row.reach }}</p>
             </div>
           </div>
         </div>
