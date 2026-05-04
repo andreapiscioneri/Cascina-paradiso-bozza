@@ -175,14 +175,38 @@
       "eyebrow": "Documentation",
       "title": "Download the full brochure.",
       "desc": "All the details of the positioning plan, packages and references in a single PDF document to share or keep.",
-      "btnOpen": "Donwload PDF",
+      "btnOpen": "Donwload Brochure",
       "btnDownload": "Download"
     },
     "cta": {
       "title": "Let's start building.",
       "desc": "An authentic project deserves communication to match. Let's talk.",
       "btn": "Back to Homepage"
-    }
+    },
+    "hoverLabel": "View",
+    "prospetto": {
+      "eyebrow": "Comparative overview",
+      "col01": "01 — BASE",
+      "col01name": "Roots",
+      "col02": "02 — MEDIUM · Most chosen",
+      "col02name": "Balance",
+      "col03": "03 — PREMIUM",
+      "col03name": "Excellence",
+      "rows": [
+        { "label": "Goal", "base": "Presence & Awareness", "medium": "Growth & Conversions", "premium": "Top-Tier Positioning" },
+        { "label": "Visual Identity", "base": "Logo + Palette", "medium": "Full Identity + Icons", "premium": "Brand Manual + Stationery" },
+        { "label": "Website", "base": "Landing Page (PDF Menu)", "medium": "Dynamic Site + Bookings", "premium": "Premium Site + SEO + Video" },
+        { "label": "Social Content", "base": "4 Reels / month", "medium": "8 Reels / month", "premium": "12 Reels / month" },
+        { "label": "ADS Management", "base": "Basic Setup (Local)", "medium": "Awareness + Traffic", "premium": "Advanced Funnel (Retargeting)" },
+        { "label": "Video/Photo Production", "base": "6h every 3 months", "medium": "10h every 3 months", "premium": "16h every 3 months" },
+        { "label": "Monthly investment", "base": "€ 900", "medium": "€ 1,500", "premium": "€ 2,800" }
+      ]
+    },
+    "budgetRows": [
+      { "pkg": "Paired with BASE —\nRoots", "daily": "€ 10 – € 15", "monthly": "€ 300 – € 450", "reach": "15,000 – 30,000 people reached" },
+      { "pkg": "Paired with MEDIUM —\nBalance", "daily": "€ 20 – € 30", "monthly": "€ 600 – € 900", "reach": "40,000 – 70,000 people reached" },
+      { "pkg": "Paired with PREMIUM —\nExcellence", "daily": "€ 40 – € 60", "monthly": "€ 1,200 – € 1,800", "reach": "100,000+ impressions and consistent traffic" }
+    ]
   },
   "brand": {
     "name": "Cascina Paradiso",

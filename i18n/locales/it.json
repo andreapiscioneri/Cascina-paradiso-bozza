@@ -175,14 +175,38 @@
       "eyebrow": "Documentazione",
       "title": "Scarica la brochure completa.",
       "desc": "Tutti i dettagli del piano di posizionamento, i pacchetti e le referenze in un unico documento PDF da condividere o conservare.",
-      "btnOpen": "Scarica PDF",
+      "btnOpen": "Scarica Brochure",
       "btnDownload": "Scarica"
     },
     "cta": {
       "title": "Iniziamo a costruire.",
       "desc": "Un progetto autentico merita una comunicazione all'altezza. Parliamone.",
       "btn": "Torna alla Homepage"
-    }
+    },
+    "hoverLabel": "Vedi",
+    "prospetto": {
+      "eyebrow": "Prospetto comparativo",
+      "col01": "01 — BASE",
+      "col01name": "Radici",
+      "col02": "02 — MEDIUM · Più scelto",
+      "col02name": "Equilibrio",
+      "col03": "03 — PREMIUM",
+      "col03name": "Eccellenza",
+      "rows": [
+        { "label": "Obiettivo", "base": "Presenza e Awareness", "medium": "Crescita e Conversioni", "premium": "Posizionamento Top-Tier" },
+        { "label": "Visual Identity", "base": "Logo + Palette", "medium": "Identità completa + Icone", "premium": "Brand Manual + Stationery" },
+        { "label": "Sito Web", "base": "Landing Page (Menu PDF)", "medium": "Sito Dinamico + Prenotazioni", "premium": "Sito Premium + SEO + Video" },
+        { "label": "Contenuti Social", "base": "4 Reel / mese", "medium": "8 Reel / mese", "premium": "12 Reel / mese" },
+        { "label": "Gestione ADS", "base": "Setup Base (Local)", "medium": "Awareness + Traffico", "premium": "Funnel Avanzato (Retargeting)" },
+        { "label": "Produzione Video/Foto", "base": "6h ogni 3 mesi", "medium": "10h ogni 3 mesi", "premium": "16h ogni 3 mesi" },
+        { "label": "Investimento mensile", "base": "€ 900", "medium": "€ 1.500", "premium": "€ 2.800" }
+      ]
+    },
+    "budgetRows": [
+      { "pkg": "Abbinato a BASE —\nRadici", "daily": "€ 10 – € 15", "monthly": "€ 300 – € 450", "reach": "15.000 – 30.000 persone raggiunte" },
+      { "pkg": "Abbinato a MEDIUM —\nEquilibrio", "daily": "€ 20 – € 30", "monthly": "€ 600 – € 900", "reach": "40.000 – 70.000 persone raggiunte" },
+      { "pkg": "Abbinato a PREMIUM —\nEccellenza", "daily": "€ 40 – € 60", "monthly": "€ 1.200 – € 1.800", "reach": "100.000+ impression e traffico costante" }
+    ]
   },
   "brand": {
     "name": "Cascina Paradiso",

@@ -12,21 +12,25 @@ useSeoMeta({
   description: t('posizionamento.seo.description'),
 })
 
-const prospettoRows = [
-  { label: 'Obiettivo', base: 'Presenza e Awareness', medium: 'Crescita e Conversioni', premium: 'Posizionamento Top-Tier' },
-  { label: 'Visual Identity', base: 'Logo + Palette', medium: 'Identità completa + Icone', premium: 'Brand Manual + Stationery' },
-  { label: 'Sito Web', base: 'Landing Page (Menu PDF)', medium: 'Sito Dinamico + Prenotazioni', premium: 'Sito Premium + SEO + Video' },
-  { label: 'Contenuti Social', base: '4 Reel / mese', medium: '8 Reel / mese', premium: '12 Reel / mese' },
-  { label: 'Gestione ADS', base: 'Setup Base (Local)', medium: 'Awareness + Traffico', premium: 'Funnel Avanzato (Retargeting)' },
-  { label: 'Produzione Video/Foto', base: '6h ogni 3 mesi', medium: '10h ogni 3 mesi', premium: '16h ogni 3 mesi' },
-  { label: 'Investimento mensile', base: '€ 900', medium: '€ 1.500', premium: '€ 2.800' },
-]
+const prospettoRows = computed(() => {
+  const rows = tm('posizionamento.prospetto.rows') as any[]
+  return rows.map(row => ({
+    label: rt(row.label),
+    base: rt(row.base),
+    medium: rt(row.medium),
+    premium: rt(row.premium),
+  }))
+})
 
-const budgetRows = [
-  { pkg: 'Abbinato a BASE —\nRadici', daily: '€ 10 – € 15', monthly: '€ 300 – € 450', reach: '15.000 – 30.000 persone raggiunte' },
-  { pkg: 'Abbinato a MEDIUM —\nEquilibrio', daily: '€ 20 – € 30', monthly: '€ 600 – € 900', reach: '40.000 – 70.000 persone raggiunte' },
-  { pkg: 'Abbinato a PREMIUM —\nEccellenza', daily: '€ 40 – € 60', monthly: '€ 1.200 – € 1.800', reach: '100.000+ impression e traffico costante' },
-]
+const budgetRows = computed(() => {
+  const rows = tm('posizionamento.budgetRows') as any[]
+  return rows.map(row => ({
+    pkg: rt(row.pkg),
+    daily: rt(row.daily),
+    monthly: rt(row.monthly),
+    reach: rt(row.reach),
+  }))
+})
 
 const heroRoot = ref<HTMLElement | null>(null)
 const heroImg = ref<HTMLElement | null>(null)
@@ -394,13 +398,13 @@ onMounted(() => {
 
             <div data-str-el class="grid grid-cols-2 gap-3 sm:gap-4">
               <a href="https://denani.it/2021/04/21/hotel-ristorante-camoretti/" target="_blank" rel="noopener">
-                <ImageReveal src="/images/CAMORETTI-scaled-e1709716201950.webp" alt="Hotel Ristorante Camoretti" ratio="square" rounded hover-label="Vedi" />
+                <ImageReveal src="/images/CAMORETTI-scaled-e1709716201950.webp" alt="Hotel Ristorante Camoretti" ratio="square" rounded :hover-label="$t('posizionamento.hoverLabel')" />
               </a>
               <a href="https://denani.it/2021/04/21/portfolio-fabrizio-crippa/" target="_blank" rel="noopener">
-                <ImageReveal src="/images/FABRIZIO-CRIPPA-scaled-e1709716167674.webp" alt="Fabrizio Crippa" ratio="square" rounded hover-label="Vedi" />
+                <ImageReveal src="/images/FABRIZIO-CRIPPA-scaled-e1709716167674.webp" alt="Fabrizio Crippa" ratio="square" rounded :hover-label="$t('posizionamento.hoverLabel')" />
               </a>
               <a href="https://denani.it/2021/09/30/pasticceria-florian/" target="_blank" rel="noopener" class="col-span-2">
-                <ImageReveal src="/images/FLORIAN-scaled-e1709716143700.webp" alt="Pasticceria Florian" ratio="landscape" rounded hover-label="Vedi" />
+                <ImageReveal src="/images/FLORIAN-scaled-e1709716143700.webp" alt="Pasticceria Florian" ratio="landscape" rounded :hover-label="$t('posizionamento.hoverLabel')" />
               </a>
             </div>
           </div>
@@ -426,10 +430,10 @@ onMounted(() => {
           <div class="grid md:grid-cols-2 gap-10 sm:gap-12 md:gap-20 items-start">
             <div data-str-el class="flex flex-col gap-4 sm:gap-5">
               <a href="https://denani.it/portfolio/kraken-factory/" target="_blank" rel="noopener">
-                <ImageReveal src="/images/KRAKEN-FACTORY-scaled-e1709716112360.webp" alt="Kraken Factory" ratio="landscape" rounded hover-label="Vedi" />
+                <ImageReveal src="/images/KRAKEN-FACTORY-scaled-e1709716112360.webp" alt="Kraken Factory" ratio="landscape" rounded :hover-label="$t('posizionamento.hoverLabel')" />
               </a>
               <a href="https://denani.it/2024/03/25/zestloungebar/" target="_blank" rel="noopener">
-                <ImageReveal src="/images/ZEST-LOUNGE-BAR.webp" alt="Zest Lounge Bar" ratio="landscape" rounded hover-label="Vedi" />
+                <ImageReveal src="/images/ZEST-LOUNGE-BAR.webp" alt="Zest Lounge Bar" ratio="landscape" rounded :hover-label="$t('posizionamento.hoverLabel')" />
               </a>
             </div>
 
@@ -531,9 +535,9 @@ onMounted(() => {
           <!-- Base — Radici -->
           <div
             data-pk-card
-            class="group flex flex-col rounded-2xl border border-[color:var(--line)] hover:border-wine/20 transition-colors duration-500 overflow-hidden"
+            class="group flex flex-col rounded-2xl border border-[color:var(--line)] dark:border-white/[0.10] hover:border-wine/30 dark:hover:border-wine/40 dark:bg-white/[0.03] transition-colors duration-500 overflow-hidden"
           >
-            <div class="px-7 sm:px-8 pt-7 sm:pt-8 pb-5 sm:pb-6 border-b border-[color:var(--line)]">
+            <div class="px-7 sm:px-8 pt-7 sm:pt-8 pb-5 sm:pb-6 border-b border-[color:var(--line)] dark:border-white/[0.08]">
               <div class="flex items-center justify-between mb-5">
                 <span class="eyebrow text-[10px] text-wine bg-wine/[0.08] px-2.5 py-1 rounded-full">
                   {{ $t('posizionamento.pacchetti.base.tag') }}
@@ -559,7 +563,7 @@ onMounted(() => {
                 </li>
               </ul>
             </div>
-            <div class="px-7 sm:px-8 py-5 sm:py-6 border-t border-[color:var(--line)] bg-brown/[0.02] dark:bg-cream/[0.02]">
+            <div class="px-7 sm:px-8 py-5 sm:py-6 border-t border-[color:var(--line)] dark:border-white/[0.08] bg-brown/[0.02] dark:bg-cream/[0.02]">
               <div class="flex items-baseline gap-2">
                 <p class="font-serif font-light text-[clamp(1.45rem,4.6vw,2.4rem)] text-brown dark:text-cream leading-none whitespace-nowrap shrink-0">
                   {{ $t('posizionamento.pacchetti.base.price') }}
@@ -625,9 +629,9 @@ onMounted(() => {
           <!-- Full — Eccellenza -->
           <div
             data-pk-card
-            class="group flex flex-col rounded-2xl border border-[color:var(--line)] hover:border-wine/20 transition-colors duration-500 overflow-hidden"
+            class="group flex flex-col rounded-2xl border border-[color:var(--line)] dark:border-white/[0.10] hover:border-wine/30 dark:hover:border-wine/40 dark:bg-white/[0.03] transition-colors duration-500 overflow-hidden"
           >
-            <div class="px-7 sm:px-8 pt-7 sm:pt-8 pb-5 sm:pb-6 border-b border-[color:var(--line)]">
+            <div class="px-7 sm:px-8 pt-7 sm:pt-8 pb-5 sm:pb-6 border-b border-[color:var(--line)] dark:border-white/[0.08]">
               <div class="flex items-center justify-between mb-5">
                 <span class="eyebrow text-[10px] text-wine bg-wine/[0.08] px-2.5 py-1 rounded-full">
                   {{ $t('posizionamento.pacchetti.full.tag') }}
@@ -653,7 +657,7 @@ onMounted(() => {
                 </li>
               </ul>
             </div>
-            <div class="px-7 sm:px-8 py-5 sm:py-6 border-t border-[color:var(--line)] bg-brown/[0.02] dark:bg-cream/[0.02]">
+            <div class="px-7 sm:px-8 py-5 sm:py-6 border-t border-[color:var(--line)] dark:border-white/[0.08] bg-brown/[0.02] dark:bg-cream/[0.02]">
               <div class="flex items-baseline gap-2">
                 <p class="font-serif font-light text-[clamp(1.45rem,4.6vw,2.4rem)] text-brown dark:text-cream leading-none whitespace-nowrap shrink-0">
                   {{ $t('posizionamento.pacchetti.full.price') }}
@@ -687,26 +691,26 @@ onMounted(() => {
     ══════════════════════════════════════════ -->
     <section class="relative py-section sm:py-section-lg bg-noir text-cream overflow-hidden">
       <div class="container-x max-w-6xl mx-auto">
-        <p class="eyebrow text-wine mb-8 sm:mb-12">Prospetto comparativo</p>
+        <p class="eyebrow text-wine mb-8 sm:mb-12">{{ $t('posizionamento.prospetto.eyebrow') }}</p>
 
         <div class="grid md:grid-cols-3 rounded-2xl overflow-hidden border border-white/[0.06]">
 
           <!-- Colonna Base -->
           <div class="flex flex-col border-b md:border-b-0 md:border-r border-white/[0.06]">
             <div class="px-6 sm:px-8 py-6 sm:py-7 border-b border-white/[0.06] bg-white/[0.02]">
-              <p class="eyebrow text-[10px] text-cream/30 mb-3">01 — BASE</p>
-              <p class="font-serif font-light text-fluid-2xl text-cream leading-none">Radici</p>
+              <p class="eyebrow text-[10px] text-cream/30 mb-3">{{ $t('posizionamento.prospetto.col01') }}</p>
+              <p class="font-serif font-light text-fluid-2xl text-cream leading-none">{{ $t('posizionamento.prospetto.col01name') }}</p>
             </div>
             <div class="flex-1 divide-y divide-white/[0.04]">
               <div
-                v-for="row in prospettoRows"
+                v-for="(row, rowIdx) in prospettoRows"
                 :key="row.label + '-base'"
                 class="px-6 sm:px-8 py-4 sm:py-5"
               >
                 <p class="eyebrow text-[9px] text-cream/25 mb-1.5">{{ row.label }}</p>
                 <p
                   class="font-serif font-medium leading-none whitespace-nowrap shrink-0"
-                  :class="row.label === 'Investimento mensile'
+                  :class="rowIdx === prospettoRows.length - 1
                     ? 'text-fluid-xl text-cream'
                     : 'text-fluid-sm text-cream/60'"
                 >{{ row.base }}</p>
@@ -718,19 +722,19 @@ onMounted(() => {
           <div class="flex flex-col relative border-b md:border-b-0 md:border-r border-white/[0.06] bg-wine/[0.07]">
             <div class="absolute top-0 left-0 right-0 h-[3px] bg-wine" />
             <div class="px-6 sm:px-8 py-6 sm:py-7 border-b border-wine/20 mt-[3px]">
-              <p class="eyebrow text-[10px] text-wine mb-3">02 — MEDIUM · Più scelto</p>
-              <p class="font-serif font-light text-fluid-2xl text-cream leading-none">Equilibrio</p>
+              <p class="eyebrow text-[10px] text-wine mb-3">{{ $t('posizionamento.prospetto.col02') }}</p>
+              <p class="font-serif font-light text-fluid-2xl text-cream leading-none">{{ $t('posizionamento.prospetto.col02name') }}</p>
             </div>
             <div class="flex-1 divide-y divide-white/[0.04]">
               <div
-                v-for="row in prospettoRows"
+                v-for="(row, rowIdx) in prospettoRows"
                 :key="row.label + '-medium'"
                 class="px-6 sm:px-8 py-4 sm:py-5"
               >
                 <p class="eyebrow text-[9px] text-cream/35 mb-1.5">{{ row.label }}</p>
                 <p
                   class="font-serif font-medium leading-none whitespace-nowrap shrink-0"
-                  :class="row.label === 'Investimento mensile'
+                  :class="rowIdx === prospettoRows.length - 1
                     ? 'text-fluid-xl text-wine'
                     : 'text-fluid-sm text-cream/80'"
                 >{{ row.medium }}</p>
@@ -741,19 +745,19 @@ onMounted(() => {
           <!-- Colonna Eccellenza -->
           <div class="flex flex-col">
             <div class="px-6 sm:px-8 py-6 sm:py-7 border-b border-white/[0.06] bg-white/[0.02]">
-              <p class="eyebrow text-[10px] text-cream/30 mb-3">03 — PREMIUM</p>
-              <p class="font-serif font-light text-fluid-2xl text-cream leading-none">Eccellenza</p>
+              <p class="eyebrow text-[10px] text-cream/30 mb-3">{{ $t('posizionamento.prospetto.col03') }}</p>
+              <p class="font-serif font-light text-fluid-2xl text-cream leading-none">{{ $t('posizionamento.prospetto.col03name') }}</p>
             </div>
             <div class="flex-1 divide-y divide-white/[0.04]">
               <div
-                v-for="row in prospettoRows"
+                v-for="(row, rowIdx) in prospettoRows"
                 :key="row.label + '-premium'"
                 class="px-6 sm:px-8 py-4 sm:py-5"
               >
                 <p class="eyebrow text-[9px] text-cream/25 mb-1.5">{{ row.label }}</p>
                 <p
                   class="font-serif font-medium leading-none whitespace-nowrap shrink-0"
-                  :class="row.label === 'Investimento mensile'
+                  :class="rowIdx === prospettoRows.length - 1
                     ? 'text-fluid-xl text-cream'
                     : 'text-fluid-sm text-cream/60'"
                 >{{ row.premium }}</p>
@@ -779,26 +783,34 @@ onMounted(() => {
           </h2>
         </div>
 
-        <div class="space-y-3 sm:space-y-4 mb-10 sm:mb-14">
+        <div class="divide-y divide-[color:var(--line)] mb-10 sm:mb-14">
           <div
             v-for="(row, i) in budgetRows"
             :key="i"
-            class="group grid grid-cols-2 md:grid-cols-[minmax(0,1.35fr)_minmax(0,0.95fr)_minmax(0,1.05fr)_minmax(0,1.35fr)] gap-x-4 gap-y-5 sm:gap-6 md:gap-10 px-6 sm:px-8 py-6 sm:py-7 rounded-2xl border border-[color:var(--line)] hover:border-wine/20 transition-colors duration-400 items-start"
+            class="group py-8 sm:py-10 md:py-12"
           >
-            <div class="col-span-2 md:col-span-1 min-w-0">
-              <p class="font-serif font-light text-fluid-base sm:text-fluid-lg text-brown dark:text-cream leading-snug whitespace-pre-line break-words">{{ row.pkg }}</p>
+            <!-- Nome pacchetto -->
+            <div class="flex items-baseline gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <span class="font-serif font-light text-[clamp(2rem,4vw,3rem)] text-wine/25 dark:text-wine/35 leading-none shrink-0 select-none group-hover:text-wine/60 transition-colors duration-500 tabular-nums">
+                {{ String(i + 1).padStart(2, '0') }}
+              </span>
+              <p class="font-serif font-light text-fluid-lg sm:text-fluid-xl text-brown dark:text-cream leading-snug whitespace-pre-line">{{ row.pkg }}</p>
             </div>
-            <div class="min-w-0">
-              <p class="eyebrow text-[9px] sm:text-[10px] text-brown/35 dark:text-cream/30 mb-2">{{ $t('posizionamento.budget.col2') }}</p>
-              <p class="font-serif font-medium text-[clamp(1.15rem,3vw,1.7rem)] text-brown/70 dark:text-cream/90 leading-none whitespace-nowrap">{{ row.daily }}</p>
-            </div>
-            <div class="min-w-0">
-              <p class="eyebrow text-[9px] sm:text-[10px] text-brown/35 dark:text-cream/30 mb-2">{{ $t('posizionamento.budget.col3') }}</p>
-              <p class="font-serif font-medium text-[clamp(1.05rem,2.9vw,1.9rem)] leading-none whitespace-nowrap shrink-0" style="color: rgb(123 30 30 / var(--tw-text-opacity, 1))">{{ row.monthly }}</p>
-            </div>
-            <div class="min-w-0">
-              <p class="eyebrow text-[9px] sm:text-[10px] text-brown/35 dark:text-cream/30 mb-2">{{ $t('posizionamento.budget.col4') }}</p>
-              <p class="font-serif font-medium italic text-fluid-xs sm:text-fluid-sm text-brown/60 dark:text-cream/80 leading-relaxed break-words">{{ row.reach }}</p>
+
+            <!-- Metriche in riga -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-8 md:gap-12 pl-[calc(clamp(2rem,4vw,3rem)+0.75rem)] sm:pl-[calc(clamp(2rem,4vw,3rem)+1rem)]">
+              <div>
+                <p class="eyebrow text-[10px] sm:text-[11px] text-brown/40 dark:text-cream/35 mb-2 sm:mb-3">{{ $t('posizionamento.budget.col2') }}</p>
+                <p class="font-serif font-light text-[clamp(1.4rem,3.5vw,2rem)] text-brown/80 dark:text-cream/80 leading-none tabular-nums">{{ row.daily }}</p>
+              </div>
+              <div>
+                <p class="eyebrow text-[10px] sm:text-[11px] text-brown/40 dark:text-cream/35 mb-2 sm:mb-3">{{ $t('posizionamento.budget.col3') }}</p>
+                <p class="font-serif font-light text-[clamp(1.5rem,3.8vw,2.2rem)] text-wine leading-none tabular-nums">{{ row.monthly }}</p>
+              </div>
+              <div>
+                <p class="eyebrow text-[10px] sm:text-[11px] text-brown/40 dark:text-cream/35 mb-2 sm:mb-3">{{ $t('posizionamento.budget.col4') }}</p>
+                <p class="font-serif italic text-fluid-base sm:text-fluid-lg text-brown/70 dark:text-cream/75 leading-snug">{{ row.reach }}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -836,7 +848,7 @@ onMounted(() => {
 
           <div class="flex flex-col sm:flex-row lg:flex-col gap-4 shrink-0">
             <a
-              href="/brochure-cascina-paradiso.pdf"
+              href="/PDF/Denani Cascina Paradiso.pdf"
               target="_blank"
               rel="noopener"
               class="group inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 bg-cream text-brown font-sans font-medium text-sm uppercase tracking-eyebrow rounded-full hover:bg-wine hover:text-cream transition-all duration-400 ease-expo"
