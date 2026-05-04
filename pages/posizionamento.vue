@@ -173,7 +173,7 @@ onMounted(() => {
       class="relative h-[100svh] min-h-[580px] w-full overflow-hidden bg-noir text-cream"
     >
       <div ref="heroImg" class="absolute inset-0 will-change-transform">
-        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+        <video autoplay muted loop playsinline preload="auto" class="w-full h-full object-cover">
           <source src="/images/12186173_2160_3840_30fps.mp4" type="video/mp4" />
         </video>
         <div
@@ -190,9 +190,10 @@ onMounted(() => {
         </div>
         <h1
           ref="heroQuote"
-          class="font-serif font-light text-fluid-5xl sm:text-fluid-6xl leading-tightest tracking-tightest max-w-[min(96vw,78rem)] text-balance whitespace-pre-line"
+          class="font-serif font-light text-fluid-4xl sm:text-fluid-5xl leading-tightest tracking-tightest max-w-[min(96vw,78rem)]"
         >
-          {{ $t('posizionamento.hero.title') }}
+          <span class="block">{{ $t('posizionamento.hero.titleLine1') }}</span>
+          <span class="block">{{ $t('posizionamento.hero.titleLine2') }}</span>
         </h1>
         <p
           ref="heroSub"
@@ -877,7 +878,7 @@ onMounted(() => {
         >
           {{ $t('posizionamento.cta.title') }}
         </AnimatedText>
-        <p class="text-fluid-base sm:text-fluid-lg opacity-80 mb-10 sm:mb-14 max-w-lg mx-auto leading-relaxed">
+        <p class="text-fluid-base opacity-80 mb-10 sm:mb-14 whitespace-nowrap">
           {{ $t('posizionamento.cta.desc') }}
         </p>
       </div>

@@ -7,6 +7,8 @@
     "hero": {
       "eyebrow": "Dal 1972 — Val Seriana",
       "title": "Non abbiamo reinventato niente.\nAbbiamo solo ricordato.",
+      "titleLine1": "Non abbiamo reinventato niente.",
+      "titleLine2": "Abbiamo solo ricordato.",
       "subtitle": "Una storia vera non ha bisogno di costruzioni. Cascina Paradiso riparte dalle radici del 1972 con una strategia di comunicazione che racconta ciò che siamo — senza filtri.",
       "scroll": "Scopri"
     },
@@ -180,7 +182,8 @@
     },
     "cta": {
       "title": "Iniziamo a costruire.",
-      "desc": "Un progetto autentico merita una comunicazione all'altezza. Parliamone.",
+      "desc": "Un progetto autentico merita una comunicazione all'altezza.",
+      "descCta": "Parliamone.",
       "btn": "Torna alla Homepage"
     },
     "hoverLabel": "Vedi",

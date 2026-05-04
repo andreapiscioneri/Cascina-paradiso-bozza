@@ -7,6 +7,8 @@
     "hero": {
       "eyebrow": "Since 1972 — Val Seriana",
       "title": "We didn't reinvent anything.\nWe just remembered.",
+      "titleLine1": "We didn't reinvent anything.",
+      "titleLine2": "We just remembered.",
       "subtitle": "A true story needs no construction. Cascina Paradiso returns to its 1972 roots with a communication strategy that tells what we are — without filters.",
       "scroll": "Discover"
     },
@@ -180,7 +182,8 @@
     },
     "cta": {
       "title": "Let's start building.",
-      "desc": "An authentic project deserves communication to match. Let's talk.",
+      "desc": "An authentic project deserves communication to match.",
+      "descCta": "Let's talk.",
       "btn": "Back to Homepage"
     },
     "hoverLabel": "View",
