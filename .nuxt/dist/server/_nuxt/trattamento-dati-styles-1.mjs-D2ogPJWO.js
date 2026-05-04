@@ -1,5 +1,0 @@
-const trattamentoDati_vue_vue_type_style_index_0_scoped_1156a7d1_lang = ".prose-legal h2[data-v-1156a7d1]{font-family:var(--font-serif);font-size:var(--text-fluid-2xl);font-weight:300;letter-spacing:-.02em;margin-bottom:1rem;margin-top:3rem}.prose-legal p[data-v-1156a7d1],.prose-legal ul[data-v-1156a7d1]{font-size:var(--text-fluid-base);line-height:1.75;margin-bottom:1.25rem;opacity:.8}.prose-legal ul[data-v-1156a7d1]{list-style:disc;padding-left:1.5rem}.prose-legal li[data-v-1156a7d1]{margin-bottom:.5rem}.prose-legal a[data-v-1156a7d1]{text-decoration:underline;text-underline-offset:3px}";
-export {
-  trattamentoDati_vue_vue_type_style_index_0_scoped_1156a7d1_lang as default
-};
-//# sourceMappingURL=trattamento-dati-styles-1.mjs-D2ogPJWO.js.map

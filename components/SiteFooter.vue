@@ -9,7 +9,6 @@ const isOnPosizionamento = computed(() => route.path.includes('/posizionamento')
   <footer class="bg-noir text-cream grain mt-32">
     <!-- Oversized wordmark -->
     <div class="container-x pt-24 pb-10 border-b border-white/10">
-      <p class="eyebrow opacity-50 mb-6">{{ $t('footer.built') }}</p>
       <h2
         class="font-serif font-light text-fluid-6xl md:text-fluid-7xl leading-tightest tracking-tightest whitespace-nowrap"
       >

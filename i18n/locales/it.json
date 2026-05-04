@@ -9,11 +9,11 @@
       "title": "Non abbiamo reinventato niente.\nAbbiamo solo ricordato.",
       "titleLine1": "Non abbiamo reinventato niente.",
       "titleLine2": "Abbiamo solo ricordato.",
-      "subtitle": "Una storia vera non ha bisogno di costruzioni. Cascina Paradiso riparte dalle radici del 1972 con una strategia di comunicazione che racconta ciò che siamo — senza filtri.",
+      "subtitle": "Una storia vera non ha bisogno di essere costruita a tavolino. DeNani propone per Cascina Paradiso una strategia di comunicazione che riparte dalle radici del 1972.",
       "scroll": "Scopri"
     },
     "valore": {
-      "eyebrow": "Il nostro posizionamento",
+      "eyebrow": "Posizionamento",
       "line1": "Il valore che ci distingue:",
       "line2": "L'onestà",
       "line3": "Siamo nati così.\nNon abbiamo bisogno di fingere."
@@ -46,19 +46,19 @@
       "s1": {
         "eyebrow": "Pilastro 01",
         "title": "Brand Identity",
-        "desc": "Prima di comunicare, bisogna esistere. Creiamo un'immagine coerente, riconoscibile e memorabile che parli di noi senza spiegazioni.",
+        "desc": "Necessità di creare un'immagine coerente, riconoscibile, ricordabile.",
         "items": {
           "logo": {
-            "title": "Logo & Visual Identity",
-            "desc": "Un segno che richiami l'artigianalità e la storia, con la pulizia visiva di chi non ha nulla da dimostrare."
+            "title": "Logo & Visual",
+            "desc": "No moderno e freddo, ma che richiami l'artigianalità con una pulizia visiva che comunichi qualità."
           },
           "palette": {
             "title": "Color Palette",
-            "desc": "Bordeaux e terra. I colori delle pareti del ristorante diventano il filo conduttore di tutta la comunicazione."
+            "desc": "vino/bordeaux ispirato alle pareti del ristorante."
           },
           "landing": {
-            "title": "Sito con Menu Dinamico",
-            "desc": "Una presenza web che si aggiorna in pochi click — essenziale per una cucina stagionale. Pensata per convertire, non solo per informare.",
+            "title": "Sito Web con Menu",
+            "desc": "possibilità di prenotare online.",
             "list1": "Video emozionale in apertura: fuoco vivo, pasta tirata a mano, vista sulla valle",
             "list2": "Prenotazione diretta integrata: l'utente prenota senza uscire dalla pagina"
           },
@@ -71,24 +71,24 @@
       "s2": {
         "eyebrow": "Pilastro 02",
         "title": "Social Media & Contenuti",
-        "desc1": "Utilizziamo il video perché è lo strumento ad alto tasso di diffusione e visibilità. Lo usiamo per raccontare, non per vendere.",
-        "desc2": "Formati narrativi:",
+        "desc1": "Utilizzare video perché strumento ad alto tasso di diffusione e visibilità.",
+        "desc2": "Cosa mostrare (esempi):",
         "items": {
           "mani": {
             "title": "Dalle Mani alla Tavola",
-            "desc": "Macro-riprese della preparazione dei piatti tipici. Focus sulla tecnica (il \"come una volta\") con l'estetica moderna dell'impiattamento curato."
+            "desc": "Macro-riprese della preparazione dei piatti tipici. Focus sulla tecnica (il \"come una volta\") ma con l'estetica moderna (impiattamento curato)."
           },
           "frammenti": {
             "title": "Frammenti di 1972",
-            "desc": "Racconti sulla storia del ristorante, sui personaggi storici che lo hanno visitato, riprese di dettagli che rimandano alla storia: foto, oggetti, memorie."
+            "desc": "Racconti sulla storia del ristorante, sui personaggi storici che lo hanno visitato, riprese di dettagli che rimandano alla storia (foto, oggetti storici)."
           },
           "atmosfera": {
             "title": "L'Atmosfera",
-            "desc": "Il rumore dei calici, il calore del legno, la pace della Val Seriana. L'esperienza prima dell'esperienza."
+            "desc": "Video che trasmettano il vibe del locale: il rumore dei calici, il calore del legno, la pace della Val Seriana."
           },
           "fornitore": {
             "title": "Il Fornitore del Giorno",
-            "desc": "Video in collaborazione con i fornitori locali o focus su un prodotto del territorio. Il territorio entra in cucina — e in camera."
+            "desc": "Video in collaborazione con i fornitori locali, o più semplicemente in cui si fa un focus su un prodotto local."
           }
         }
       },
@@ -114,53 +114,53 @@
       "disclaimer": "Il budget per le sponsorizzazioni è da considerarsi indicativo e non vincolante, sebbene sia caldamente raccomandato per garantire la massima visibilità al progetto. L'intero investimento è interamente deducibile ai sensi dell'Art. 108 del TUIR.",
       "base": {
         "label": "Pacchetto Base",
-        "tag": "RADICI",
+        "tag": "Small",
         "name": "Radici",
         "desc": "Le fondamenta. Presenza, identità e primo presidio social.",
-        "price": "€ 900",
+        "price": "€ 1.000",
         "items": [
-          "Creazione logo e definizione palette colori Bordeaux/Vino",
-          "Landing Page (sito mono-pagina) con Menu Digitale PDF",
-          "Configurazione profili Facebook, Instagram, TikTok",
-          "Calendario editoriale trimestrale",
-          "1 Reel/Video a settimana — copione, ripresa, montaggio, pubblicazione",
-          "Campagna Meta sempre attiva — Local Awareness 20km *",
-          "1 sessione shooting (≈ 6h) ogni 3 mesi"
+          "Creazione logo e definizione della palette colori (Bordeaux/Vino).",
+          "Landing Page (Sito Web mono-pagina) con Menu Digitale PDF.",
+          "Configurazione profili social Facebook, Instagram, Tik Tok",
+          "Calendario editoriale trimestrale - Programmazione strategica di temi e contenuti ogni tre mesi, concordata con il cliente per bilanciare promozione e racconto del brand.",
+          "1 Reel/Video a settimana: Include sviluppo testi (copione), ripresa, montaggio professionale e pubblicazione con caption (didascalia) strategica e ricerca hashtag.",
+          "Advertising: Setup base di una campagna sempre attiva su Meta per local awareness nel raggio di 20km. *Budget sponsorizzazioni a parte.",
+          "Produzione: 1 sessione di shooting (6 ore circa) ogni tre mesi."
         ]
       },
       "pro": {
         "label": "Pacchetto Medium",
-        "tag": "EQUILIBRIO",
+        "tag": "Medium",
         "name": "Equilibrio",
-        "badge": "Più scelto",
+        "badge": "Medium",
         "desc": "Identità completa, sito dinamico e presenza social strutturata per crescere.",
         "price": "€ 1.500",
         "items": [
-          "Identità visiva completa: logo evoluto, font istituzionali, palette estesa, icone",
-          "Landing Page Dinamica con menu aggiornabile, prenotazioni e sezione 'La nostra storia'",
-          "Restyling materiale cartaceo — nuovi biglietti da visita",
-          "Ottimizzazione profili Facebook, Instagram e TikTok",
-          "Calendario editoriale trimestrale",
-          "2 Reel/Video a settimana — copione, ripresa, montaggio, pubblicazione",
-          "Campagne Multi-Obiettivo Meta: Copertura brand + Traffico prenotazioni *",
-          "1–2 sessioni shooting (≈ 10h) ogni 3 mesi"
+          "Identità visiva completa: Evoluzione del logo, scelta dei font istituzionali, palette colori estesa, icone e linee stilistiche per i social.",
+          "Landing Page Dinamica: sito web con gestione autonoma del menu (ideale per stagionalità), integrazione diretta dei sistemi di prenotazione e sezione narrativa \"La nostra storia\".",
+          "Restyling Materiale Cartaceo: Progettazione grafica coordinata per i nuovi biglietti da visita.",
+          "Ottimizzazione profili: Configurazione e ottimizzazione estetica/funzionale di Facebook, Instagram e TikTok.",
+          "Calendario editoriale trimestrale: Programmazione strategica di temi e contenuti ogni tre mesi, concordata con il cliente per bilanciare promozione e racconto del brand.",
+          "2 Reel/Video a settimana: Include sviluppo testi (copione), ripresa, montaggio professionale e pubblicazione con caption (didascalia) strategica e ricerca hashtag.",
+          "Gestione Campagne Multi-Obiettivo: Creazione e monitoraggio di campagne su Meta differenziate (Copertura per il brand + Traffico mirato al sistema di prenotazione/menu). *Budget sponsorizzazioni a parte.",
+          "1-2 sessioni di shooting (10 ore circa) ogni tre mesi."
         ]
       },
       "full": {
         "label": "Pacchetto Premium",
-        "tag": "ECCELLENZA",
+        "tag": "Premium",
         "name": "Eccellenza",
         "desc": "Il percorso completo. Deleghi tutto, ti concentri sulla cucina.",
         "price": "€ 2.800",
         "items": [
-          "Brand Book completo + stationery coordinata (biglietti, sottobicchieri, carta intestata, cartellonistica)",
-          "Sito Web Evoluto: Hero Video emozionale, prenotazione avanzata, multilingua, SEO locale",
-          "Gestione proattiva Facebook, Instagram e TikTok con monitoraggio notifiche",
-          "Strategia editoriale avanzata su dati, con focus su eventi speciali, festività e storytelling fornitori",
-          "3 Reel/Video a settimana — copione, ripresa, montaggio, pubblicazione",
-          "Storytelling quotidiano nelle Stories — dietro le quinte, fuori menu, vita in Cascina",
-          "Funnel Ads Avanzato: Retargeting, campagne eventi/cerimonie, pubblici Lookalike *",
-          "Sessioni shooting/video-making trimestrali (fino a 16h)"
+          "Brand Identity Premium: Creazione del manuale d'uso del marchio (Brand Book) e design coordinato per tutta la stationery (biglietti da visita, sottobicchieri, carta intestata, cartellonistica interna).",
+          "Sito Web Evoluto: Piattaforma completa con Hero Video emozionale in apertura (10 secondi), sistema di prenotazione avanzato, gestione multilingua e ottimizzazione SEO locale per scalare i ranking su Google.",
+          "Gestione proattiva di Facebook, Instagram e TikTok con monitoraggio delle notifiche.",
+          "Calendario editoriale trimestrale: Strategia avanzata basata sui dati, con focus su eventi speciali, festività e storytelling profondo dei fornitori locali.",
+          "3 Reel/Video a settimana: Include sviluppo testi (copione), ripresa, montaggio professionale e pubblicazione con caption (didascalia) strategica e ricerca hashtag.",
+          "Storytelling quotidiano: Presidio costante delle Stories per mostrare il \"dietro le quinte\", i fuori menu e la vita quotidiana in Cascina.",
+          "Strategia Ads Avanzata: Gestione di funnel complessi su Meta (Retargeting per chi ha visitato il sito, campagne specifiche per eventi/cerimonie e creazione di pubblici \"Lookalike\"). *Budget sponsorizzazioni a parte.",
+          "Sessioni di shooting/video-making trimestrali (fino a 16 ore)."
         ]
       }
     },
@@ -202,7 +202,7 @@
         { "label": "Contenuti Social", "base": "4 Reel / mese", "medium": "8 Reel / mese", "premium": "12 Reel / mese" },
         { "label": "Gestione ADS", "base": "Setup Base (Local)", "medium": "Awareness + Traffico", "premium": "Funnel Avanzato (Retargeting)" },
         { "label": "Produzione Video/Foto", "base": "6h ogni 3 mesi", "medium": "10h ogni 3 mesi", "premium": "16h ogni 3 mesi" },
-        { "label": "Investimento mensile", "base": "€ 900", "medium": "€ 1.500", "premium": "€ 2.800" }
+        { "label": "Investimento mensile", "base": "€ 1.000", "medium": "€ 1.500", "premium": "€ 2.800" }
       ]
     },
     "budgetRows": [

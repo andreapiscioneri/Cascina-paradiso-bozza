@@ -8,6 +8,7 @@ interface Props {
   alt?: string
   ratio?: 'portrait' | 'landscape' | 'square' | 'cinematic'
   parallax?: boolean
+  fit?: 'cover' | 'contain'
   sizes?: string
   preload?: boolean
   rounded?: boolean
@@ -17,6 +18,7 @@ const props = withDefaults(defineProps<Props>(), {
   alt: '',
   ratio: 'landscape',
   parallax: true,
+  fit: 'cover',
   sizes: 'sm:100vw md:80vw lg:1200px',
   preload: false,
   rounded: false,
@@ -94,6 +96,8 @@ const ratioClass = computed(() =>
     ? 'aspect-cinematic'
     : 'aspect-landscape',
 )
+
+  const fitClass = computed(() => (props.fit === 'contain' ? 'object-contain' : 'object-cover'))
 </script>
 
 <template>
@@ -112,7 +116,8 @@ const ratioClass = computed(() =>
           :sizes="sizes"
           :preload="preload"
           loading="lazy"
-          class="w-full h-full object-cover"
+          class="w-full h-full"
+          :class="fitClass"
           format="webp"
         />
       </div>

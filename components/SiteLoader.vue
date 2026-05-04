@@ -51,23 +51,7 @@ onMounted(() => {
 
 <template>
   <div v-if="isVisible" ref="root" class="cp-loader">
-    <div ref="logo" class="flex flex-col items-center gap-4 px-6 w-full max-w-xs sm:max-w-sm mx-auto">
-      <svg
-        class="cp-loader__logo"
-        viewBox="0 0 72 72"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <circle cx="36" cy="36" r="34" stroke="currentColor" stroke-width="1" />
-        <path
-          d="M22 44c4-10 10-14 14-14s10 4 14 14"
-          stroke="currentColor"
-          stroke-width="1"
-          stroke-linecap="round"
-        />
-        <circle cx="36" cy="28" r="2" fill="currentColor" />
-      </svg>
+    <div ref="logo" class="flex flex-col items-center gap-3 px-6 w-full max-w-xs sm:max-w-sm mx-auto">
       <span class="font-serif text-fluid-xl sm:text-fluid-2xl tracking-tight text-center">Cascina Paradiso</span>
       <span class="eyebrow text-[10px] sm:text-xs opacity-60">{{ $t('loader.since') }}</span>
     </div>

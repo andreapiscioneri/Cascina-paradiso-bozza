@@ -1,5 +1,0 @@
-const cookie_vue_vue_type_style_index_0_scoped_aa4fee60_lang = ".prose-legal h2[data-v-aa4fee60]{font-family:var(--font-serif);font-size:var(--text-fluid-2xl);font-weight:300;letter-spacing:-.02em;margin-bottom:1rem;margin-top:3rem}.prose-legal p[data-v-aa4fee60],.prose-legal ul[data-v-aa4fee60]{font-size:var(--text-fluid-base);line-height:1.75;margin-bottom:1.25rem;opacity:.8}.prose-legal ul[data-v-aa4fee60]{list-style:disc;padding-left:1.5rem}.prose-legal li[data-v-aa4fee60]{margin-bottom:.5rem}.prose-legal a[data-v-aa4fee60]{text-decoration:underline;text-underline-offset:3px}";
-export {
-  cookie_vue_vue_type_style_index_0_scoped_aa4fee60_lang as default
-};
-//# sourceMappingURL=cookie-styles-1.mjs-DB2BmJqk.js.map

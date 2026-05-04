@@ -58,23 +58,6 @@ const links = computed(() => {
         class="flex items-center gap-3 group"
         @click="isOpen = false"
       >
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 72 72"
-          fill="none"
-          class="transition-transform duration-600 ease-expo group-hover:rotate-[8deg]"
-          aria-hidden="true"
-        >
-          <circle cx="36" cy="36" r="34" stroke="currentColor" stroke-width="1.5" />
-          <path
-            d="M22 44c4-10 10-14 14-14s10 4 14 14"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-          />
-          <circle cx="36" cy="28" r="2.5" fill="currentColor" />
-        </svg>
         <span class="flex flex-col leading-none">
           <span class="font-serif text-fluid-lg">Cascina Paradiso</span>
           <span class="eyebrow opacity-60 hidden sm:inline">{{ $t('brand.since') }}</span>
@@ -82,22 +65,6 @@ const links = computed(() => {
       </NuxtLink>
 
       <div v-else class="flex items-center gap-3">
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 72 72"
-          fill="none"
-          aria-hidden="true"
-        >
-          <circle cx="36" cy="36" r="34" stroke="currentColor" stroke-width="1.5" />
-          <path
-            d="M22 44c4-10 10-14 14-14s10 4 14 14"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-          />
-          <circle cx="36" cy="28" r="2.5" fill="currentColor" />
-        </svg>
         <span class="flex flex-col leading-none">
           <span class="font-serif text-fluid-lg">Cascina Paradiso</span>
           <span class="eyebrow opacity-60 hidden sm:inline">{{ $t('brand.since') }}</span>

@@ -35,7 +35,6 @@ const budgetRows = computed(() => {
 const heroRoot = ref<HTMLElement | null>(null)
 const heroImg = ref<HTMLElement | null>(null)
 const heroQuote = ref<HTMLElement | null>(null)
-const heroEyebrow = ref<HTMLElement | null>(null)
 const heroSub = ref<HTMLElement | null>(null)
 
 const manifestoRoot = ref<HTMLElement | null>(null)
@@ -58,14 +57,15 @@ onMounted(() => {
   const { $gsap, $ScrollTrigger } = useNuxtApp() as any
   if (!$gsap || !$ScrollTrigger) return
 
-  $gsap.from([heroEyebrow.value, heroSub.value], {
-    y: 30,
-    opacity: 0,
-    duration: 1.2,
-    stagger: 0.15,
-    delay: 0.3,
-    ease: 'expo.out',
-  })
+  if (heroSub.value) {
+    $gsap.from(heroSub.value, {
+      y: 30,
+      opacity: 0,
+      duration: 1.2,
+      delay: 0.3,
+      ease: 'expo.out',
+    })
+  }
 
   $gsap.fromTo(
     heroImg.value,
@@ -184,10 +184,6 @@ onMounted(() => {
       </div>
 
       <div class="relative z-10 h-full container-x flex flex-col justify-end pb-16 sm:pb-20 md:pb-28">
-        <div ref="heroEyebrow" class="eyebrow mb-4 sm:mb-6 text-cream/80">
-          <span class="inline-block w-6 sm:w-8 h-px bg-cream/60 mr-3 align-middle" />
-          {{ $t('posizionamento.hero.eyebrow') }}
-        </div>
         <h1
           ref="heroQuote"
           class="font-serif font-light text-fluid-4xl sm:text-fluid-5xl leading-tightest tracking-tightest max-w-[min(96vw,78rem)]"
@@ -302,10 +298,8 @@ onMounted(() => {
     ══════════════════════════════════════════ -->
     <section class="relative py-section sm:py-section-lg bg-wine text-cream overflow-hidden grain">
       <div class="relative z-10 container-x max-w-6xl mx-auto">
-        <p class="eyebrow text-cream/50 mb-6 sm:mb-8">{{ $t('posizionamento.strumenti.eyebrow') }}</p>
-        <h2 class="font-serif font-light text-fluid-5xl sm:text-fluid-6xl md:text-fluid-7xl leading-tightest tracking-tightest max-w-3xl">
-          {{ $t('posizionamento.strumenti.titleLine1') }}<br />
-          <em>{{ $t('posizionamento.strumenti.titleLine2') }}</em>
+        <h2 class="font-serif font-light text-fluid-5xl sm:text-fluid-6xl md:text-fluid-7xl leading-tightest tracking-tightest">
+          Strumenti
         </h2>
       </div>
     </section>
@@ -320,10 +314,9 @@ onMounted(() => {
       <section data-str-block class="relative py-section sm:py-section-lg bg-cream dark:bg-noir overflow-hidden">
         <div class="container-x max-w-6xl mx-auto">
 
-          <div data-str-el class="flex items-start gap-4 sm:gap-8 md:gap-10 mb-10 sm:mb-16">
+          <div data-str-el class="flex items-center gap-4 sm:gap-8 md:gap-10 mb-10 sm:mb-16">
             <span class="font-serif font-light text-[clamp(3.5rem,8vw,9rem)] text-wine leading-none shrink-0">01</span>
-            <div class="pt-1 sm:pt-4">
-              <p class="eyebrow text-wine mb-2 sm:mb-3">{{ $t('posizionamento.strumenti.s1.eyebrow') }}</p>
+            <div>
               <h3 class="font-serif font-light text-fluid-4xl sm:text-fluid-5xl leading-tightest tracking-tightest text-brown dark:text-cream">
                 {{ $t('posizionamento.strumenti.s1.title') }}
               </h3>
@@ -337,7 +330,7 @@ onMounted(() => {
               </p>
               <div class="space-y-3">
                 <div
-                  v-for="item in ['logo', 'palette', 'landing', 'menu']"
+                  v-for="item in ['logo', 'palette', 'landing']"
                   :key="item"
                   class="flex items-stretch border border-[color:var(--line)] hover:border-wine/30 transition-colors duration-400 rounded-xl overflow-hidden"
                 >
@@ -349,38 +342,6 @@ onMounted(() => {
                     <p class="text-fluid-xs sm:text-fluid-sm text-brown/60 dark:text-cream/60 leading-relaxed">
                       {{ $t(`posizionamento.strumenti.s1.items.${item}.desc`) }}
                     </p>
-                    <template v-if="item === 'palette'">
-                      <div class="mt-3 sm:mt-4 grid grid-cols-2 gap-2 sm:gap-3">
-                        <div class="flex items-center gap-2.5 text-fluid-xs sm:text-fluid-sm text-brown/70 dark:text-cream/70">
-                          <span class="h-3.5 w-3.5 rounded-full border border-white/10 bg-wine shrink-0" aria-hidden="true" />
-                          <div class="min-w-0">
-                            <span class="block font-medium text-brown dark:text-cream">Bordeaux</span>
-                            <span class="block text-brown/40 dark:text-cream/40 tracking-[0.18em] uppercase">#7B1E1E</span>
-                          </div>
-                        </div>
-                        <div class="flex items-center gap-2.5 text-fluid-xs sm:text-fluid-sm text-brown/70 dark:text-cream/70">
-                          <span class="h-3.5 w-3.5 rounded-full border border-white/10 bg-brown shrink-0" aria-hidden="true" />
-                          <div class="min-w-0">
-                            <span class="block font-medium text-brown dark:text-cream">Terra</span>
-                            <span class="block text-brown/40 dark:text-cream/40 tracking-[0.18em] uppercase">#3E2F2B</span>
-                          </div>
-                        </div>
-                        <div class="flex items-center gap-2.5 text-fluid-xs sm:text-fluid-sm text-brown/70 dark:text-cream/70">
-                          <span class="h-3.5 w-3.5 rounded-full border border-white/40 bg-black shrink-0" aria-hidden="true" />
-                          <div class="min-w-0">
-                            <span class="block font-medium text-brown dark:text-cream">Nero</span>
-                            <span class="block text-brown/40 dark:text-cream/40 tracking-[0.18em] uppercase">#0F0F0F</span>
-                          </div>
-                        </div>
-                        <div class="flex items-center gap-2.5 text-fluid-xs sm:text-fluid-sm text-brown/70 dark:text-cream/70">
-                          <span class="h-3.5 w-3.5 rounded-full border border-[color:var(--line)] bg-cream shrink-0" aria-hidden="true" />
-                          <div class="min-w-0">
-                            <span class="block font-medium text-brown dark:text-cream">Bianco</span>
-                            <span class="block text-brown/40 dark:text-cream/40 tracking-[0.18em] uppercase">#F5F1E8</span>
-                          </div>
-                        </div>
-                      </div>
-                    </template>
                     <template v-if="item === 'landing'">
                       <ul class="mt-2 sm:mt-3 space-y-1.5 text-fluid-xs sm:text-fluid-sm text-brown/60 dark:text-cream/60">
                         <li class="flex items-start gap-2">
@@ -399,15 +360,11 @@ onMounted(() => {
             </div>
 
             <div data-str-el class="grid grid-cols-2 gap-3 sm:gap-4">
-              <a href="https://denani.it/2021/04/21/hotel-ristorante-camoretti/" target="_blank" rel="noopener">
-                <ImageReveal src="/images/CAMORETTI-scaled-e1709716201950.webp" alt="Hotel Ristorante Camoretti" ratio="square" rounded :hover-label="$t('posizionamento.hoverLabel')" />
-              </a>
-              <a href="https://denani.it/2021/04/21/portfolio-fabrizio-crippa/" target="_blank" rel="noopener">
-                <ImageReveal src="/images/FABRIZIO-CRIPPA-scaled-e1709716167674.webp" alt="Fabrizio Crippa" ratio="square" rounded :hover-label="$t('posizionamento.hoverLabel')" />
-              </a>
-              <a href="https://denani.it/2021/09/30/pasticceria-florian/" target="_blank" rel="noopener" class="col-span-2">
-                <ImageReveal src="/images/FLORIAN-scaled-e1709716143700.webp" alt="Pasticceria Florian" ratio="landscape" rounded :hover-label="$t('posizionamento.hoverLabel')" />
-              </a>
+              <ImageReveal src="/images/brand1.jpg" alt="Branding image" ratio="square" rounded />
+              <ImageReveal src="/images/brand2.jpg" alt="Brand studio" ratio="square" rounded />
+              <div class="col-span-2">
+                <ImageReveal src="/images/brand3.jpg" alt="Brand mockup" ratio="landscape" rounded />
+              </div>
             </div>
           </div>
         </div>
@@ -419,10 +376,9 @@ onMounted(() => {
       <section data-str-block class="relative py-section sm:py-section-lg bg-noir text-cream overflow-hidden">
         <div class="relative z-10 container-x max-w-6xl mx-auto">
 
-          <div data-str-el class="flex items-start gap-4 sm:gap-8 md:gap-10 mb-10 sm:mb-16">
+          <div data-str-el class="flex items-center gap-4 sm:gap-8 md:gap-10 mb-10 sm:mb-16">
             <span class="font-serif font-light text-[clamp(3.5rem,8vw,9rem)] text-wine leading-none shrink-0">02</span>
-            <div class="pt-1 sm:pt-4">
-              <p class="eyebrow text-cream/40 mb-2 sm:mb-3">{{ $t('posizionamento.strumenti.s2.eyebrow') }}</p>
+            <div>
               <h3 class="font-serif font-light text-fluid-4xl sm:text-fluid-5xl leading-tightest tracking-tightest text-cream">
                 {{ $t('posizionamento.strumenti.s2.title') }}
               </h3>
@@ -431,12 +387,8 @@ onMounted(() => {
 
           <div class="grid md:grid-cols-2 gap-10 sm:gap-12 md:gap-20 items-start">
             <div data-str-el class="flex flex-col gap-4 sm:gap-5">
-              <a href="https://denani.it/portfolio/kraken-factory/" target="_blank" rel="noopener">
-                <ImageReveal src="/images/KRAKEN-FACTORY-scaled-e1709716112360.webp" alt="Kraken Factory" ratio="landscape" rounded :hover-label="$t('posizionamento.hoverLabel')" />
-              </a>
-              <a href="https://denani.it/2024/03/25/zestloungebar/" target="_blank" rel="noopener">
-                <ImageReveal src="/images/ZEST-LOUNGE-BAR.webp" alt="Zest Lounge Bar" ratio="landscape" rounded :hover-label="$t('posizionamento.hoverLabel')" />
-              </a>
+              <ImageReveal src="/images/social1.jpg" alt="Social content" ratio="landscape" rounded />
+              <ImageReveal src="/images/social2.jpg" alt="Content creation" ratio="landscape" rounded />
             </div>
 
             <div data-str-el class="flex flex-col gap-4 sm:gap-6">
@@ -476,10 +428,9 @@ onMounted(() => {
       <section data-str-block class="relative py-section sm:py-section-lg bg-noir text-cream overflow-hidden">
         <div class="relative z-10 container-x max-w-6xl mx-auto">
 
-          <div data-str-el class="flex items-start gap-4 sm:gap-8 md:gap-10 mb-10 sm:mb-16">
+          <div data-str-el class="flex items-center gap-4 sm:gap-8 md:gap-10 mb-10 sm:mb-16">
             <span class="font-serif font-light text-[clamp(3.5rem,8vw,9rem)] text-wine leading-none shrink-0">03</span>
-            <div class="pt-1 sm:pt-4">
-              <p class="eyebrow text-cream/40 mb-2 sm:mb-3">{{ $t('posizionamento.strumenti.s3.eyebrow') }}</p>
+            <div>
               <h3 class="font-serif font-light text-fluid-4xl sm:text-fluid-5xl leading-tightest tracking-tightest text-cream">
                 {{ $t('posizionamento.strumenti.s3.title') }}
               </h3>
@@ -498,14 +449,12 @@ onMounted(() => {
               </div>
             </div>
             <div data-str-el class="flex flex-col gap-3 sm:gap-4">
-              <a href="https://www.instagram.com/farmacia.di.gorle/" target="_blank" rel="noopener" class="group/img relative rounded-2xl overflow-hidden ring-1 ring-transparent hover:ring-wine/50 transition-all duration-500">
-                <ImageReveal src="/images/farmacia-gorle-instagram-cover.svg" alt="Farmacia di Gorle – Instagram" ratio="landscape" :rounded="false" />
-                <div class="absolute inset-0 bg-wine/0 group-hover/img:bg-wine/10 transition-colors duration-500 pointer-events-none" />
-              </a>
-              <a href="https://www.instagram.com/mediline_torino/" target="_blank" rel="noopener" class="group/img relative rounded-2xl overflow-hidden ring-1 ring-transparent hover:ring-wine/50 transition-all duration-500">
-                <ImageReveal src="/images/mediline-instagram-cover.svg" alt="Mediline – Instagram" ratio="landscape" :rounded="false" />
-                <div class="absolute inset-0 bg-wine/0 group-hover/img:bg-wine/10 transition-colors duration-500 pointer-events-none" />
-              </a>
+              <div class="rounded-2xl overflow-hidden">
+                <ImageReveal src="/images/sp2.jpg" alt="Sponsorizzazioni" ratio="landscape" :rounded="false" />
+              </div>
+              <div class="rounded-2xl overflow-hidden">
+                <ImageReveal src="/images/sp3.jpg" alt="Sponsorizzazioni" ratio="landscape" :rounded="false" />
+              </div>
             </div>
           </div>
         </div>
@@ -520,14 +469,11 @@ onMounted(() => {
       <div class="container-x max-w-6xl mx-auto">
 
         <div class="mb-12 sm:mb-16 md:mb-20">
-          <p class="eyebrow text-wine mb-4 sm:mb-6">{{ $t('posizionamento.pacchetti.eyebrow') }}</p>
+          <p class="eyebrow text-wine  mb-4 sm:mb-6 font-sans font-semibold text-fluid-base sm:text-fluid-lg tracking-tight leading-tight">{{ $t('posizionamento.pacchetti.eyebrow') }}</p>
           <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6">
             <h2 class="font-serif font-light text-fluid-5xl sm:text-fluid-6xl leading-tightest tracking-tightest text-brown dark:text-cream">
               {{ $t('posizionamento.pacchetti.title') }}
             </h2>
-            <p class="text-fluid-xs sm:text-fluid-sm text-brown/60 dark:text-cream/60 leading-relaxed md:max-w-xs">
-              {{ $t('posizionamento.pacchetti.subtitle') }}
-            </p>
           </div>
         </div>
 
@@ -549,9 +495,7 @@ onMounted(() => {
               <h3 class="font-serif font-light text-fluid-3xl sm:text-fluid-4xl text-brown dark:text-cream leading-none mb-3">
                 {{ $t('posizionamento.pacchetti.base.name') }}
               </h3>
-              <p class="text-fluid-xs sm:text-fluid-sm text-brown/55 dark:text-cream/55 leading-relaxed">
-                {{ $t('posizionamento.pacchetti.base.desc') }}
-              </p>
+
             </div>
             <div class="px-7 sm:px-8 py-6 sm:py-7 flex-1">
               <ul class="space-y-3 sm:space-y-4">
@@ -597,9 +541,7 @@ onMounted(() => {
               <h3 class="font-serif font-medium text-fluid-3xl sm:text-fluid-4xl text-cream leading-none mb-3 drop-shadow-[0_0_12px_rgba(255,255,255,0.05)]">
                 {{ $t('posizionamento.pacchetti.pro.name') }}
               </h3>
-              <p class="text-fluid-xs sm:text-fluid-sm text-cream/65 leading-relaxed">
-                {{ $t('posizionamento.pacchetti.pro.desc') }}
-              </p>
+
             </div>
             <div class="px-7 sm:px-8 py-6 sm:py-7 flex-1">
               <ul class="space-y-3 sm:space-y-4">
@@ -643,9 +585,7 @@ onMounted(() => {
               <h3 class="font-serif font-light text-fluid-3xl sm:text-fluid-4xl text-brown dark:text-cream leading-none mb-3">
                 {{ $t('posizionamento.pacchetti.full.name') }}
               </h3>
-              <p class="text-fluid-xs sm:text-fluid-sm text-brown/55 dark:text-cream/55 leading-relaxed">
-                {{ $t('posizionamento.pacchetti.full.desc') }}
-              </p>
+
             </div>
             <div class="px-7 sm:px-8 py-6 sm:py-7 flex-1">
               <ul class="space-y-3 sm:space-y-4">
@@ -677,96 +617,13 @@ onMounted(() => {
 
         <!-- Note sconto + budget -->
         <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-1">
-          <p class="eyebrow text-[10px] sm:text-xs text-wine">
+          <p class="eyebrow text-wine font-sans font-semibold text-fluid-base sm:text-fluid-lg tracking-tight leading-tight">
             {{ $t('posizionamento.pacchetti.scontoNote') }}
           </p>
-          <p class="eyebrow text-[10px] sm:text-xs text-brown/40 dark:text-cream/30">
+          <p class="max-w-sm sm:max-w-xs text-fluid-xs sm:text-fluid-sm leading-relaxed text-brown/60 dark:text-cream/55 sm:text-right">
+            <span class="block mb-1 text-[10px] uppercase tracking-[0.24em] text-brown/35 dark:text-cream/35">Nota</span>
             {{ $t('posizionamento.pacchetti.budgetAside') }}
           </p>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ══════════════════════════════════════════
-         PROSPETTO COMPARATIVO
-    ══════════════════════════════════════════ -->
-    <section class="relative py-section sm:py-section-lg bg-noir text-cream overflow-hidden">
-      <div class="container-x max-w-6xl mx-auto">
-        <p class="eyebrow text-wine mb-8 sm:mb-12">{{ $t('posizionamento.prospetto.eyebrow') }}</p>
-
-        <div class="grid md:grid-cols-3 rounded-2xl overflow-hidden border border-white/[0.06]">
-
-          <!-- Colonna Base -->
-          <div class="flex flex-col border-b md:border-b-0 md:border-r border-white/[0.06]">
-            <div class="px-6 sm:px-8 py-6 sm:py-7 border-b border-white/[0.06] bg-white/[0.02]">
-              <p class="eyebrow text-[10px] text-cream/30 mb-3">{{ $t('posizionamento.prospetto.col01') }}</p>
-              <p class="font-serif font-light text-fluid-2xl text-cream leading-none">{{ $t('posizionamento.prospetto.col01name') }}</p>
-            </div>
-            <div class="flex-1 divide-y divide-white/[0.04]">
-              <div
-                v-for="(row, rowIdx) in prospettoRows"
-                :key="row.label + '-base'"
-                class="px-6 sm:px-8 py-4 sm:py-5"
-              >
-                <p class="eyebrow text-[9px] text-cream/25 mb-1.5">{{ row.label }}</p>
-                <p
-                  class="font-serif font-medium leading-none whitespace-nowrap shrink-0"
-                  :class="rowIdx === prospettoRows.length - 1
-                    ? 'text-fluid-xl text-cream'
-                    : 'text-fluid-sm text-cream/60'"
-                >{{ row.base }}</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Colonna Equilibrio — featured -->
-          <div class="flex flex-col relative border-b md:border-b-0 md:border-r border-white/[0.06] bg-wine/[0.07]">
-            <div class="absolute top-0 left-0 right-0 h-[3px] bg-wine" />
-            <div class="px-6 sm:px-8 py-6 sm:py-7 border-b border-wine/20 mt-[3px]">
-              <p class="eyebrow text-[10px] text-wine mb-3">{{ $t('posizionamento.prospetto.col02') }}</p>
-              <p class="font-serif font-light text-fluid-2xl text-cream leading-none">{{ $t('posizionamento.prospetto.col02name') }}</p>
-            </div>
-            <div class="flex-1 divide-y divide-white/[0.04]">
-              <div
-                v-for="(row, rowIdx) in prospettoRows"
-                :key="row.label + '-medium'"
-                class="px-6 sm:px-8 py-4 sm:py-5"
-              >
-                <p class="eyebrow text-[9px] text-cream/35 mb-1.5">{{ row.label }}</p>
-                <p
-                  class="font-serif font-medium leading-none whitespace-nowrap shrink-0"
-                  :class="rowIdx === prospettoRows.length - 1
-                    ? 'text-fluid-xl text-wine'
-                    : 'text-fluid-sm text-cream/80'"
-                >{{ row.medium }}</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Colonna Eccellenza -->
-          <div class="flex flex-col">
-            <div class="px-6 sm:px-8 py-6 sm:py-7 border-b border-white/[0.06] bg-white/[0.02]">
-              <p class="eyebrow text-[10px] text-cream/30 mb-3">{{ $t('posizionamento.prospetto.col03') }}</p>
-              <p class="font-serif font-light text-fluid-2xl text-cream leading-none">{{ $t('posizionamento.prospetto.col03name') }}</p>
-            </div>
-            <div class="flex-1 divide-y divide-white/[0.04]">
-              <div
-                v-for="(row, rowIdx) in prospettoRows"
-                :key="row.label + '-premium'"
-                class="px-6 sm:px-8 py-4 sm:py-5"
-              >
-                <p class="eyebrow text-[9px] text-cream/25 mb-1.5">{{ row.label }}</p>
-                <p
-                  class="font-serif font-medium leading-none whitespace-nowrap shrink-0"
-                  :class="rowIdx === prospettoRows.length - 1
-                    ? 'text-fluid-xl text-cream'
-                    : 'text-fluid-sm text-cream/60'"
-                >{{ row.premium }}</p>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
@@ -807,7 +664,7 @@ onMounted(() => {
               </div>
               <div>
                 <p class="eyebrow text-[10px] sm:text-[11px] text-brown/40 dark:text-cream/35 mb-2 sm:mb-3">{{ $t('posizionamento.budget.col3') }}</p>
-                <p class="font-serif font-light text-[clamp(1.5rem,3.8vw,2.2rem)] text-wine leading-none tabular-nums">{{ row.monthly }}</p>
+                <p class="font-serif font-semibold text-[clamp(1.55rem,4vw,2.3rem)] leading-none tabular-nums" style="color: rgb(153 18 18 / var(--tw-text-opacity, 1)); text-shadow: 0 0 0.5px rgba(153,18,18,0.35);">{{ row.monthly }}</p>
               </div>
               <div>
                 <p class="eyebrow text-[10px] sm:text-[11px] text-brown/40 dark:text-cream/35 mb-2 sm:mb-3">{{ $t('posizionamento.budget.col4') }}</p>
@@ -817,10 +674,51 @@ onMounted(() => {
           </div>
         </div>
 
-        <div class="border-l-2 border-wine pl-5 sm:pl-6 max-w-3xl">
-          <p class="text-fluid-xs sm:text-fluid-sm text-brown/55 dark:text-cream/55 leading-relaxed">
+        <div class="border-l-2 border-wine pl-5 sm:pl-6 max-w-4xl">
+          <p class="text-fluid-sm sm:text-fluid-base md:text-fluid-lg text-brown/60 dark:text-cream/60 leading-relaxed">
             {{ $t('posizionamento.budget.note') }}
           </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         I NOSTRI LAVORI
+    ══════════════════════════════════════════ -->
+    <section class="relative py-section sm:py-section-lg bg-cream dark:bg-noir overflow-hidden">
+      <div class="container-x max-w-6xl mx-auto">
+
+        <div class="mb-10 sm:mb-16 md:mb-20 border-b border-[color:var(--line)] pb-6 sm:pb-8">
+          <p class="eyebrow text-wine mb-4 sm:mb-5">Portfolio</p>
+          <h2 class="font-serif font-light text-fluid-5xl sm:text-fluid-6xl leading-tightest tracking-tightest text-brown dark:text-cream">
+            I nostri lavori
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+          <a href="https://denani.it/2021/04/21/hotel-ristorante-camoretti/" target="_blank" rel="noopener">
+            <ImageReveal src="/images/CAMORETTI-scaled-e1709716201950.webp" alt="Hotel Ristorante Camoretti" ratio="square" rounded :hover-label="$t('posizionamento.hoverLabel')" />
+          </a>
+          <a href="https://denani.it/2021/04/21/portfolio-fabrizio-crippa/" target="_blank" rel="noopener">
+            <ImageReveal src="/images/FABRIZIO-CRIPPA-scaled-e1709716167674.webp" alt="Fabrizio Crippa" ratio="square" rounded :hover-label="$t('posizionamento.hoverLabel')" />
+          </a>
+          <a href="https://denani.it/2021/09/30/pasticceria-florian/" target="_blank" rel="noopener">
+            <ImageReveal src="/images/FLORIAN-scaled-e1709716143700.webp" alt="Pasticceria Florian" ratio="square" rounded :hover-label="$t('posizionamento.hoverLabel')" />
+          </a>
+          <a href="https://www.instagram.com/farmacia.di.gorle/" target="_blank" rel="noopener">
+            <ImageReveal src="/images/farmacia.png" alt="Farmacia di Gorle" ratio="square" rounded fit="contain" :hover-label="$t('posizionamento.hoverLabel')" />
+          </a>
+          <a href="https://www.instagram.com/mediline_torino/" target="_blank" rel="noopener" class="col-span-2 md:col-span-1">
+            <ImageReveal src="/images/mediline.png" alt="Mediline" ratio="square" rounded fit="contain" :hover-label="$t('posizionamento.hoverLabel')" />
+          </a>
+          <a href="https://denani.it/portfolio/kraken-factory/" target="_blank" rel="noopener">
+            <ImageReveal src="/images/KRAKEN-FACTORY-scaled-e1709716112360.webp" alt="Kraken Factory" ratio="square" rounded :hover-label="$t('posizionamento.hoverLabel')" />
+          </a>
+          <a href="https://denani.it/2024/03/25/zestloungebar/" target="_blank" rel="noopener">
+            <ImageReveal src="/images/ZEST-LOUNGE-BAR.webp" alt="Zest Lounge Bar" ratio="square" rounded :hover-label="$t('posizionamento.hoverLabel')" />
+          </a>
         </div>
 
       </div>

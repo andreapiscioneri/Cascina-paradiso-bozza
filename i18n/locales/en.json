@@ -13,7 +13,7 @@
       "scroll": "Discover"
     },
     "valore": {
-      "eyebrow": "Our positioning",
+      "eyebrow": "Positioning",
       "line1": "The value that sets us apart:",
       "line2": "Honesty",
       "line3": "We were born this way.\nWe don't need to pretend."
@@ -114,7 +114,7 @@
       "disclaimer": "The advertising budget is indicative and non-binding, though strongly recommended to maximise project visibility. The entire investment is fully tax-deductible under Art. 108 TUIR.",
       "base": {
         "label": "Base Package",
-        "tag": "ROOTS",
+        "tag": "Small",
         "name": "Roots",
         "desc": "The foundation. Presence, identity and first social presence.",
         "price": "€ 900",
@@ -130,9 +130,9 @@
       },
       "pro": {
         "label": "Medium Package",
-        "tag": "BALANCE",
+        "tag": "Medium",
         "name": "Balance",
-        "badge": "Most chosen",
+        "badge": "Medium",
         "desc": "Full identity, dynamic website and structured social presence for growth.",
         "price": "€ 1,500",
         "items": [
@@ -148,7 +148,7 @@
       },
       "full": {
         "label": "Premium Package",
-        "tag": "EXCELLENCE",
+        "tag": "Premium",
         "name": "Excellence",
         "desc": "The complete journey. Delegate everything, focus on the kitchen.",
         "price": "€ 2,800",
