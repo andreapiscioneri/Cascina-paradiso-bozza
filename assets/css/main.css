@@ -285,11 +285,16 @@
   transition: opacity 700ms var(--ease-expo);
 }
 
+.cp-loader__logo {
+  width: clamp(52px, 14vw, 80px);
+  height: clamp(52px, 14vw, 80px);
+}
+
 .cp-loader__bar {
   position: absolute;
-  bottom: 10vh;
-  left: 10vw;
-  right: 10vw;
+  bottom: 8vh;
+  left: clamp(1.5rem, 8vw, 10vw);
+  right: clamp(1.5rem, 8vw, 10vw);
   height: 1px;
   background: var(--line);
   overflow: hidden;

@@ -197,18 +197,19 @@ onMounted(() => {
         </h1>
         <p
           ref="heroSub"
-          class="mt-6 sm:mt-8 max-w-sm sm:max-w-xl text-fluid-sm sm:text-fluid-base opacity-80 leading-relaxed"
+          class="mt-6 sm:mt-8 max-w-sm sm:max-w-xl text-fluid-sm sm:text-fluid-base opacity-80 leading-relaxed pr-16 sm:pr-0"
         >
           {{ $t('posizionamento.hero.subtitle') }}
         </p>
 
+        <!-- Su mobile: centrato in basso. Su sm+: assoluto a destra -->
         <button
           type="button"
-          class="absolute bottom-8 sm:bottom-10 right-[var(--safe-x)] flex flex-col items-center gap-2 sm:gap-3 opacity-70 hover:opacity-100 transition-opacity"
+          class="hidden sm:flex absolute bottom-10 right-[var(--safe-x)] flex-col items-center gap-3 opacity-70 hover:opacity-100 transition-opacity"
           @click="scrollDown"
         >
-          <span class="eyebrow text-[10px] sm:text-xs">{{ $t('posizionamento.hero.scroll') }}</span>
-          <span class="block w-px h-8 sm:h-12 bg-current animate-pulse" />
+          <span class="eyebrow text-xs">{{ $t('posizionamento.hero.scroll') }}</span>
+          <span class="block w-px h-12 bg-current animate-pulse" />
         </button>
       </div>
     </section>

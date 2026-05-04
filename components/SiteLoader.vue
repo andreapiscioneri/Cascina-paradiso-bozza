@@ -51,10 +51,9 @@ onMounted(() => {
 
 <template>
   <div v-if="isVisible" ref="root" class="cp-loader">
-    <div ref="logo" class="flex flex-col items-center gap-3">
+    <div ref="logo" class="flex flex-col items-center gap-4 px-6 w-full max-w-xs sm:max-w-sm mx-auto">
       <svg
-        width="72"
-        height="72"
+        class="cp-loader__logo"
         viewBox="0 0 72 72"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -69,8 +68,8 @@ onMounted(() => {
         />
         <circle cx="36" cy="28" r="2" fill="currentColor" />
       </svg>
-      <span class="font-serif text-fluid-lg tracking-tight">Cascina Paradiso</span>
-      <span class="eyebrow opacity-60">{{ $t('loader.since') }}</span>
+      <span class="font-serif text-fluid-xl sm:text-fluid-2xl tracking-tight text-center">Cascina Paradiso</span>
+      <span class="eyebrow text-[10px] sm:text-xs opacity-60">{{ $t('loader.since') }}</span>
     </div>
     <div class="cp-loader__bar">
       <span class="cp-loader__fill" :style="{ width: progress + '%' }"></span>
