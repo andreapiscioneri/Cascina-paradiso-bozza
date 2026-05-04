@@ -1,38 +1,38 @@
 {
   "posizionamento": {
     "seo": {
-      "title": "Positioning | Cascina Paradiso",
-      "description": "The positioning strategy and objectives of Cascina Paradiso"
+      "title": "Positioning Strategy | Cascina Paradiso",
+      "description": "The communication and digital positioning strategy of Cascina Paradiso: brand identity, social media and sponsorships for an authentic restaurant in Val Seriana."
     },
     "hero": {
-      "eyebrow": "Cascina Paradiso – Restaurant since 1972",
-      "title": "\"We didn't reinvent anything. We just remembered.\"",
-      "subtitle": "Cascina Paradiso is not a marketing operation built from scratch, but a living fragment of Val Seriana's history. While the market today 'mimics' tradition with artificial rustic aesthetics, we restart from the roots of 1972.",
-      "scroll": "Scroll"
+      "eyebrow": "Since 1972 — Val Seriana",
+      "title": "We didn't reinvent anything. We just remembered.",
+      "subtitle": "A true story needs no construction. Cascina Paradiso returns to its 1972 roots with a communication strategy that tells what we are — without filters.",
+      "scroll": "Discover"
     },
     "valore": {
-      "eyebrow": "Positioning",
-      "line1": "The Differentiating Value:",
+      "eyebrow": "Our positioning",
+      "line1": "The value that sets us apart:",
       "line2": "Honesty",
-      "line3": "We were born this way, we don't need to pretend."
+      "line3": "We were born this way. We don't need to pretend."
     },
     "keywords": [
       "Heritage", "Tradition", "History", "Territory", "Authenticity", "Local Cuisine", "Genuineness", "Fresh Products", "Local Suppliers", "Raw Materials"
     ],
     "obiettivi": {
-      "eyebrow": "Strategies and Objectives",
+      "eyebrow": "Strategy and objectives",
       "items": {
         "one": {
-          "title": "Brand Awareness (RE-Discover)",
-          "desc": "Reactivate the historical memory of old customers and position ourselves as a \"new discovery\" for new potential customers."
+          "title": "Brand recognition",
+          "desc": "Reawaken the historical memory of those who already knew us and introduce ourselves as a new discovery to those who haven't experienced us yet."
         },
         "two": {
-          "title": "Conversion",
-          "desc": "Transform interest into direct bookings through streamlined digital tools."
+          "title": "Direct conversion",
+          "desc": "Turn every digital interaction into a real reservation — without friction, without intermediate steps."
         },
         "three": {
-          "title": "Digital Positioning",
-          "desc": "Climb Google rankings for local searches (\"Restaurants Val Seriana\") and oversee social media with high-level aesthetics."
+          "title": "Local digital presence",
+          "desc": "Climb Google rankings for searches in Val Seriana and build a social presence with a recognisable, consistent aesthetic."
         }
       }
     },
@@ -40,70 +40,123 @@
       "bgText": "TOOLS",
       "eyebrow": "How we will do it",
       "titleLine1": "Three pillars",
-      "titleLine2": "for success",
+      "titleLine2": "to build everything",
       "s1": {
-        "eyebrow": "Tool 1",
+        "eyebrow": "Pillar 01",
         "title": "Brand Identity",
-        "desc": "Need to create a coherent, recognizable, and memorable image.",
+        "desc": "Before communicating, you need to exist. We create a coherent, recognisable and memorable image that speaks for itself — without explanation.",
         "items": {
           "logo": {
-            "title": "Logo & Visual",
-            "desc": "Not modern and cold, but recalling craftsmanship with visual cleanliness that communicates quality."
+            "title": "Logo & Visual Identity",
+            "desc": "A mark that recalls craftsmanship and history, with the visual clarity of those who have nothing to prove."
           },
           "palette": {
             "title": "Color Palette",
-            "desc": "Wine/burgundy inspired by the restaurant's walls."
+            "desc": "Burgundy and earth. The colours of the restaurant's walls become the thread running through all communication."
           },
           "landing": {
-            "title": "Landing Page with Dynamic Menu",
-            "desc": "Easily updatable (essential for those working with seasonal products). Options:",
-            "list1": "Hero Video: 10 emotional seconds (burning fire, hand-rolled fresh pasta, valley view)",
-            "list2": "Direct Booking: Fundamental to convert the user immediately, without intermediate steps"
+            "title": "Website with Dynamic Menu",
+            "desc": "A web presence that updates in a few clicks — essential for a seasonal kitchen. Built to convert, not just to inform.",
+            "list1": "Emotional opening video: live fire, hand-rolled pasta, valley views",
+            "list2": "Integrated direct booking: the user reserves without leaving the page"
           },
           "menu": {
             "title": "Physical Menu",
-            "desc": "Consistent with the rest of the image, the menu is the first physical touchpoint. It must be textured (quality paper) and tell, in a column or on the back, the story of Cantina Cerea to give depth to the experience."
+            "desc": "The first physical touchpoint must match everything else: quality paper, refined typography, and the story of Cantina Cerea on the back."
           }
         }
       },
       "s2": {
-        "eyebrow": "Tool 2",
+        "eyebrow": "Pillar 02",
         "title": "Social Media & Content",
-        "desc1": "Use video as a tool with a high rate of diffusion and visibility.",
-        "desc2": "What to show:",
+        "desc1": "Video is the tool with the highest organic reach. We use it to tell stories, not to sell.",
+        "desc2": "Narrative formats:",
         "items": {
           "mani": {
-            "title": "\"From Hands to Table\"",
-            "desc": "Macro-shots of the preparation of typical dishes. Focus on technique (\"like it used to be\") but with modern aesthetics (careful plating)."
+            "title": "From Hands to Table",
+            "desc": "Close-up shots of preparation: fresh pasta, burning grill, local ingredients. Old-school technique with today's aesthetic."
           },
           "frammenti": {
-            "title": "\"Fragments of 1972\"",
-            "desc": "Stories about the restaurant's history, the historical figures who visited it, shots of details referring to the history (photos, historical objects)."
+            "title": "Fragments of 1972",
+            "desc": "The restaurant's story told through details: archive photos, objects that have survived time, faces and memories of those who were there."
           },
           "atmosfera": {
-            "title": "\"The Atmosphere\"",
-            "desc": "Videos conveying the vibe of the place: the clinking of glasses, the warmth of the wood, the peace of Val Seriana."
+            "title": "The Atmosphere",
+            "desc": "The sound of glasses, the warmth of the wood, the late-afternoon light. The experience before the experience."
           },
           "fornitore": {
-            "title": "\"The Supplier of the Day\"",
-            "desc": "Videos in collaboration with local suppliers, or simply focusing on a local product."
+            "title": "Today's Supplier",
+            "desc": "Who brings the meat, who makes the cheese, who picks the herbs. The territory enters the kitchen — and the camera."
           }
         }
       },
       "s3": {
-        "eyebrow": "Tool 3",
+        "eyebrow": "Pillar 03",
         "title": "Sponsorships",
         "items": {
           "ads": {
-            "title": "Strategic Social Ads",
-            "desc": "Geolocated campaigns aimed at an audience who loves fine-dining and tradition, to accelerate reach and turn \"I didn't know it reopened\" into \"I want to go try it\"."
+            "title": "Geolocated Social Campaigns",
+            "desc": "Targeted ads reaching people who live, work or travel through Val Seriana. To turn 'I didn't know it reopened' into 'I want to go this week'."
           }
         }
       }
     },
+    "pacchetti": {
+      "eyebrow": "Packages",
+      "title": "Choose where to start.",
+      "subtitle": "Three levels of intervention, each designed for a specific phase of the journey.",
+      "priceNote": "Personalised quote",
+      "disclaimer": "Prices vary based on project complexity. Write to us for a no-commitment conversation.",
+      "base": {
+        "label": "Package 01",
+        "name": "Identity",
+        "desc": "The foundations. For those who want to exist visually in a coherent and professional way.",
+        "price": "On request",
+        "items": [
+          "Full logo & visual identity",
+          "Color palette and typography",
+          "Printed physical menu",
+          "Optimised Google Business profile"
+        ]
+      },
+      "pro": {
+        "label": "Package 02",
+        "name": "Presence",
+        "badge": "Recommended",
+        "desc": "Identity plus active presence. The real starting point for building a loyal audience.",
+        "price": "On request",
+        "items": [
+          "Everything in Identity Package",
+          "Website with updatable dynamic menu",
+          "Social profile setup and optimisation",
+          "Content production — first month included",
+          "Monthly editorial plan"
+        ]
+      },
+      "full": {
+        "label": "Package 03",
+        "name": "Growth",
+        "desc": "The complete journey. For those who want to delegate everything and focus on the kitchen.",
+        "price": "On request",
+        "items": [
+          "Everything in Presence Package",
+          "Ongoing social management",
+          "Geolocated sponsored campaigns",
+          "Monthly report with analysis and adjustments",
+          "Dedicated strategic consultancy"
+        ]
+      }
+    },
+    "brochure": {
+      "eyebrow": "Documentation",
+      "title": "Download the full brochure.",
+      "desc": "All the details of the positioning plan, packages and references in a single PDF document to share or keep.",
+      "btnOpen": "Donwload PDF",
+      "btnDownload": "Download"
+    },
     "cta": {
-      "title": "Let's restart from the roots",
-      "desc": "Every communication choice refers to who we are: a cross-section of Bergamasco history that lives today, as authentic as yesterday.",
+      "title": "Let's start building.",
+      "desc": "An authentic project deserves communication to match. Let's talk.",
       "btn": "Back to Homepage"
     }
   },

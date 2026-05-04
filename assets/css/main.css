@@ -206,6 +206,9 @@
   transform: translate(-50%, -50%);
   transition: width 400ms var(--ease-expo), height 400ms var(--ease-expo),
     background-color 300ms ease, opacity 200ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cp-cursor--hover {
@@ -227,12 +230,13 @@
 }
 
 .cp-cursor__label {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   opacity: 0;
   transition: opacity 300ms ease;
+  line-height: 1.2;
 }
 
 .cp-cursor--image .cp-cursor__label {

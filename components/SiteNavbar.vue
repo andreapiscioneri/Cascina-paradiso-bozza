@@ -24,12 +24,18 @@ watch(isOpen, (v) => {
   document.body.style.overflow = v ? 'hidden' : ''
 })
 
-const links = computed(() => [
-  { to: localePath('/storia'), label: t('nav.storia') },
-  { to: localePath('/menu'), label: t('nav.menu') },
-  { to: localePath('/posizionamento'), label: t('nav.posizionamento') },
-  { to: localePath('/contatti'), label: t('nav.contatti') },
-  ])
+const route = useRoute()
+const isOnPosizionamento = computed(() => route.path.includes('/posizionamento'))
+
+const links = computed(() => {
+  const base = [
+    { to: localePath('/storia'), label: t('nav.storia') },
+    { to: localePath('/menu'), label: t('nav.menu') },
+    { to: localePath('/posizionamento'), label: t('nav.posizionamento') },
+    { to: localePath('/contatti'), label: t('nav.contatti') },
+  ]
+  return isOnPosizionamento.value ? [] : base
+})
 </script>
 
 <template>
@@ -89,6 +95,7 @@ const links = computed(() => [
         <ThemeToggle class="hidden sm:flex" />
         <LangToggle class="hidden sm:flex" />
         <AppButton
+          v-if="!isOnPosizionamento"
           :to="localePath('/prenotazioni')"
           variant="solid"
           size="sm"
@@ -150,7 +157,7 @@ const links = computed(() => [
               <ThemeToggle />
               <LangToggle />
             </div>
-            <AppButton :to="localePath('/prenotazioni')" variant="solid" @click="isOpen = false">
+            <AppButton v-if="!isOnPosizionamento" :to="localePath('/prenotazioni')" variant="solid" @click="isOpen = false">
               {{ $t('nav.prenota') }}
             </AppButton>
           </div>

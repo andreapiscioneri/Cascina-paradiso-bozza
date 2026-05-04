@@ -1,38 +1,38 @@
 {
   "posizionamento": {
     "seo": {
-      "title": "Posizionamento | Cascina Paradiso",
-      "description": "La strategia di posizionamento e obiettivi di Cascina Paradiso"
+      "title": "Strategia di Posizionamento | Cascina Paradiso",
+      "description": "La strategia di comunicazione e posizionamento digitale di Cascina Paradiso: brand identity, social media e sponsorizzazioni per un ristorante autentico della Val Seriana."
     },
     "hero": {
-      "eyebrow": "Cascina Paradiso – Ristorante dal 1972",
-      "title": "\"Non abbiamo reinventato niente. Abbiamo solo ricordato.\"",
-      "subtitle": "Cascina Paradiso non è un'operazione di marketing costruita a tavolino, ma un frammento vivo della storia della Val Seriana. Mentre il mercato oggi \"scimmiotta\" la tradizione con estetiche rustiche artificiali, noi ripartiamo dalle radici del 1972.",
-      "scroll": "Scorri"
+      "eyebrow": "Dal 1972 — Val Seriana",
+      "title": "Non abbiamo reinventato niente. Abbiamo solo ricordato.",
+      "subtitle": "Una storia vera non ha bisogno di costruzioni. Cascina Paradiso riparte dalle radici del 1972 con una strategia di comunicazione che racconta ciò che siamo — senza filtri.",
+      "scroll": "Scopri"
     },
     "valore": {
-      "eyebrow": "Posizionamento",
-      "line1": "Il Valore Differenziante:",
+      "eyebrow": "Il nostro posizionamento",
+      "line1": "Il valore che ci distingue:",
       "line2": "L'onestà",
-      "line3": "Siamo nati così, non abbiamo bisogno di fingere."
+      "line3": "Siamo nati così. Non abbiamo bisogno di fingere."
     },
     "keywords": [
       "Heritage", "Tradizione", "Storia", "Territorialità", "Autenticità", "Cucina tipica", "Genuinità", "Prodotti freschi", "Fornitori locali", "Materie prime"
     ],
     "obiettivi": {
-      "eyebrow": "Strategie e Obiettivi",
+      "eyebrow": "Strategia e obiettivi",
       "items": {
         "one": {
-          "title": "Brand Awareness (RI-Conoscere)",
-          "desc": "Riattivare la memoria storica dei vecchi clienti e posizionarci come \"nuova scoperta\" per nuovi potenziali clienti."
+          "title": "Riconoscibilità del brand",
+          "desc": "Riattivare la memoria storica di chi già ci conosceva e presentarci come nuova scoperta per chi non ci ha ancora vissuto."
         },
         "two": {
-          "title": "Conversione",
-          "desc": "Trasformare l'interesse in prenotazioni dirette attraverso strumenti digitali snelli."
+          "title": "Conversione diretta",
+          "desc": "Trasformare ogni interazione digitale in una prenotazione reale, senza passaggi intermedi e senza attrito."
         },
         "three": {
-          "title": "Posizionamento Digitale",
-          "desc": "Scalare il ranking Google per le ricerche locali (\"Ristoranti Val Seriana\") e presidiare i social con un'estetica di alto livello."
+          "title": "Presidio digitale locale",
+          "desc": "Scalare il ranking Google per le ricerche nella Val Seriana e costruire una presenza social con un'estetica riconoscibile."
         }
       }
     },
@@ -40,70 +40,123 @@
       "bgText": "STRUMENTI",
       "eyebrow": "Come lo faremo",
       "titleLine1": "Tre pilastri",
-      "titleLine2": "per il successo",
+      "titleLine2": "per costruire tutto",
       "s1": {
-        "eyebrow": "Strumento 1",
+        "eyebrow": "Pilastro 01",
         "title": "Brand Identity",
-        "desc": "Necessità di creare un'immagine coerente, riconoscibile, ricordabile.",
+        "desc": "Prima di comunicare, bisogna esistere. Creiamo un'immagine coerente, riconoscibile e memorabile che parli di noi senza spiegazioni.",
         "items": {
           "logo": {
-            "title": "Logo & Visual",
-            "desc": "No moderno e freddo, ma che richiami l'artigianalità con una pulizia visiva che comunichi qualità."
+            "title": "Logo & Visual Identity",
+            "desc": "Un segno che richiami l'artigianalità e la storia, con la pulizia visiva di chi non ha nulla da dimostrare."
           },
           "palette": {
             "title": "Color Palette",
-            "desc": "Vino/bordeaux ispirato alle pareti del ristorante."
+            "desc": "Bordeaux e terra. I colori delle pareti del ristorante diventano il filo conduttore di tutta la comunicazione."
           },
           "landing": {
-            "title": "Landing Page con Menu Dinamico",
-            "desc": "Facilmente aggiornabile (essenziale per chi lavora con prodotti stagionali). Opzionabili:",
-            "list1": "Hero Video: 10 secondi emozionali (fuoco che arde, pasta fresca tirata a mano, vista sulla valle)",
-            "list2": "Prenotazione Diretta: Fondamentale per convertire l'utente subito, senza passaggi intermedi"
+            "title": "Sito con Menu Dinamico",
+            "desc": "Una presenza web che si aggiorna in pochi click — essenziale per una cucina stagionale. Pensata per convertire, non solo per informare.",
+            "list1": "Video emozionale in apertura: fuoco vivo, pasta tirata a mano, vista sulla valle",
+            "list2": "Prenotazione diretta integrata: l'utente prenota senza uscire dalla pagina"
           },
           "menu": {
             "title": "Menu Fisico",
-            "desc": "Coerente con il resto dell'immagine, il menù è il primo punto di contatto fisico. Deve essere materico (carta di qualità) e raccontare, in una colonna o nel retro, la storia della Cantina Cerea per dare profondità all'esperienza."
+            "desc": "Il primo punto di contatto fisico deve essere all'altezza di tutto il resto: carta di qualità, tipografia curata, e la storia della Cantina Cerea sul retro."
           }
         }
       },
       "s2": {
-        "eyebrow": "Strumento 2",
-        "title": "Social Media & Content",
-        "desc1": "Utilizzare video perché strumento ad alto tasso di diffusione e visibilità.",
-        "desc2": "Cosa mostrare:",
+        "eyebrow": "Pilastro 02",
+        "title": "Social Media & Contenuti",
+        "desc1": "Il video è lo strumento a più alto tasso di diffusione organica. Lo usiamo per raccontare, non per vendere.",
+        "desc2": "I formati narrativi:",
         "items": {
           "mani": {
-            "title": "\"Dalle Mani alla Tavola\"",
-            "desc": "Macro-riprese della preparazione dei piatti tipici. Focus sulla tecnica (il \"come una volta\") ma con l'estetica moderna (impiattamento curato)."
+            "title": "Dalle Mani alla Tavola",
+            "desc": "Macro-riprese della preparazione: pasta fresca, brace accesa, ingredienti del territorio. La tecnica di una volta con l'estetica di oggi."
           },
           "frammenti": {
-            "title": "\"Frammenti di 1972\"",
-            "desc": "Racconti sulla storia del ristorante, sui personaggi storici che lo hanno visitato, riprese di dettagli che rimandano alla storia (foto, oggetti storici)."
+            "title": "Frammenti di 1972",
+            "desc": "La storia del locale raccontata per dettagli: foto d'archivio, oggetti che resistono al tempo, volti e ricordi di chi c'era."
           },
           "atmosfera": {
-            "title": "\"L'Atmosfera\"",
-            "desc": "Video che trasmettano il vibe del locale: il rumore dei calici, il calore del legno, la pace della Val Seriana."
+            "title": "L'Atmosfera",
+            "desc": "Il suono dei calici, il calore del legno, la luce di fine pomeriggio. L'esperienza prima dell'esperienza."
           },
           "fornitore": {
-            "title": "\"Il Fornitore del Giorno\"",
-            "desc": "Video in collaborazione con i fornitori locali, o più semplicemente in cui si fa un focus su un prodotto local."
+            "title": "Il Fornitore del Giorno",
+            "desc": "Chi porta la carne, chi produce il formaggio, chi raccoglie le erbe. Il territorio entra in cucina — e in camera."
           }
         }
       },
       "s3": {
-        "eyebrow": "Strumento 3",
+        "eyebrow": "Pilastro 03",
         "title": "Sponsorizzazioni",
         "items": {
           "ads": {
-            "title": "Social Ads Strategiche",
-            "desc": "Campagne geolocalizzate mirate a un pubblico amante del fine-dining e della tradizione, per accelerare la copertura e trasformare i \"non so che ha riaperto\" in \"voglio andare a provare\"."
+            "title": "Campagne Social Geolocalizzate",
+            "desc": "Annunci mirati a chi vive, lavora o si sposta nella Val Seriana. Per trasformare il 'non sapevo che avesse riaperto' in 'voglio andarci questa settimana'."
           }
         }
       }
     },
+    "pacchetti": {
+      "eyebrow": "I pacchetti",
+      "title": "Scegli da dove partire.",
+      "subtitle": "Tre livelli di intervento, ciascuno pensato per una fase precisa del percorso.",
+      "priceNote": "Preventivo personalizzato",
+      "disclaimer": "I prezzi variano in base alla complessità del progetto. Scrivici per un confronto senza impegno.",
+      "base": {
+        "label": "Pacchetto 01",
+        "name": "Identità",
+        "desc": "Le fondamenta. Per chi vuole esistere visivamente in modo coerente e professionale.",
+        "price": "Su richiesta",
+        "items": [
+          "Logo & visual identity completa",
+          "Color palette e typografia",
+          "Menu fisico stampato",
+          "Scheda Google Business ottimizzata"
+        ]
+      },
+      "pro": {
+        "label": "Pacchetto 02",
+        "name": "Presenza",
+        "badge": "Consigliato",
+        "desc": "Identità più presenza attiva. Il punto di partenza reale per costruire un pubblico fedele.",
+        "price": "Su richiesta",
+        "items": [
+          "Tutto il Pacchetto Identità",
+          "Sito con menu dinamico aggiornabile",
+          "Setup e ottimizzazione profili social",
+          "Produzione contenuti — primo mese incluso",
+          "Piano editoriale mensile"
+        ]
+      },
+      "full": {
+        "label": "Pacchetto 03",
+        "name": "Crescita",
+        "desc": "Il percorso completo. Per chi vuole delegar tutto e concentrarsi sulla cucina.",
+        "price": "Su richiesta",
+        "items": [
+          "Tutto il Pacchetto Presenza",
+          "Gestione social continuativa",
+          "Campagne sponsorizzate geolocalizzate",
+          "Report mensile con analisi e aggiustamenti",
+          "Consulenza strategica dedicata"
+        ]
+      }
+    },
+    "brochure": {
+      "eyebrow": "Documentazione",
+      "title": "Scarica la brochure completa.",
+      "desc": "Tutti i dettagli del piano di posizionamento, i pacchetti e le referenze in un unico documento PDF da condividere o conservare.",
+      "btnOpen": "Scarica PDF",
+      "btnDownload": "Scarica"
+    },
     "cta": {
-      "title": "Ripartiamo dalle radici",
-      "desc": "Ogni scelta comunicativa rimanda a ciò che siamo: uno spaccato di storia bergamasca che vive oggi, autentico come ieri.",
+      "title": "Iniziamo a costruire.",
+      "desc": "Un progetto autentico merita una comunicazione all'altezza. Parliamone.",
       "btn": "Torna alla Homepage"
     }
   },
