@@ -86,7 +86,6 @@ const links = computed(() => {
 
       <!-- Right cluster -->
       <div class="flex items-center gap-4">
-        <ThemeToggle class="hidden sm:flex" />
         <LangToggle class="hidden sm:flex" />
         <AppButton
           v-if="!isOnPosizionamento"
@@ -149,7 +148,6 @@ const links = computed(() => {
           </nav>
           <div class="mt-auto py-8 flex flex-col gap-4">
             <div class="flex gap-4">
-              <ThemeToggle />
               <LangToggle />
             </div>
             <AppButton v-if="!isOnPosizionamento" :to="localePath('/prenotazioni')" variant="solid" @click="isOpen = false">

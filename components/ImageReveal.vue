@@ -122,10 +122,9 @@ const ratioClass = computed(() =>
         />
       </div>
     </div>
-    <!-- subtle vignette -->
     <div
       class="pointer-events-none absolute inset-0"
-      style="background: radial-gradient(120% 80% at 50% 50%, transparent 50%, rgba(15,15,15,0.18) 100%)"
+      style="background: linear-gradient(to bottom, rgba(15,15,15,0) 0%, rgba(15,15,15,1) 100%)"
     />
   </div>
 </template>

@@ -334,7 +334,7 @@ onMounted(() => {
             </div>
           </div>
 
-          <div class="grid md:grid-cols-2 gap-10 sm:gap-12 md:gap-20 items-start">
+          <div class="grid md:grid-cols-2 gap-10 sm:gap-12 md:gap-20 items-center">
             <div data-str-el>
               <p class="text-fluid-base sm:text-fluid-lg text-brown/80 dark:text-cream/80 leading-relaxed mb-8 sm:mb-10">
                 {{ $t('posizionamento.strumenti.s1.desc') }}
@@ -370,12 +370,8 @@ onMounted(() => {
               </div>
             </div>
 
-            <div data-str-el class="grid grid-cols-2 gap-3 sm:gap-4">
-              <ImageReveal src="/images/brand1.jpg" alt="Branding image" ratio="square" rounded />
-              <ImageReveal src="/images/brand2.jpg" alt="Brand studio" ratio="square" rounded />
-              <div class="col-span-2">
-                <ImageReveal src="/images/brand3.jpg" alt="Brand mockup" ratio="landscape" rounded />
-              </div>
+            <div data-str-el class="rounded-2xl overflow-hidden">
+              <ImageReveal src="/images/brand1.jpg" alt="Branding image" ratio="portrait" :rounded="false" />
             </div>
           </div>
         </div>
@@ -396,10 +392,9 @@ onMounted(() => {
             </div>
           </div>
 
-          <div class="grid md:grid-cols-2 gap-10 sm:gap-12 md:gap-20 items-start">
-            <div data-str-el class="flex flex-col gap-4 sm:gap-5">
-              <ImageReveal src="/images/social1.jpg" alt="Social content" ratio="landscape" rounded />
-              <ImageReveal src="/images/social2.jpg" alt="Content creation" ratio="landscape" rounded />
+          <div class="grid md:grid-cols-2 gap-10 sm:gap-12 md:gap-20 items-center">
+            <div data-str-el class="rounded-2xl overflow-hidden">
+              <ImageReveal src="/images/social1.jpg" alt="Social content" ratio="portrait" :rounded="false" />
             </div>
 
             <div data-str-el class="flex flex-col gap-4 sm:gap-6">
@@ -459,13 +454,8 @@ onMounted(() => {
                 </p>
               </div>
             </div>
-            <div data-str-el class="flex flex-col gap-3 sm:gap-4">
-              <div class="rounded-2xl overflow-hidden">
-                <ImageReveal src="/images/sp2.jpg" alt="Sponsorizzazioni" ratio="landscape" :rounded="false" />
-              </div>
-              <div class="rounded-2xl overflow-hidden">
-                <ImageReveal src="/images/sp3.jpg" alt="Sponsorizzazioni" ratio="landscape" :rounded="false" />
-              </div>
+            <div data-str-el class="rounded-2xl overflow-hidden">
+              <ImageReveal src="/images/sp2.jpg" alt="Sponsorizzazioni" ratio="portrait" :rounded="false" />
             </div>
           </div>
         </div>
